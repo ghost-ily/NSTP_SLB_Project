@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bow84f06y8a00"]
+
+[ext_resource type="Script" uid="uid://u6mxwwwpo35s" path="res://Game 1 Resources/game_1.gd" id="1_8g8x0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_li4ao"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_8g8x0"]
+
+[node name="main" type="Node2D" unique_id=1352383641]
+script = ExtResource("1_8g8x0")
+metadata/_edit_horizontal_guides_ = [-841.0, 650.0]
+metadata/_edit_vertical_guides_ = [1147.0]
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1937216045]
+position = Vector2(612, 600)
+scale = Vector2(65, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=685748179]
+shape = SubResource("RectangleShape2D_li4ao")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground" unique_id=1126837814]
+self_modulate = Color(0.36862746, 0.25882354, 0.23529412, 1)
+scale = Vector2(20.000002, 19.900002)
+texture = SubResource("CanvasTexture_8g8x0")

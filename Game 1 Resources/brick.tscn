@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://diel18thuip8l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkspu"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_awxk8"]
+
+[node name="Brick" type="RigidBody2D" unique_id=1417910574]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1380593282]
+scale = Vector2(6, 3)
+shape = SubResource("RectangleShape2D_nkspu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1204953005]
+self_modulate = Color(0.46, 0.46, 0.46, 1)
+scale = Vector2(120, 60)
+texture = SubResource("CanvasTexture_awxk8")
