@@ -6,8 +6,9 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_awxk8"]
 
-[node name="Brick" type="RigidBody2D" unique_id=1417910574]
+[node name="Brick" type="RigidBody2D" unique_id=1417910574 groups=["bricks"]]
 input_pickable = true
+lock_rotation = true
 script = ExtResource("1_3rsm1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1380593282]
@@ -24,6 +25,8 @@ texture = SubResource("CanvasTexture_awxk8")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="mouseArea" unique_id=1934401267]
 scale = Vector2(6, 3)
 shape = SubResource("RectangleShape2D_nkspu")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1653365284]
 
 [connection signal="mouse_shape_entered" from="mouseArea" to="." method="_on_mouse_area_mouse_shape_entered"]
 [connection signal="mouse_shape_exited" from="mouseArea" to="." method="_on_mouse_area_mouse_shape_exited"]
