@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://diel18thuip8l"]
 
+[ext_resource type="Script" uid="uid://r7ohtqmbm5e3" path="res://Game 1 Resources/brick.gd" id="1_3rsm1"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkspu"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_awxk8"]
 
 [node name="Brick" type="RigidBody2D" unique_id=1417910574]
 input_pickable = true
+script = ExtResource("1_3rsm1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1380593282]
 scale = Vector2(6, 3)
@@ -15,3 +18,12 @@ shape = SubResource("RectangleShape2D_nkspu")
 self_modulate = Color(0.46, 0.46, 0.46, 1)
 scale = Vector2(120, 60)
 texture = SubResource("CanvasTexture_awxk8")
+
+[node name="mouseArea" type="Area2D" parent="." unique_id=819478539]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="mouseArea" unique_id=1934401267]
+scale = Vector2(6, 3)
+shape = SubResource("RectangleShape2D_nkspu")
+
+[connection signal="mouse_shape_entered" from="mouseArea" to="." method="_on_mouse_area_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="mouseArea" to="." method="_on_mouse_area_mouse_shape_exited"]
