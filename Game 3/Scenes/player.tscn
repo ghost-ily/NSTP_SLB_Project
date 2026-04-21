@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cdwc7uswm7bdo"]
 
-[ext_resource type="Script" uid="uid://clfy67yt74xoq" path="res://Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://by45x81kg36de" path="res://Assets/Modern tiles_Free/Characters_free/Bob_16x16.png" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://clfy67yt74xoq" path="res://Game 3/Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://by45x81kg36de" path="res://Game 3/Assets/Modern tiles_Free/Characters_free/Bob_16x16.png" id="1_v0iea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1ek2"]
 size = Vector2(14, 22)
@@ -35,5 +35,8 @@ sprite_frames = SubResource("SpriteFrames_6t5aa")
 
 [node name="MoveTimer" type="Timer" parent="." unique_id=374786040]
 wait_time = 0.1
+
+[node name="BookAnchor" type="Node2D" parent="." unique_id=856467389]
+position = Vector2(10, -5)
 
 [connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]

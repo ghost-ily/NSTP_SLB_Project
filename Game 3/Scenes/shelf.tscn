@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://c7j71aje4k3gw"]
 
-[ext_resource type="Texture2D" uid="uid://tktgaxcrmx8h" path="res://Assets/shelf_1.png" id="1_ndc05"]
-[ext_resource type="FontFile" uid="uid://brwviftb7arsx" path="res://Assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="2_pp4lf"]
+[ext_resource type="Texture2D" uid="uid://tktgaxcrmx8h" path="res://Game 3/Assets/shelf_1.png" id="1_ndc05"]
+[ext_resource type="Script" uid="uid://dnpelrw6thckj" path="res://Game 3/Scripts/shelf.gd" id="1_vam0j"]
+[ext_resource type="FontFile" uid="uid://brwviftb7arsx" path="res://Game 3/Assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="2_pp4lf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pp4lf"]
 size = Vector2(96, 102)
 
 [node name="Shelf" type="Area2D" unique_id=193637864]
+script = ExtResource("1_vam0j")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1396550074]
 position = Vector2(0, -51)
