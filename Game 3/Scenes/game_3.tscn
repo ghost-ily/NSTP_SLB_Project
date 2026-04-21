@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://dc72qhxhd14r6"]
+
+[ext_resource type="PackedScene" uid="uid://cdwc7uswm7bdo" path="res://Game 3/Scenes/player.tscn" id="1_5r6k1"]
+[ext_resource type="PackedScene" uid="uid://c7j71aje4k3gw" path="res://Game 3/Scenes/shelf.tscn" id="2_qjn0y"]
+[ext_resource type="Texture2D" uid="uid://c2feyh5ulo3p" path="res://Game 3/Assets/shelf_2.png" id="3_wbilk"]
+[ext_resource type="Texture2D" uid="uid://c6k0135rp4kdg" path="res://Game 3/Assets/shelf_3.png" id="4_nv3va"]
+[ext_resource type="Texture2D" uid="uid://01hadv1un7f7" path="res://Game 3/Assets/shelf_4.png" id="5_x4ixy"]
+[ext_resource type="Texture2D" uid="uid://dudku4vba42mv" path="res://Game 3/Assets/shelf_5.png" id="6_blwty"]
+[ext_resource type="Texture2D" uid="uid://de6b1ql0j0egf" path="res://Game 3/Assets/shelf_6.png" id="7_as2rh"]
+[ext_resource type="PackedScene" uid="uid://yrv7j4p5ednf" path="res://Game 3/Scenes/table.tscn" id="8_6e7jb"]
+
+[node name="Game" type="Node2D" unique_id=1065281874]
+
+[node name="Player" parent="." unique_id=1146975373 instance=ExtResource("1_5r6k1")]
+z_index = 10
+position = Vector2(1, 0)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=810037128]
+position = Vector2(237, 0)
+zoom = Vector2(2, 2)
+
+[node name="Shelves" type="Node" parent="." unique_id=948207991]
+
+[node name="Science" parent="Shelves" unique_id=193637864 instance=ExtResource("2_qjn0y")]
+unique_name_in_owner = true
+position = Vector2(300, 100)
+
+[node name="Label" parent="Shelves/Science" index="2" unique_id=86449406]
+offset_top = -93.0
+offset_bottom = -70.0
+text = "Science
+"
+
+[node name="Literature" parent="Shelves" unique_id=1387118188 instance=ExtResource("2_qjn0y")]
+unique_name_in_owner = true
+position = Vector2(200, 100)
+
+[node name="Sprite2D" parent="Shelves/Literature" index="0" unique_id=1396550074]
+texture = ExtResource("3_wbilk")
+
+[node name="Label" parent="Shelves/Literature" index="2" unique_id=86449406]
+offset_left = -33.0
+offset_top = -97.0
+offset_right = 33.0
+offset_bottom = -74.0
+text = "Literature"
+
+[node name="History" parent="Shelves" unique_id=1868130102 instance=ExtResource("2_qjn0y")]
+unique_name_in_owner = true
+position = Vector2(100, 100)
+
+[node name="Sprite2D" parent="Shelves/History" index="0" unique_id=1396550074]
+texture = ExtResource("4_nv3va")
+
+[node name="Label" parent="Shelves/History" index="2" unique_id=86449406]
+text = "History"
+
+[node name="Languages" parent="Shelves" unique_id=946267633 instance=ExtResource("2_qjn0y")]
+unique_name_in_owner = true
+position = Vector2(300, -20)
+
+[node name="Sprite2D" parent="Shelves/Languages" index="0" unique_id=1396550074]
+texture = ExtResource("5_x4ixy")
+
+[node name="Label" parent="Shelves/Languages" index="2" unique_id=86449406]
+text = "Languages"
+
+[node name="Arts" parent="Shelves" unique_id=2072128195 instance=ExtResource("2_qjn0y")]
+unique_name_in_owner = true
+position = Vector2(200, -20)
+
+[node name="Sprite2D" parent="Shelves/Arts" index="0" unique_id=1396550074]
+texture = ExtResource("6_blwty")
+
+[node name="Label" parent="Shelves/Arts" index="2" unique_id=86449406]
+offset_top = -94.0
+offset_bottom = -71.0
+text = "Arts
+"
+
+[node name="Philosophy" parent="Shelves" unique_id=1135831266 instance=ExtResource("2_qjn0y")]
+unique_name_in_owner = true
+position = Vector2(100, -20)
+
+[node name="Sprite2D" parent="Shelves/Philosophy" index="0" unique_id=1396550074]
+texture = ExtResource("7_as2rh")
+
+[node name="Label" parent="Shelves/Philosophy" index="2" unique_id=86449406]
+offset_left = -66.0
+offset_top = -96.0
+offset_right = 66.0
+offset_bottom = -80.0
+text = "Philosophy"
+
+[node name="Table" parent="." unique_id=1354710621 instance=ExtResource("8_6e7jb")]
+unique_name_in_owner = true
+
+[editable path="Shelves/Science"]
+[editable path="Shelves/Literature"]
+[editable path="Shelves/History"]
+[editable path="Shelves/Languages"]
+[editable path="Shelves/Arts"]
+[editable path="Shelves/Philosophy"]
