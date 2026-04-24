@@ -6,6 +6,7 @@ var strength: int
 var stock: int
 var is_being_dragged: bool
 var offset: Vector2 = Vector2.ZERO
+@export var madiname: String = ""
 
 func _init(medstrength: int) -> void:
 	strength = medstrength

@@ -2,6 +2,8 @@ extends Area2D
 
 signal demand_medicine(strength: int, patient: Area2D)
 
+@export var patient_name: String = ""
+
 var medicine_demanded: int = -1
 var timer_demand: Timer
 

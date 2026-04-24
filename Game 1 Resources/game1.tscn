@@ -13,21 +13,27 @@ metadata/_edit_vertical_guides_ = [1147.0]
 
 [node name="Patient" parent="." unique_id=1511861545 instance=ExtResource("2_uydok")]
 position = Vector2(72, 57)
+patient_name = "Patient1"
 
 [node name="Patient2" parent="." unique_id=365582622 instance=ExtResource("2_uydok")]
 position = Vector2(430, 57)
+patient_name = "Patient2"
 
 [node name="Patient3" parent="." unique_id=597292296 instance=ExtResource("2_uydok")]
 position = Vector2(811, 57)
+patient_name = "Patient3"
 
 [node name="Patient4" parent="." unique_id=2118908647 instance=ExtResource("2_uydok")]
 position = Vector2(73, 229)
+patient_name = "Patient4"
 
 [node name="Patient5" parent="." unique_id=1310114465 instance=ExtResource("2_uydok")]
 position = Vector2(431, 229)
+patient_name = "Patient5"
 
 [node name="Patient6" parent="." unique_id=485362484 instance=ExtResource("2_uydok")]
 position = Vector2(812, 232)
+patient_name = "Patient6"
 
 [node name="Drawer" parent="." unique_id=1973800405 instance=ExtResource("3_ifx7m")]
 position = Vector2(-3, 535)
@@ -35,38 +41,47 @@ position = Vector2(-3, 535)
 [node name="Medicine" parent="." unique_id=1407108781 instance=ExtResource("4_ifx7m")]
 modulate = Color(0, 1, 0, 1)
 position = Vector2(72, 565)
+madiname = "MedBox1"
 
 [node name="Medicine2" parent="." unique_id=149504584 instance=ExtResource("4_ifx7m")]
 modulate = Color(1, 1, 0, 1)
 position = Vector2(192, 565)
+madiname = "MedBox2"
 
 [node name="Medicine3" parent="." unique_id=1371856123 instance=ExtResource("4_ifx7m")]
 modulate = Color(1, 0, 1, 1)
 position = Vector2(312, 565)
+madiname = "MedBox3"
 
 [node name="Medicine4" parent="." unique_id=1760985649 instance=ExtResource("4_ifx7m")]
 modulate = Color(0.19607843, 1, 0.60784316, 1)
 position = Vector2(432, 565)
+madiname = "MedBox4"
 
 [node name="Medicine5" parent="." unique_id=1834575343 instance=ExtResource("4_ifx7m")]
 modulate = Color(0.39215687, 0.39215687, 1, 1)
 position = Vector2(552, 565)
+madiname = "MedBox5"
 
 [node name="Medicine6" parent="." unique_id=1048198375 instance=ExtResource("4_ifx7m")]
 modulate = Color(1, 0.60784316, 0, 1)
 position = Vector2(672, 565)
+madiname = "MedBox6"
 
 [node name="Medicine7" parent="." unique_id=1230463662 instance=ExtResource("4_ifx7m")]
 modulate = Color(1, 0.39215687, 0.39215687, 1)
 position = Vector2(792, 565)
+madiname = "MedBox7"
 
 [node name="Medicine8" parent="." unique_id=142249224 instance=ExtResource("4_ifx7m")]
 modulate = Color(1, 0.29411766, 0.78431374, 1)
 position = Vector2(912, 565)
+madiname = "MedBox8"
 
 [node name="Medicine9" parent="." unique_id=653599015 instance=ExtResource("4_ifx7m")]
 modulate = Color(1, 0, 0, 1)
 position = Vector2(1032, 565)
+madiname = "MedBox9"
 
 [node name="Control" parent="." unique_id=1959794212 instance=ExtResource("2_o2ufn")]
 anchors_preset = -1
