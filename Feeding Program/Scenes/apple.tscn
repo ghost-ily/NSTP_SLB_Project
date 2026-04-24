@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d27ypajbypja1"]
+
+[ext_resource type="Texture2D" uid="uid://cdql8xs5mer32" path="res://Feeding Program/Assets/Food/red_apple.png" id="1_m2ga2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jl7pq"]
+size = Vector2(25, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ma2lr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_m2ga2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Apple" type="Area2D" unique_id=1892923481]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1287134521]
+position = Vector2(0.5, -10)
+shape = SubResource("RectangleShape2D_jl7pq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1007546672]
+position = Vector2(0, -11)
+sprite_frames = SubResource("SpriteFrames_ma2lr")

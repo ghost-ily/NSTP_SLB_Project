@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dxds3xiq33keu"]
+
+[ext_resource type="Texture2D" uid="uid://b3dpxs6vofcwp" path="res://Feeding Program/Assets/Food/milk_pack.png" id="1_bh0nm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5i4sx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bh0nm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2u30d"]
+size = Vector2(18, 29)
+
+[node name="Milk" type="Area2D" unique_id=685225326]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=439428137]
+position = Vector2(0, -15)
+sprite_frames = SubResource("SpriteFrames_5i4sx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1099375980]
+position = Vector2(0, -14.5)
+shape = SubResource("RectangleShape2D_2u30d")
