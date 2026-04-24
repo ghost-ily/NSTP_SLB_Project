@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d2ymjl77rfeo"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ygie1"]
+
+[node name="Patient" type="Node2D" unique_id=1511861545]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=828565598]
+position = Vector2(264.99994, 83.999985)
+scale = Vector2(529, 167)
+texture = SubResource("CanvasTexture_ygie1")

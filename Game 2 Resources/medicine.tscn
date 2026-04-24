@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c5i3tv2sushda"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_loep1"]
+
+[node name="Medicine" type="Node2D" unique_id=1407108781]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1823974806]
+position = Vector2(18.25, 24.75)
+scale = Vector2(37.5, 50.5)
+texture = SubResource("CanvasTexture_loep1")
