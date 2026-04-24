@@ -9,11 +9,9 @@ extends Control
 var restarted = false
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	button.pressed.connect(_on_button_pressed)
-	
+func _ready() -> void:	
 	window.hide()
-	timer.start(7)
+	timer.start(60)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,5 +30,5 @@ func _process(delta: float) -> void:
 func _on_button_pressed() -> void:
 	get_parent().start_game()
 	window.hide()
-	timer.start(7)
+	timer.start(60)
 	timer.paused = false

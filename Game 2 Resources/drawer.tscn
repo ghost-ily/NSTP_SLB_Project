@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://co0d8jo65vxo2"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_xaw6c"]
+
+[node name="Drawer" type="Node2D" unique_id=1973800405]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1177433924]
+modulate = Color(0.56046253, 0.56046253, 0.56046253, 1)
+position = Vector2(575.75, 56.75)
+scale = Vector2(1152.5, 114.5)
+texture = SubResource("CanvasTexture_xaw6c")

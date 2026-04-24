@@ -1,10 +1,20 @@
 [gd_scene format=3 uid="uid://d2ymjl77rfeo"]
 
+[ext_resource type="Script" uid="uid://nhm8pgppumsi" path="res://Game 2 Resources/scripts/patient.gd" id="1_gc4pr"]
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_ygie1"]
 
-[node name="Patient" type="Node2D" unique_id=1511861545]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygie1"]
+size = Vector2(266, 86)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=828565598]
-position = Vector2(264.99994, 83.999985)
-scale = Vector2(529, 167)
+[node name="Patient" type="Area2D" unique_id=356992277]
+script = ExtResource("1_gc4pr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1613119984]
+position = Vector2(132.75, 42.75)
+scale = Vector2(266.5, 86.5)
 texture = SubResource("CanvasTexture_ygie1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1747793587]
+position = Vector2(133, 43)
+shape = SubResource("RectangleShape2D_ygie1")
