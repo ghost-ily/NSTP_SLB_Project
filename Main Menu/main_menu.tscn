@@ -30,6 +30,7 @@ offset_top = 100.0
 offset_right = 100.0
 offset_bottom = 300.0
 grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = ExtResource("1_vccqd")
 expand_mode = 1
 
@@ -41,11 +42,13 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -96.0
-offset_top = -157.0
+offset_top = -168.0
 offset_right = 96.0
-offset_bottom = -134.0
+offset_bottom = -145.0
 grow_horizontal = 2
 grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
 text = "Press any button to start"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -121,20 +124,16 @@ anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -0.5
-offset_right = 0.5
+offset_left = -350.0
+offset_top = 87.0
+offset_right = 350.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme_override_font_sizes/normal_font_size = 20
-text = "Dear
-
-Following recent updates on the flood control project issues, some of the misused funds have now been recovered. As per your office's functions, you are instructed to make sure that these funds are used properly and for their original purpose. 
-
-Together with your team, you are responsible for using these funds to improve public services and projects as they were meant to be.
-
-You are advised to keep mistakes to a minimum. Errors may result in the need for replacement equipment and additional expenses, which will be charged against the budget. Repeated or excessive mistakes may lead to your removal from the position.
-
-We trust in your capability to carry out this task effectively, and we wish you success in your duties."
+bbcode_enabled = true
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="StartLabel" type="Label" parent="ReadyScreen" unique_id=224729336]
 layout_mode = 1
@@ -143,12 +142,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -103.5
-offset_top = -82.0
-offset_right = 111.5
-offset_bottom = -59.0
+offset_left = -112.0
+offset_top = -98.0
+offset_right = 112.0
+offset_bottom = -75.0
 grow_horizontal = 2
 grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 1
 text = "Press any button to continue"
 horizontal_alignment = 1
 vertical_alignment = 1
