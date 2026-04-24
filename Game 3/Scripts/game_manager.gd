@@ -13,7 +13,6 @@ extends Node
 var correct_score = 0
 var incorrect_score = 0
 var target = 10
-
 var game_time = 120
 
 func _ready() -> void:
