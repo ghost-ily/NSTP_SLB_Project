@@ -13,12 +13,13 @@ var on_floor: Array = []
 var on_brick: Array = []
 var game_complete: bool = false
 
+
 func start_game() -> void:
+	for b in all_bricks:
+		b.position = Vector2(randi_range(100,1000), 500)
 	game_complete = false
 	on_brick.clear()
 	on_floor.clear()
-	for b in all_bricks:
-		b.position = Vector2(randi_range(100,1000), 500)
 
 
 # Called when the node enters the scene tree for the first time.
@@ -55,3 +56,5 @@ func _process(delta: float) -> void:
 					
 			if (on_brick.size() == 3):
 				game_complete = true
+				for c in all_bricks:
+					c.position = Vector2(randi_range(100,1000), 500)

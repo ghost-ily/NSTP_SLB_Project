@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bow84f06y8a00"]
 
 [ext_resource type="Script" uid="uid://u6mxwwwpo35s" path="res://Game 1 Resources/game_1.gd" id="1_8g8x0"]
-[ext_resource type="PackedScene" uid="uid://c0yf31bfp34y6" path="res://GameOver.tscn" id="2_o2ufn"]
+[ext_resource type="PackedScene" uid="uid://dsra78oc18l5m" path="res://UI/game_stats.tscn" id="2_o2ufn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_li4ao"]
 
@@ -24,7 +24,6 @@ self_modulate = Color(0.36862746, 0.25882354, 0.23529412, 1)
 scale = Vector2(20.000002, 19.900002)
 texture = SubResource("CanvasTexture_8g8x0")
 
-[node name="Control" parent="." unique_id=1959794212 instance=ExtResource("2_o2ufn")]
-anchors_preset = -1
-offset_left = 142.0
-offset_top = 1271.0
+[node name="GameStats" parent="." unique_id=987682661 instance=ExtResource("2_o2ufn")]
+offset_right = 1152.0
+offset_bottom = 648.0

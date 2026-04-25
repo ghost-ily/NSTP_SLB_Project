@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://dsra78oc18l5m"]
+
+[ext_resource type="Script" uid="uid://ber3l7viho0d5" path="res://UI/budget.gd" id="1_22fyq"]
+[ext_resource type="Script" uid="uid://ck5ivpm0qog8n" path="res://UI/game_stats.gd" id="1_u0wc1"]
+[ext_resource type="Texture2D" uid="uid://c7sg4epyi4bkx" path="res://UI/suit_hearts.png" id="2_vilh5"]
+[ext_resource type="Script" uid="uid://cuqegiic541v3" path="res://UI/lives.gd" id="2_x0i2f"]
+[ext_resource type="Script" uid="uid://dmia6e3veq77h" path="res://UI/timer.gd" id="4_53cm2"]
+[ext_resource type="Texture2D" uid="uid://36pe2dpwdg0n" path="res://UI/hourglass.png" id="4_hb2mw"]
+[ext_resource type="Texture2D" uid="uid://cial4wticjbmb" path="res://UI/health_bar.png" id="6_51brd"]
+
+[node name="GameStats" type="Control" unique_id=987682661]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_u0wc1")
+
+[node name="DebugWindow" type="Window" parent="." unique_id=1636541132]
+oversampling_override = 1.0
+position = Vector2i(443, 197)
+size = Vector2i(323, 216)
+visible = false
+
+[node name="Label" type="Label" parent="DebugWindow" unique_id=296660750]
+offset_left = 109.0
+offset_top = 50.0
+offset_right = 252.0
+offset_bottom = 102.0
+text = "Ready?"
+
+[node name="Button" type="Button" parent="DebugWindow" unique_id=169705501]
+offset_left = 93.0
+offset_top = 111.0
+offset_right = 214.0
+offset_bottom = 171.0
+text = "Ready!"
+
+[node name="GameTimer" type="Timer" parent="." unique_id=1071314775]
+wait_time = 7.0
+one_shot = true
+
+[node name="Budget" type="RichTextLabel" parent="." unique_id=309366661]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -372.0
+offset_top = 20.0
+offset_right = -19.0
+offset_bottom = 70.0
+grow_horizontal = 0
+theme_override_font_sizes/normal_font_size = 32
+horizontal_alignment = 2
+script = ExtResource("1_22fyq")
+
+[node name="Decrement" type="Button" parent="." unique_id=51712099]
+visible = false
+layout_mode = 0
+offset_left = 596.0
+offset_top = 271.0
+offset_right = 679.0
+offset_bottom = 351.0
+text = "-"
+
+[node name="Lives" type="Control" parent="." unique_id=324075631]
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 281.0
+offset_bottom = 84.0
+script = ExtResource("2_x0i2f")
+
+[node name="1" type="TextureRect" parent="Lives" unique_id=287869021]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("2_vilh5")
+
+[node name="2" type="TextureRect" parent="Lives" unique_id=713924987]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+texture = ExtResource("2_vilh5")
+
+[node name="3" type="TextureRect" parent="Lives" unique_id=322641746]
+layout_mode = 0
+offset_left = 128.0
+offset_right = 192.0
+offset_bottom = 64.0
+texture = ExtResource("2_vilh5")
+
+[node name="4" type="TextureRect" parent="Lives" unique_id=1030079935]
+layout_mode = 0
+offset_left = 192.0
+offset_right = 256.0
+offset_bottom = 64.0
+texture = ExtResource("2_vilh5")
+
+[node name="Timer" type="Control" parent="." unique_id=2121361692]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -252.0
+offset_top = -80.0
+offset_right = 252.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("4_53cm2")
+
+[node name="TimeSymbol" type="TextureRect" parent="Timer" unique_id=902048936]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_hb2mw")
+
+[node name="TimeLeft" type="TextureProgressBar" parent="Timer" unique_id=1196975922]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 504.0
+offset_bottom = 64.0
+value = 100.0
+texture_progress = ExtResource("6_51brd")
+
+[node name="StartTimer" type="Button" parent="Timer" unique_id=2038780298]
+visible = false
+layout_mode = 0
+offset_left = 103.0
+offset_top = -200.0
+offset_right = 427.0
+offset_bottom = -155.0
+text = "Start Timer"
