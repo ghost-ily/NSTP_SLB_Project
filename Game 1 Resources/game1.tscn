@@ -24,6 +24,30 @@ self_modulate = Color(0.36862746, 0.25882354, 0.23529412, 1)
 scale = Vector2(20.000002, 19.900002)
 texture = SubResource("CanvasTexture_8g8x0")
 
+[node name="Wall" type="StaticBody2D" parent="." unique_id=1680152876]
+position = Vector2(-50, 302.945)
+scale = Vector2(5, 34.995)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" unique_id=657792169]
+shape = SubResource("RectangleShape2D_li4ao")
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall" unique_id=659167458]
+self_modulate = Color(0.36862746, 0.25882354, 0.23529412, 1)
+scale = Vector2(20.000002, 19.900002)
+texture = SubResource("CanvasTexture_8g8x0")
+
+[node name="Wall2" type="StaticBody2D" parent="." unique_id=1957852809]
+position = Vector2(1205, 302.945)
+scale = Vector2(5, 34.995)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" unique_id=539708523]
+shape = SubResource("RectangleShape2D_li4ao")
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall2" unique_id=18781284]
+self_modulate = Color(0.36862746, 0.25882354, 0.23529412, 1)
+scale = Vector2(20.000002, 19.900002)
+texture = SubResource("CanvasTexture_8g8x0")
+
 [node name="Control" parent="." unique_id=1959794212 instance=ExtResource("2_o2ufn")]
 anchors_preset = -1
 offset_left = 142.0

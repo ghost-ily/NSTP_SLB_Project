@@ -19,7 +19,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("left_click") && has_mouse:
 		if is_grabbed == true:
 			is_grabbed = false
-			has_mouse = false
 		else:
 			is_grabbed = true
 	if is_grabbed == true:
@@ -35,4 +34,7 @@ func _on_mouse_area_mouse_shape_exited(shape_idx: int) -> void:
 	
 
 func get_under_object():
-	return under_object
+	if is_grabbed == true:
+		return null
+	else:
+		return under_object
