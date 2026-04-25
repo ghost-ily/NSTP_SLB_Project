@@ -1,18 +1,99 @@
 [gd_scene format=3 uid="uid://cijg0u51vnotf"]
 
+[ext_resource type="Script" uid="uid://dob7vfhoiy8o2" path="res://Feeding Program/Scripts/game_manager.gd" id="1_d3pqv"]
 [ext_resource type="Texture2D" uid="uid://c5cpivrl6fwoy" path="res://Feeding Program/Assets/table.png" id="1_ufq50"]
+[ext_resource type="FontFile" uid="uid://dba80ad2j2ofv" path="res://Feeding Program/Assets/PixelOperator8.ttf" id="2_46eq0"]
 [ext_resource type="PackedScene" uid="uid://ceylxf4eyjcdo" path="res://Feeding Program/Scenes/trigger.tscn" id="2_mjbtq"]
+[ext_resource type="Script" uid="uid://d1c2wj8wxxh5t" path="res://Feeding Program/Scripts/spawner.gd" id="3_mjbtq"]
 
 [node name="Feeding Program" type="Node2D" unique_id=906347311]
+
+[node name="GameManager" type="Node" parent="." unique_id=49090882]
+unique_name_in_owner = true
+script = ExtResource("1_d3pqv")
+
+[node name="Timer" type="Timer" parent="GameManager" unique_id=2007813289]
+one_shot = true
+
+[node name="Score" type="Label" parent="GameManager" unique_id=1032214570]
+offset_left = -191.0
+offset_top = -179.0
+offset_right = -151.0
+offset_bottom = -156.0
+theme_override_fonts/font = ExtResource("2_46eq0")
+theme_override_font_sizes/font_size = 8
+text = "Correct:
+Incorrect:"
+
+[node name="Time" type="Label" parent="GameManager" unique_id=1754830907]
+offset_left = 79.0
+offset_top = -179.0
+offset_right = 191.0
+offset_bottom = -156.0
+theme_override_fonts/font = ExtResource("2_46eq0")
+theme_override_font_sizes/font_size = 8
+text = "Time Left:"
+horizontal_alignment = 2
+
+[node name="Target" type="Label" parent="GameManager" unique_id=1579170142]
+offset_left = 80.0
+offset_top = -170.0
+offset_right = 192.0
+offset_bottom = -147.0
+theme_override_fonts/font = ExtResource("2_46eq0")
+theme_override_font_sizes/font_size = 8
+text = "Target: "
+horizontal_alignment = 2
+
+[node name="Window" type="Window" parent="GameManager" unique_id=1014340786]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(350, 200)
+visible = false
+
+[node name="Label" type="Label" parent="GameManager/Window" unique_id=1498501668]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -47.0
+offset_right = 63.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_46eq0")
+theme_override_font_sizes/font_size = 24
+text = "You Win"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="GameManager/Window" unique_id=604959316]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = 34.0
+offset_right = 54.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_46eq0")
+text = "Retry"
 
 [node name="Table" type="Sprite2D" parent="." unique_id=1147193072]
 position = Vector2(0, -20)
 texture = ExtResource("1_ufq50")
 
 [node name="Healthy" parent="." unique_id=1131611655 instance=ExtResource("2_mjbtq")]
+unique_name_in_owner = true
 position = Vector2(-42, -52)
 
 [node name="Unhealthy" parent="." unique_id=155113734 instance=ExtResource("2_mjbtq")]
+unique_name_in_owner = true
 position = Vector2(43, -51)
 
 [node name="Sprite2D" parent="Unhealthy" index="0" unique_id=570347993]
@@ -28,7 +109,12 @@ position = Vector2(0, -72)
 zoom = Vector2(3, 3)
 
 [node name="Spawner" type="Node2D" parent="." unique_id=1081595222]
-position = Vector2(0, -25)
+unique_name_in_owner = true
+position = Vector2(0, -29)
+script = ExtResource("3_mjbtq")
+
+[connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
+[connection signal="pressed" from="GameManager/Window/Button" to="GameManager" method="_on_button_pressed"]
 
 [editable path="Healthy"]
 [editable path="Unhealthy"]

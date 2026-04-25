@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://dxds3xiq33keu"]
 
+[ext_resource type="Script" uid="uid://o0pndk6r1nsy" path="res://Feeding Program/Scripts/milk.gd" id="1_2u30d"]
 [ext_resource type="Texture2D" uid="uid://b3dpxs6vofcwp" path="res://Feeding Program/Assets/Food/milk_pack.png" id="1_bh0nm"]
+[ext_resource type="PackedScene" uid="uid://dicbh8wfvn2o6" path="res://Feeding Program/Scenes/draggable_component.tscn" id="2_5i4sx"]
+[ext_resource type="PackedScene" uid="uid://cbwo3rey4mmxm" path="res://Feeding Program/Scenes/scoring_component.tscn" id="4_febqe"]
+[ext_resource type="PackedScene" uid="uid://c5babptu201ma" path="res://Feeding Program/Scenes/collision_component.tscn" id="5_hocfc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5i4sx"]
 animations = [{
@@ -16,12 +20,38 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2u30d"]
 size = Vector2(18, 29)
 
-[node name="Milk" type="Area2D" unique_id=685225326]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hocfc"]
+size = Vector2(18, 29)
+
+[node name="Milk" type="CharacterBody2D" unique_id=1778370900]
+script = ExtResource("1_2u30d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=439428137]
-position = Vector2(0, -15)
 sprite_frames = SubResource("SpriteFrames_5i4sx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1099375980]
-position = Vector2(0, -14.5)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_2u30d")
+
+[node name="Button" type="Button" parent="." unique_id=715101489]
+modulate = Color(1, 1, 1, 0)
+offset_left = -9.0
+offset_top = -14.0
+offset_right = 9.0
+offset_bottom = 15.0
+
+[node name="DraggableComponent" parent="." unique_id=1844435161 instance=ExtResource("2_5i4sx")]
+offset = Vector2(0, -29)
+
+[node name="ScoringComponent" parent="." unique_id=1194813053 instance=ExtResource("4_febqe")]
+
+[node name="CollisionComponent" parent="." unique_id=598408951 instance=ExtResource("5_hocfc")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionComponent" unique_id=1377905005]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_hocfc")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+
+[editable path="CollisionComponent"]

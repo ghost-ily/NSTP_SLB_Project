@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c5babptu201ma"]
+
+[ext_resource type="Script" uid="uid://c0cjac1xjkbgh" path="res://Feeding Program/Scripts/collision_component.gd" id="1_65txq"]
+
+[node name="CollisionComponent" type="StaticBody2D" unique_id=598408951]
+script = ExtResource("1_65txq")

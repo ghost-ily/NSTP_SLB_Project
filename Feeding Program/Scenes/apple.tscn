@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://d27ypajbypja1"]
 
+[ext_resource type="Script" uid="uid://cy60a24kv8egs" path="res://Feeding Program/Scripts/apple.gd" id="1_jl7pq"]
 [ext_resource type="Texture2D" uid="uid://cdql8xs5mer32" path="res://Feeding Program/Assets/Food/red_apple.png" id="1_m2ga2"]
+[ext_resource type="PackedScene" uid="uid://dicbh8wfvn2o6" path="res://Feeding Program/Scenes/draggable_component.tscn" id="3_ma2lr"]
+[ext_resource type="PackedScene" uid="uid://cbwo3rey4mmxm" path="res://Feeding Program/Scenes/scoring_component.tscn" id="4_fgte2"]
+[ext_resource type="PackedScene" uid="uid://c5babptu201ma" path="res://Feeding Program/Scenes/collision_component.tscn" id="5_8dlhr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jl7pq"]
 size = Vector2(25, 20)
@@ -16,12 +20,37 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Apple" type="Area2D" unique_id=1892923481]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dlhr"]
+size = Vector2(25, 20)
+
+[node name="Apple" type="CharacterBody2D" unique_id=624121244]
+script = ExtResource("1_jl7pq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1287134521]
-position = Vector2(0.5, -10)
+position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_jl7pq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1007546672]
-position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_ma2lr")
+
+[node name="Button" type="Button" parent="." unique_id=1634050891]
+modulate = Color(1, 1, 1, 0)
+offset_left = -12.0
+offset_top = -9.0
+offset_right = 13.0
+offset_bottom = 11.0
+
+[node name="DraggableComponent" parent="." unique_id=1844435161 instance=ExtResource("3_ma2lr")]
+
+[node name="ScoringComponent" parent="." unique_id=1194813053 instance=ExtResource("4_fgte2")]
+
+[node name="CollisionComponent" parent="." unique_id=598408951 instance=ExtResource("5_8dlhr")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionComponent" unique_id=530708130]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_8dlhr")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+
+[editable path="CollisionComponent"]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cbwo3rey4mmxm"]
+
+[ext_resource type="Script" uid="uid://6wuuloa2i1mj" path="res://Feeding Program/Scripts/scoring_component.gd" id="1_40pjk"]
+
+[node name="ScoringComponent" type="Node" unique_id=1194813053]
+script = ExtResource("1_40pjk")
