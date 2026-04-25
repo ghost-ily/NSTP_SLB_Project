@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dsra78oc18l5m"]
 
-[ext_resource type="Script" uid="uid://ck5ivpm0qog8n" path="res://UI/game_stats.gd" id="1_838hb"]
+[ext_resource type="Script" uid="uid://ck5ivpm0qog8n" path="res://UI/game_manager.gd" id="1_838hb"]
 [ext_resource type="Script" uid="uid://ber3l7viho0d5" path="res://UI/budget.gd" id="2_soe0u"]
 [ext_resource type="Script" uid="uid://cuqegiic541v3" path="res://UI/lives.gd" id="3_0q5so"]
 [ext_resource type="Texture2D" uid="uid://c7sg4epyi4bkx" path="res://UI/suit_hearts.png" id="4_dhxbs"]
