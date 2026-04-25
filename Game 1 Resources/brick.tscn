@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://r7ohtqmbm5e3" path="res://Game 1 Resources/brick.gd" id="1_3rsm1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkspu"]
+size = Vector2(22.666668, 26)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_awxk8"]
 
