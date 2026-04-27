@@ -7,18 +7,21 @@ var bottle: TextureButton
 var syringe: TextureButton
 var mask: TextureButton
 var all_btns: Array
+
 var bed_g: Label
 var blood_g: Label
 var glove_g: Label
 var bottle_g: Label
 var syringe_g: Label
 var mask_g: Label
+
 var bed_c: Label
 var blood_c: Label
 var glove_c: Label
 var bottle_c: Label
 var syringe_c: Label
 var mask_c: Label
+
 var clear_cart: Button
 var checkout: Button
 var all_goals: Array
@@ -53,7 +56,7 @@ func _ready() -> void:
 	clear_cart = $ClearCart
 	checkout = $Checkout
 	connect_signals()
-	generate_new_goals()
+	start_game()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -95,11 +98,14 @@ func _on_checkout_pressed() -> void:
 		in_cart.clear()
 	else:
 		in_cart.clear()
-		generate_new_goals()
+		start_game()
 	
 	
 	
-func generate_new_goals() -> void:
+func start_game() -> void:
 	for g in all_goals:
 		var i_goal = randi_range(3, 7)
 		g.text = str(i_goal)
+		
+	for i in range(all_btns.size()):
+		$InputContainer.move_child(all_btns[i], randi_range(0, 5))
