@@ -8,6 +8,7 @@ var user_input: LineEdit
 var user_confirm: Button
 var ready_screen: Control
 var user_name: String
+var main_game_scene = preload("res://UI/game_manager.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -47,6 +48,9 @@ func _on_screen_clicked(input: InputEvent) -> void:
 			title_screen.hide()
 			user_screen.hide()
 			ready_screen.hide()
+			var new_scene = main_game_scene.instantiate()
+			get_tree().root.add_child(new_scene)
+			get_tree().current_scene.queue_free()
 		
 
 func _on_confirm_pressed() -> void:
