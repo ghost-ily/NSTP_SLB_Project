@@ -3,8 +3,7 @@
 [ext_resource type="Script" uid="uid://r7ohtqmbm5e3" path="res://Game 1 Resources/brick.gd" id="1_3rsm1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nkspu"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_awxk8"]
+size = Vector2(19.666668, 20.666668)
 
 [node name="Brick" type="RigidBody2D" unique_id=1417910574 groups=["bricks"]]
 input_pickable = true
@@ -17,8 +16,7 @@ shape = SubResource("RectangleShape2D_nkspu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1204953005]
 self_modulate = Color(0.46, 0.46, 0.46, 1)
-scale = Vector2(120, 60)
-texture = SubResource("CanvasTexture_awxk8")
+scale = Vector2(1.2725003, 1.2725003)
 
 [node name="mouseArea" type="Area2D" parent="." unique_id=819478539]
 

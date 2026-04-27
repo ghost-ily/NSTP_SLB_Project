@@ -14,6 +14,7 @@ func _ready() -> void:
 	
 	window.hide()
 	timer.start(7)
+	timer.paused = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,5 +33,5 @@ func _process(delta: float) -> void:
 func _on_button_pressed() -> void:
 	get_parent().start_game()
 	window.hide()
-	timer.start(7)
-	timer.paused = false
+	#timer.start(7)
+	#timer.paused = false
