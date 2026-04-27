@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c5i3tv2sushda"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_loep1"]
+size = Vector2(63.5, 91)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_balq1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4jnb1"]
+size = Vector2(1.0000001, 1)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1192179124]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=324906129]
+shape = SubResource("RectangleShape2D_loep1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=610709565]
+modulate = Color(0.1254902, 1, 1, 1)
+position = Vector2(1.9073486e-06, 0)
+scale = Vector2(61.999996, 90)
+texture = SubResource("CanvasTexture_balq1")
+
+[node name="mouseArea" type="Area2D" parent="." unique_id=2059217065]
+position = Vector2(1.9073486e-06, 0)
+scale = Vector2(61.999996, 90)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouseArea" unique_id=1745613025]
+position = Vector2(-3.1725055e-08, 0)
+shape = SubResource("RectangleShape2D_4jnb1")

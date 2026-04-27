@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bow84f06y8a00"]
+
+[ext_resource type="Script" uid="uid://bxnb537h7peu5" path="res://Game 2 Resources/medicinesorter.gd" id="1_v2op4"]
+[ext_resource type="PackedScene" uid="uid://c0yf31bfp34y6" path="res://GameOver.tscn" id="2_o2ufn"]
+
+[node name="main" type="Node2D" unique_id=1352383641]
+script = ExtResource("1_v2op4")
+metadata/_edit_horizontal_guides_ = [-841.0, 650.0]
+metadata/_edit_vertical_guides_ = [1147.0]
+
+[node name="Control" parent="." unique_id=1959794212 instance=ExtResource("2_o2ufn")]
+anchors_preset = -1
+offset_left = 142.0
+offset_top = 1271.0
