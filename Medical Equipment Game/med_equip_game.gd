@@ -41,7 +41,7 @@ func _ready() -> void:
 	bottle_g = $GoalPanel/VBoxContainer/GridContainer/BottleGoal
 	mask_g = $GoalPanel/VBoxContainer/GridContainer/MaskGoal
 	syringe_g = $GoalPanel/VBoxContainer/GridContainer/SyringeGoal
-	all_goals = [bed_g, blood_g, glove_g, bottle_g, mask_g, syringe_g]
+	all_goals = [bed_g, blood_g, glove_g, bottle_g, syringe_g, mask_g]
 	
 	bed_c = $CartPanel/VBoxContainer/GridContainer2/BedCart
 	blood_c = $CartPanel/VBoxContainer/GridContainer2/BloodCart
@@ -69,6 +69,7 @@ func connect_signals() -> void:
 	for btn in all_btns:
 		btn.pressed.connect(_on_btn_pressed.bind(btn.name))
 	clear_cart.pressed.connect(_on_clear_pressed)
+	checkout.pressed.connect(_on_checkout_pressed)
 
 	
 func _on_btn_pressed(btn_name: String) -> void:
@@ -78,8 +79,27 @@ func _on_btn_pressed(btn_name: String) -> void:
 func _on_clear_pressed() -> void:
 	in_cart.clear()
 	
+
+func _on_checkout_pressed() -> void:
+	if int(all_goals[0].text) != in_cart.count("Bed"):
+		in_cart.clear()
+	elif int(all_goals[1].text) != in_cart.count("Blood"):
+		in_cart.clear()
+	elif int(all_goals[2].text) != in_cart.count("Glove"):
+		in_cart.clear()
+	elif int(all_goals[3].text) != in_cart.count("Bottle"):
+		in_cart.clear()
+	elif int(all_goals[4].text) != in_cart.count("Syringe"):
+		in_cart.clear()
+	elif int(all_goals[5].text) != in_cart.count("Mask"):
+		in_cart.clear()
+	else:
+		in_cart.clear()
+		generate_new_goals()
+	
+	
 	
 func generate_new_goals() -> void:
 	for g in all_goals:
 		var i_goal = randi_range(3, 7)
-		g.text = " x " + str(i_goal)
+		g.text = str(i_goal)
