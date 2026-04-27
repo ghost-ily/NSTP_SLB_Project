@@ -3,14 +3,19 @@ extends RigidBody2D
 @onready var mouse_area: Area2D = $mouseArea
 @onready var under_ray: RayCast2D = $RayCast2D
 
+var textures: Array[Texture2D]
+var texture1 = preload("res://Game 1 Resources/nstp_brick.png")
+var texture2 = preload("res://Game 1 Resources/nstp_brick_2.png")
 var has_mouse: bool = false
 var is_grabbed: bool = false
 var under_object
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	textures = [texture1, texture2]
 	mouse_area.mouse_shape_entered.connect(_on_mouse_area_mouse_shape_entered)
 	mouse_area.mouse_shape_exited.connect(_on_mouse_area_mouse_shape_exited)
+	$Sprite2D.texture = textures.pick_random()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
