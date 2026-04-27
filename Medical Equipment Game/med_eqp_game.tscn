@@ -1,0 +1,354 @@
+[gd_scene format=3 uid="uid://dt4d4bc6yrr73"]
+
+[ext_resource type="Script" uid="uid://clg7es1cpt632" path="res://Medical Equipment Game/med_equip_game.gd" id="1_5e6jl"]
+[ext_resource type="Texture2D" uid="uid://c7fxj6h64x327" path="res://Medical Equipment Game/bed.png" id="1_s30o5"]
+[ext_resource type="Texture2D" uid="uid://dnxb20hwai48m" path="res://Medical Equipment Game/blood.png" id="2_5e6jl"]
+[ext_resource type="Texture2D" uid="uid://dk071j4odw5tf" path="res://Medical Equipment Game/bed_p.png" id="3_fg6dt"]
+[ext_resource type="Texture2D" uid="uid://dtuihwob2cvs5" path="res://Medical Equipment Game/gloves.png" id="3_fgfan"]
+[ext_resource type="Texture2D" uid="uid://bc3l7ao8yto2s" path="res://Medical Equipment Game/iv_fluid.png" id="4_yww8k"]
+[ext_resource type="Texture2D" uid="uid://bs72dr6mrcpjg" path="res://Medical Equipment Game/blood_p.png" id="5_05loe"]
+[ext_resource type="Texture2D" uid="uid://btns4lej3euex" path="res://Medical Equipment Game/syringe.png" id="5_41b8q"]
+[ext_resource type="Texture2D" uid="uid://gyx4imkdsbn6" path="res://Medical Equipment Game/masks.png" id="6_ngeme"]
+[ext_resource type="Texture2D" uid="uid://c5hq6604l0qdd" path="res://Medical Equipment Game/gloves_p.png" id="7_2ckkb"]
+[ext_resource type="Texture2D" uid="uid://db2ipbh2a04xd" path="res://Medical Equipment Game/iv_fluid_p.png" id="9_vjq1s"]
+[ext_resource type="Texture2D" uid="uid://cnwm7nhiets3t" path="res://Medical Equipment Game/syringe_p.png" id="11_gls15"]
+[ext_resource type="Texture2D" uid="uid://bf5schx1ce8cg" path="res://Medical Equipment Game/masks_p.png" id="13_18650"]
+
+[node name="Game" type="Control" unique_id=474715905]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5e6jl")
+
+[node name="InputContainer" type="GridContainer" parent="." unique_id=1893766167]
+layout_mode = 0
+offset_left = 589.0
+offset_top = 89.0
+offset_right = 1122.0
+offset_bottom = 443.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 3
+
+[node name="Bed" type="TextureButton" parent="InputContainer" unique_id=2077391675]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("1_s30o5")
+texture_pressed = ExtResource("3_fg6dt")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Blood" type="TextureButton" parent="InputContainer" unique_id=1568536124]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_5e6jl")
+texture_pressed = ExtResource("5_05loe")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Glove" type="TextureButton" parent="InputContainer" unique_id=698428854]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_fgfan")
+texture_pressed = ExtResource("7_2ckkb")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Bottle" type="TextureButton" parent="InputContainer" unique_id=1600166990]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("4_yww8k")
+texture_pressed = ExtResource("9_vjq1s")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Syringe" type="TextureButton" parent="InputContainer" unique_id=1758275617]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("5_41b8q")
+texture_pressed = ExtResource("11_gls15")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Mask" type="TextureButton" parent="InputContainer" unique_id=1549603423]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("6_ngeme")
+texture_pressed = ExtResource("13_18650")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="GoalPanel" type="PanelContainer" parent="." unique_id=582453875]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1117.0
+offset_top = -235.5
+offset_right = -874.0
+offset_bottom = 223.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GoalPanel" unique_id=276786932]
+layout_mode = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="GoalPanel/VBoxContainer" unique_id=277580968]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "Goal:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="GoalPanel/VBoxContainer" unique_id=2050683784]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="GoalPanel/VBoxContainer" unique_id=981170342]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="GoalPanel/VBoxContainer/GridContainer" unique_id=147015937]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_s30o5")
+expand_mode = 2
+
+[node name="BedGoal" type="Label" parent="GoalPanel/VBoxContainer/GridContainer" unique_id=238618119]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = " x 200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="GoalPanel/VBoxContainer/GridContainer" unique_id=1474301934]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("2_5e6jl")
+expand_mode = 2
+
+[node name="BloodGoal" type="Label" parent="GoalPanel/VBoxContainer/GridContainer" unique_id=1087227532]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = " x 200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="GoalPanel/VBoxContainer/GridContainer" unique_id=402252987]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("3_fgfan")
+expand_mode = 2
+
+[node name="GloveGoal" type="Label" parent="GoalPanel/VBoxContainer/GridContainer" unique_id=1733608879]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = " x 200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="GoalPanel/VBoxContainer/GridContainer" unique_id=842607294]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("4_yww8k")
+expand_mode = 2
+
+[node name="BottleGoal" type="Label" parent="GoalPanel/VBoxContainer/GridContainer" unique_id=1506327933]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = " x 200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect5" type="TextureRect" parent="GoalPanel/VBoxContainer/GridContainer" unique_id=410970360]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("6_ngeme")
+expand_mode = 2
+
+[node name="MaskGoal" type="Label" parent="GoalPanel/VBoxContainer/GridContainer" unique_id=75633167]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = " x 200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect6" type="TextureRect" parent="GoalPanel/VBoxContainer/GridContainer" unique_id=893699391]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("5_41b8q")
+expand_mode = 2
+
+[node name="SyringeGoal" type="Label" parent="GoalPanel/VBoxContainer/GridContainer" unique_id=548741925]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = " x 200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CartPanel" type="PanelContainer" parent="." unique_id=1386666060]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -849.0
+offset_top = -235.5
+offset_right = -600.0
+offset_bottom = 223.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CartPanel" unique_id=2008518474]
+layout_mode = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="CartPanel/VBoxContainer" unique_id=1392766363]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "In cart:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CartPanel/VBoxContainer" unique_id=1883265998]
+layout_mode = 2
+
+[node name="GridContainer2" type="GridContainer" parent="CartPanel/VBoxContainer" unique_id=1922521389]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="CartPanel/VBoxContainer/GridContainer2" unique_id=1528957176]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("1_s30o5")
+expand_mode = 2
+
+[node name="BedCart" type="Label" parent="CartPanel/VBoxContainer/GridContainer2" unique_id=918533771]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = " x 200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="CartPanel/VBoxContainer/GridContainer2" unique_id=2053179015]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("2_5e6jl")
+expand_mode = 2
+
+[node name="BloodCart" type="Label" parent="CartPanel/VBoxContainer/GridContainer2" unique_id=99870520]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = " x 200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="CartPanel/VBoxContainer/GridContainer2" unique_id=2123466916]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("3_fgfan")
+expand_mode = 2
+
+[node name="GloveCart" type="Label" parent="CartPanel/VBoxContainer/GridContainer2" unique_id=1820283611]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = " x 200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="CartPanel/VBoxContainer/GridContainer2" unique_id=2059213615]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("4_yww8k")
+expand_mode = 2
+
+[node name="BottleCart" type="Label" parent="CartPanel/VBoxContainer/GridContainer2" unique_id=1788707078]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = " x 200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect5" type="TextureRect" parent="CartPanel/VBoxContainer/GridContainer2" unique_id=1957269081]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("6_ngeme")
+expand_mode = 2
+
+[node name="MaskCart" type="Label" parent="CartPanel/VBoxContainer/GridContainer2" unique_id=849797646]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = " x 200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect6" type="TextureRect" parent="CartPanel/VBoxContainer/GridContainer2" unique_id=1456009785]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("5_41b8q")
+expand_mode = 2
+
+[node name="SyringeCart" type="Label" parent="CartPanel/VBoxContainer/GridContainer2" unique_id=1223605818]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = " x 200"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClearCart" type="Button" parent="." unique_id=2116373934]
+layout_mode = 0
+offset_left = 588.0
+offset_top = 470.0
+offset_right = 758.0
+offset_bottom = 547.0
+text = "Clear Cart"
+
+[node name="Checkout" type="Button" parent="." unique_id=757454314]
+layout_mode = 0
+offset_left = 776.0
+offset_top = 470.0
+offset_right = 1121.0
+offset_bottom = 547.0
+text = "Checkout"
