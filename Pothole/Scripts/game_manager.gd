@@ -24,6 +24,7 @@ func fill_cement(charges: int) -> void:
 	player_cement = charges
 
 func end_game() -> void:
+	timer.paused = true
 	game_has_ended = true
 	window.show()
 	if spawner.get_child_count() > 0:
