@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://djv51pxlehk7b"]
+
+[ext_resource type="Script" uid="uid://3ugix76xtbon" path="res://Game 6 Resources/trash.gd" id="1_m3fwr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iex7o"]
+size = Vector2(68, 66)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o3syk"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3fwr"]
+size = Vector2(68, 66)
+
+[node name="Trash" type="RigidBody2D" unique_id=1743613059]
+script = ExtResource("1_m3fwr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=173859755]
+shape = SubResource("RectangleShape2D_iex7o")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1522806394]
+texture = SubResource("PlaceholderTexture2D_o3syk")
+
+[node name="mouseArea" type="Area2D" parent="." unique_id=2031315440]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouseArea" unique_id=1549903003]
+shape = SubResource("RectangleShape2D_m3fwr")

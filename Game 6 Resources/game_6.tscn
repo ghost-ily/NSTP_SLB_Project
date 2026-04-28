@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bkgj4by70h0sv"]
+
+[ext_resource type="Script" uid="uid://ddrsuyk3ejnn3" path="res://Game 6 Resources/game_6.gd" id="1_bxc1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcvax"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ym0kk"]
+
+[node name="Game" type="Node2D" unique_id=1168203925]
+script = ExtResource("1_bxc1t")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=801547671]
+position = Vector2(612, 600)
+scale = Vector2(65, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1215019534]
+shape = SubResource("RectangleShape2D_dcvax")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground" unique_id=132667380]
+self_modulate = Color(0.4103884, 0.3983227, 0.3902751, 1)
+scale = Vector2(20.000002, 19.900002)
+texture = SubResource("CanvasTexture_ym0kk")
