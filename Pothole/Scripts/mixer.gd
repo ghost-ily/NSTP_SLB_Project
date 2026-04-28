@@ -19,11 +19,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if not is_mixing and asphalt == 0:
-		label.text = "Needs:"
+		label.text = "Needs:\n"
 		if not has_stone:
-			label.text = label.text + " [stone]" + "\n"
+			label.text = label.text + "[stone]" + "\n"
 		if not has_binder:
-			label.text = label.text + " [binder]"
+			label.text = label.text + "[binder]"
 	elif not is_mixing and asphalt > 0:
 		label.text = "Asphalt Ready"
 	else:

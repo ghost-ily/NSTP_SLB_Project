@@ -38,6 +38,8 @@ func _on_timer_timeout() -> void:
 
 func _on_button_pressed() -> void:
 	for h in spawner.potholes:
-		h.queue_free()
+		if h != null:
+			h.queue_free()
 	spawner.potholes.clear()
 	spawner._ready()
+	
