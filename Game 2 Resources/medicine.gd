@@ -1,10 +1,11 @@
 extends Area2D
 
 signal placed_on_shelf(category, shelf_name)
-@onready var dispcat = $Label2
 
 var category = ""
 var dragging = false
+
+@onready var tex = $Sprite2D
 
 func _ready():
 	add_to_group("medicines")

@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://c5i3tv2sushda"]
 
 [ext_resource type="Script" uid="uid://b3mxl6cqfcrrb" path="res://Game 2 Resources/medicine.gd" id="1_balq1"]
+[ext_resource type="Texture2D" uid="uid://dxs21tw2n42hy" path="res://Game 2 Resources/assets/otc.png" id="2_4jnb1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_loep1"]
 size = Vector2(64, 86)
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_balq1"]
 
 [node name="Area2D" type="Area2D" unique_id=150860384]
 script = ExtResource("1_balq1")
@@ -15,25 +14,6 @@ position = Vector2(0, -3.8146973e-06)
 shape = SubResource("RectangleShape2D_loep1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=391100171]
-modulate = Color(0.6627451, 0.39607844, 0.8, 1)
-position = Vector2(1.9073486e-06, -3.8146973e-06)
-scale = Vector2(63.999996, 85.99999)
-texture = SubResource("CanvasTexture_balq1")
-
-[node name="Label2" type="Label" parent="." unique_id=1727100298]
-offset_left = -34.0
-offset_top = 25.0
-offset_right = 54.333336
-offset_bottom = 48.0
-scale = Vector2(0.75, 0.75)
-text = "Prescribed"
-horizontal_alignment = 2
-
-[node name="Label" type="Label" parent="." unique_id=1496070562]
-offset_left = 6.000002
-offset_top = 21.0
-offset_right = 76.0
-offset_bottom = 44.0
-scale = Vector2(0.35, 0.35)
-text = "Category"
-horizontal_alignment = 2
+position = Vector2(7.6413155e-05, 0.062603)
+scale = Vector2(0.31999928, 0.42937398)
+texture = ExtResource("2_4jnb1")

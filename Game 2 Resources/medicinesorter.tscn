@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://bxnb537h7peu5" path="res://Game 2 Resources/medicinesorter.gd" id="1_v2op4"]
 [ext_resource type="PackedScene" uid="uid://c0yf31bfp34y6" path="res://GameOver.tscn" id="2_o2ufn"]
 [ext_resource type="PackedScene" uid="uid://dxnqepn68uxc1" path="res://Game 2 Resources/shelf.tscn" id="3_eb2n6"]
+[ext_resource type="Texture2D" uid="uid://kq1o72fwulja" path="res://Game 2 Resources/assets/perscriptionmeds.png" id="4_4747v"]
+[ext_resource type="Texture2D" uid="uid://cq1xco83wh6yb" path="res://Game 2 Resources/assets/ivbag.png" id="4_au5gg"]
+[ext_resource type="Texture2D" uid="uid://dxs21tw2n42hy" path="res://Game 2 Resources/assets/otc.png" id="4_kyrlg"]
 
 [node name="main" type="Node2D" unique_id=1352383641]
 script = ExtResource("1_v2op4")
@@ -15,37 +18,136 @@ offset_left = 142.0
 offset_top = 1271.0
 
 [node name="ShelfCrit" parent="." unique_id=1387935665 instance=ExtResource("3_eb2n6")]
-position = Vector2(820, 101)
+position = Vector2(829, 23)
 
 [node name="Label" type="Label" parent="ShelfCrit" unique_id=1713506394]
-offset_left = 55.0
-offset_top = -24.0
-offset_right = 192.0
-offset_bottom = -1.0
+modulate = Color(0, 0, 0, 1)
+offset_left = 50.0
+offset_top = 26.0
+offset_right = 187.0
+offset_bottom = 49.0
 text = "Critical Medicines"
 horizontal_alignment = 1
 
+[node name="Sprite2D2" type="Sprite2D" parent="ShelfCrit" unique_id=193750956]
+position = Vector2(1.9999962, 107)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_au5gg")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ShelfCrit" unique_id=675291020]
+position = Vector2(39.999992, 107)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_au5gg")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ShelfCrit" unique_id=69583639]
+position = Vector2(247.99998, 174)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_au5gg")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ShelfCrit" unique_id=1103226453]
+position = Vector2(246.99998, 109)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_au5gg")
+
 [node name="ShelfPres" parent="." unique_id=1682588727 instance=ExtResource("3_eb2n6")]
-position = Vector2(470, 99)
+position = Vector2(459, 133)
 
 [node name="Label" type="Label" parent="ShelfPres" unique_id=2134886072]
-offset_left = 33.0
-offset_top = -24.0
-offset_right = 209.0
-offset_bottom = -1.0
+modulate = Color(0, 0, 0, 1)
+offset_left = 30.0
+offset_top = 26.0
+offset_right = 206.0
+offset_bottom = 49.0
 text = "Prescribed Medicines"
 horizontal_alignment = 1
 
+[node name="Sprite2D2" type="Sprite2D" parent="ShelfPres" unique_id=875955910]
+position = Vector2(1.9999962, 107)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_4747v")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ShelfPres" unique_id=762105599]
+position = Vector2(33.999992, 107)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_4747v")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ShelfPres" unique_id=2061875086]
+position = Vector2(5.999996, 172)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_4747v")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ShelfPres" unique_id=1355990043]
+position = Vector2(39.999992, 174)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_4747v")
+
+[node name="Sprite2D6" type="Sprite2D" parent="ShelfPres" unique_id=328962000]
+position = Vector2(247.99998, 106)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_4747v")
+
+[node name="Sprite2D7" type="Sprite2D" parent="ShelfPres" unique_id=481698879]
+position = Vector2(216.99998, 108)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_4747v")
+
 [node name="ShelfOTC" parent="." unique_id=1562471713 instance=ExtResource("3_eb2n6")]
-position = Vector2(128, 99)
+position = Vector2(85, 28)
 
 [node name="Label" type="Label" parent="ShelfOTC" unique_id=540681035]
-offset_left = 12.0
-offset_top = -24.0
-offset_right = 231.0
-offset_bottom = -1.0
+modulate = Color(0, 0, 0, 1)
+offset_left = 25.999998
+offset_top = 28.0
+offset_right = 245.0
+offset_bottom = 51.0
+scale = Vector2(0.85, 0.85)
 text = "Over-the-Counter Medicines"
 horizontal_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="ShelfOTC" unique_id=612661259]
+position = Vector2(1.9999962, 107)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_kyrlg")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ShelfOTC" unique_id=1053013463]
+position = Vector2(36.999992, 108)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_kyrlg")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ShelfOTC" unique_id=1908866464]
+position = Vector2(71.999985, 109)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_kyrlg")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ShelfOTC" unique_id=1480733003]
+position = Vector2(242.99998, 173)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_kyrlg")
+
+[node name="Sprite2D6" type="Sprite2D" parent="ShelfOTC" unique_id=1136109347]
+position = Vector2(207.99998, 174)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_kyrlg")
+
+[node name="Sprite2D7" type="Sprite2D" parent="ShelfOTC" unique_id=1486971996]
+position = Vector2(2.9999962, 172)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_kyrlg")
+
+[node name="Sprite2D8" type="Sprite2D" parent="ShelfOTC" unique_id=1869032133]
+position = Vector2(42.999992, 172)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_kyrlg")
+
+[node name="Sprite2D9" type="Sprite2D" parent="ShelfOTC" unique_id=921422995]
+position = Vector2(245.99998, 107)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_kyrlg")
+
+[node name="Sprite2D10" type="Sprite2D" parent="ShelfOTC" unique_id=1833216370]
+position = Vector2(206.99998, 109)
+scale = Vector2(0.18499964, 0.2482319)
+texture = ExtResource("4_kyrlg")
 
 [node name="MedicineSpawner" type="Node2D" parent="." unique_id=1931757531]
 position = Vector2(591, 552)

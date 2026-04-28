@@ -21,17 +21,17 @@ func start_game() -> void:
 		med.queue_free()
 
 	# Restart spawn timer
-	randotime.wait_time = randi_range(1, 3)
+	randotime.wait_time = randf_range(0.75, 1.5)
 	randotime.start()
 
 func _ready() -> void:
-	randotime.wait_time = randi_range(1, 3)
+	randotime.wait_time = randf_range(0.75, 1.5)
 	randotime.start()
 	scoreboard.text = "Score: %d" % score
 
 func _on_RandomTimer_timeout() -> void:
 	spawn_medicine()
-	randotime.wait_time = randi_range(1, 3)
+	randotime.wait_time = randf_range(0.75, 1.5)
 	randotime.start()
 
 func spawn_medicine() -> void:
@@ -42,8 +42,11 @@ func spawn_medicine() -> void:
 	add_child(med)
 	med.add_to_group("medicines")
 	med.connect("placed_on_shelf", Callable(self, "_on_medicine_placed"))
-	med.dispcat.text = med.category
-	print("Spawned medicine:", med.category, "at", med.position) # debug line
+	if med.category == "Prescribed":
+		med.tex.texture = ResourceLoader.load("res://Game 2 Resources/assets/perscriptionmeds.png")
+	elif med.category == "Critical":
+		med.tex.texture = ResourceLoader.load("res://Game 2 Resources/assets/ivbag.png")
+	else: med.tex.texture = ResourceLoader.load("res://Game 2 Resources/assets/otc.png")
 
 func _on_medicine_placed(med_category: String, shelf_name: String) -> void:
 	var correct = false
@@ -55,9 +58,14 @@ func _on_medicine_placed(med_category: String, shelf_name: String) -> void:
 		correct = true
 
 	if correct:
-		score += 500
+		if med_category == "OTC":
+			score += 250
+		elif med_category == "Prescribed":
+			score += 300
+		else:
+			score += 500
 	else:
-		score -= 300
+		score -= 650
 	scoreboard.text = "Score: %d" % score
 
 	# SAMPLE WIN TERMINATOR.
