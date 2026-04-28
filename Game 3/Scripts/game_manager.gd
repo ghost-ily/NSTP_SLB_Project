@@ -14,7 +14,7 @@ var correct_score = 0
 var incorrect_score = 0
 var target = 10
 var game_time = 120
-@export var game_complete: bool
+var game_complete: bool
 var service = "Education"
 
 func _ready() -> void:

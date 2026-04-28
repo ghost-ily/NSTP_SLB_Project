@@ -11,7 +11,7 @@ var player_max_capacity = 5
 var game_has_ended = false
 
 func _process(delta: float) -> void:
-	if randf() <= 0.01 and reserve_books.size() < 10 and !game_has_ended:
+	if reserve_books.size() < 10 and !game_has_ended:
 		var new_book = BOOK.instantiate()
 		#print("Book Arrived")
 		new_book.position.x = 0
