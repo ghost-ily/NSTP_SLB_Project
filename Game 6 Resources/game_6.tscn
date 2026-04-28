@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bkgj4by70h0sv"]
 
-[ext_resource type="Script" uid="uid://ddrsuyk3ejnn3" path="res://game_6.gd" id="1_bxc1t"]
+[ext_resource type="Script" uid="uid://ddrsuyk3ejnn3" path="res://Game 6 Resources/game_6.gd" id="1_bxc1t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dcvax"]
 
