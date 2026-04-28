@@ -25,6 +25,7 @@ var books: Array[Node2D] = []
 
 func _ready() -> void:
 	shelves = [[table, philosophy, arts, languages], [table, history, literature, science]]
+	connect_signals()
 
 func _process(delta: float) -> void:
 	if game_has_ended:
@@ -94,3 +95,14 @@ func _on_arts_mouse_shape_entered(shape_idx: int) -> void:
 
 func _on_philosophy_mouse_shape_entered(shape_idx: int) -> void:
 	selected_shelf_position = Vector2(1, 0)
+	
+func connect_signals() -> void:
+	philosophy.mouse_shape_entered.connect(_on_philosophy_mouse_shape_entered)
+	arts.mouse_shape_entered.connect(_on_arts_mouse_shape_entered)
+	languages.mouse_shape_entered.connect(_on_languages_mouse_shape_entered)
+	history.mouse_shape_entered.connect(_on_history_mouse_shape_entered)
+	literature.mouse_shape_entered.connect(_on_literature_mouse_shape_entered)
+	science.mouse_shape_entered.connect(_on_science_mouse_shape_entered)
+	table.mouse_shape_entered.connect(_on_table_mouse_shape_entered)
+	interaction_timer.timeout.connect(_on_interaction_timer_timeout)
+	move_timer.timeout.connect(_on_move_timer_timeout)
