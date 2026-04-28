@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://cdwc7uswm7bdo"]
 
 [ext_resource type="Script" uid="uid://clfy67yt74xoq" path="res://Game 3/Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://by45x81kg36de" path="res://Game 3/Assets/Modern tiles_Free/Characters_free/Bob_16x16.png" id="1_v0iea"]
+[ext_resource type="Texture2D" uid="uid://cwq2oggg1gkuk" path="res://Game 3/Assets/Bob_16x16.png" id="2_kmqvx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1ek2"]
 size = Vector2(14, 22)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
-atlas = ExtResource("1_v0iea")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ml5od"]
+atlas = ExtResource("2_kmqvx")
 region = Rect2(48, 0, 16, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_6t5aa"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_b0ti7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cvnsp")
+"texture": SubResource("AtlasTexture_ml5od")
 }],
 "loop": true,
 "name": &"default",
@@ -31,7 +31,7 @@ shape = SubResource("RectangleShape2D_f1ek2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27876641]
 position = Vector2(0, -16)
-sprite_frames = SubResource("SpriteFrames_6t5aa")
+sprite_frames = SubResource("SpriteFrames_b0ti7")
 
 [node name="MoveTimer" type="Timer" parent="." unique_id=374786040]
 wait_time = 0.1
