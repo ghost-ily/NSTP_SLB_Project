@@ -1,7 +1,6 @@
 extends Node2D
 
 const BRICK = preload("res://Game 1 Resources/brick.tscn")
-@onready var ui: Control = $Control
 
 var brick1 = BRICK.instantiate()
 var brick2 = BRICK.instantiate()

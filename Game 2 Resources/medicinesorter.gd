@@ -3,10 +3,9 @@ extends Node2D
 var score = 0
 const MEDICINE = preload("res://Game 2 Resources/medicine.tscn")
 
-@onready var ui: Control = $Control
 @onready var scoreboard: Label = $scoreBoard
-@onready var randotime: Timer = $RandomTimer
 @onready var medspawn: Node2D = $MedicineSpawner
+@onready var randotime: Timer = $RandomTimer
 
 var game_complete: bool = false
 
@@ -21,17 +20,17 @@ func start_game() -> void:
 		med.queue_free()
 
 	# Restart spawn timer
-	randotime.wait_time = randi_range(1, 3)
+	randotime.wait_time = 1
 	randotime.start()
 
 func _ready() -> void:
-	randotime.wait_time = randi_range(1, 3)
+	randotime.wait_time = 1
 	randotime.start()
 	scoreboard.text = "Score: %d" % score
 
 func _on_RandomTimer_timeout() -> void:
 	spawn_medicine()
-	randotime.wait_time = randi_range(1, 3)
+	randotime.wait_time = 1
 	randotime.start()
 
 func spawn_medicine() -> void:

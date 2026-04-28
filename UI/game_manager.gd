@@ -5,9 +5,11 @@ var lives: Control
 var timer: Control
 var debug: Window
 var is_new_game: bool
-var debug_game_scene = preload("res://Game 1 Resources/game1.tscn")
+var debug_game_scene = load("res://Game 2 Resources/medicinesorter.tscn")
+var game_1 = load("res://Game 1 Resources/game1.tscn")
+var game_2 = load("res://Game 2 Resources/medicinesorter.tscn")
 var current_game
-var all_games: Array
+var all_games: Array = [game_1, game_2]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

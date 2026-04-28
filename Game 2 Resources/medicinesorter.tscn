@@ -1,18 +1,12 @@
 [gd_scene format=3 uid="uid://bow84f06y8a00"]
 
 [ext_resource type="Script" uid="uid://bxnb537h7peu5" path="res://Game 2 Resources/medicinesorter.gd" id="1_v2op4"]
-[ext_resource type="PackedScene" uid="uid://c0yf31bfp34y6" path="res://GameOver.tscn" id="2_o2ufn"]
 [ext_resource type="PackedScene" uid="uid://dxnqepn68uxc1" path="res://Game 2 Resources/shelf.tscn" id="3_eb2n6"]
 
 [node name="main" type="Node2D" unique_id=1352383641]
 script = ExtResource("1_v2op4")
 metadata/_edit_horizontal_guides_ = [-841.0, 650.0]
 metadata/_edit_vertical_guides_ = [1147.0]
-
-[node name="Control" parent="." unique_id=1959794212 instance=ExtResource("2_o2ufn")]
-anchors_preset = -1
-offset_left = 142.0
-offset_top = 1271.0
 
 [node name="ShelfCrit" parent="." unique_id=1387935665 instance=ExtResource("3_eb2n6")]
 position = Vector2(820, 101)
@@ -48,9 +42,10 @@ text = "Over-the-Counter Medicines"
 horizontal_alignment = 1
 
 [node name="MedicineSpawner" type="Node2D" parent="." unique_id=1931757531]
-position = Vector2(591, 552)
+position = Vector2(591, 508)
 
 [node name="scoreBoard" type="Label" parent="." unique_id=1659060111]
+visible = false
 offset_left = 23.0
 offset_top = 14.0
 offset_right = 84.0

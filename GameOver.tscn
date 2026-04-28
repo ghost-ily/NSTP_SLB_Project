@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c0yf31bfp34y6"]
+[gd_scene format=3 uid="uid://dwld21wke3qfm"]
 
 [ext_resource type="Script" uid="uid://r75y785o767a" path="res://menu_ui.gd" id="1_40baj"]
 
@@ -23,7 +23,7 @@ visible = false
 
 [node name="Button" type="Button" parent="Window" unique_id=1244858209]
 custom_minimum_size = Vector2(100, 50)
-anchors_preset = -1
+anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
