@@ -8,7 +8,6 @@ var service: String = "Education"
 func _ready() -> void:
 	game_complete = false
 	game_3 = %GameManager
-	service = game_3.get_service()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,3 +17,7 @@ func _process(delta: float) -> void:
 	
 func start_game() -> void:
 	game_3._on_button_pressed()
+	
+	
+func get_service():
+	return game_3.get_service()
