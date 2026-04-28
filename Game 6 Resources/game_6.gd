@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var trash = preload("res://Game 6 Resources/trash.tscn")
+@onready var truck: Area2D = $Truck
 var all_trash: Array = []
 
 var service = "Environmental"
