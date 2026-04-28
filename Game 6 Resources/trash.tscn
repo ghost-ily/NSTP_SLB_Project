@@ -20,6 +20,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_iex7o")
 
 [node name="mouseArea" type="Area2D" parent="." unique_id=2031315440]
+z_index = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mouseArea" unique_id=1549903003]
 shape = SubResource("RectangleShape2D_m3fwr")

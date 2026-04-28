@@ -147,6 +147,15 @@ offset_bottom = 70.0
 texture = ExtResource("8_vnrng")
 expand_mode = 1
 
+[node name="UIContrast3" type="TextureRect" parent="." unique_id=1883054857]
+modulate = Color(0, 0, 0, 1)
+offset_left = 324.0
+offset_top = 563.0
+offset_right = 831.0
+offset_bottom = 636.0
+texture = ExtResource("8_vnrng")
+expand_mode = 1
+
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
 [connection signal="pressed" from="GameManager/Window/Button" to="GameManager" method="_on_button_pressed"]
 

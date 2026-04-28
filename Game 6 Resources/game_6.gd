@@ -28,7 +28,7 @@ func start_game():
 	for i in range(4, randi_range(8, 12)):
 		var inst_trash = trash.instantiate()
 		all_trash.append(inst_trash)
-		inst_trash.position = Vector2(randi_range(100, 1000), 520)
+		inst_trash.position = Vector2(randi_range(100, 1000), 420)
 		add_child(inst_trash)
 
 

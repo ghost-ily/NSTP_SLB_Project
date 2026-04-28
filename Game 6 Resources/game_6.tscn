@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ddrsuyk3ejnn3" path="res://Game 6 Resources/game_6.gd" id="1_bxc1t"]
 [ext_resource type="Texture2D" uid="uid://s0xkh4u4u6h8" path="res://Game 6 Resources/nstp_street_bg.png" id="2_dcvax"]
+[ext_resource type="Texture2D" uid="uid://cial4wticjbmb" path="res://UI/health_bar.png" id="3_ym0kk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dcvax"]
 
@@ -26,3 +27,30 @@ texture = SubResource("CanvasTexture_ym0kk")
 position = Vector2(534.00006, 330)
 scale = Vector2(0.43999785, 0.43999785)
 texture = ExtResource("2_dcvax")
+
+[node name="UIContrast" type="TextureRect" parent="." unique_id=1466421312]
+modulate = Color(0, 0, 0, 1)
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 281.0
+offset_bottom = 84.0
+texture = ExtResource("3_ym0kk")
+expand_mode = 1
+
+[node name="UIContrast2" type="TextureRect" parent="." unique_id=168627613]
+modulate = Color(0, 0, 0, 1)
+offset_left = 785.0
+offset_top = 20.0
+offset_right = 1138.0005
+offset_bottom = 70.0
+texture = ExtResource("3_ym0kk")
+expand_mode = 1
+
+[node name="UIContrast3" type="TextureRect" parent="." unique_id=327657096]
+modulate = Color(0, 0, 0, 1)
+offset_left = 324.0
+offset_top = 563.0
+offset_right = 831.0
+offset_bottom = 636.0
+texture = ExtResource("3_ym0kk")
+expand_mode = 1

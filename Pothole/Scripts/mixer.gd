@@ -30,10 +30,11 @@ func _process(delta: float) -> void:
 		label.text = "Mixing..." + str(int(timer.time_left)) + "s"
 		
 	if has_stone and has_binder:
-		is_mixing = true
+		#is_mixing = true
 		has_stone = false
 		has_binder = false
-		timer.start()
+		asphalt = 3
+		#timer.start()
 
 func _on_button_pressed() -> void:
 	if asphalt > 0:
