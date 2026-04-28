@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7vgn3vk8l283"]
 
-[ext_resource type="Script" uid="uid://o0pndk6r1nsy" path="res://Feeding Program/Scripts/carrot.gd" id="1_2vyxa"]
+[ext_resource type="Script" uid="uid://37bmfe20yt5e" path="res://Feeding Program/Scripts/chocolate.gd" id="1_vpwqr"]
 [ext_resource type="Texture2D" uid="uid://cpdrj0q2ybbnc" path="res://Feeding Program/Assets/chocolatebar.png" id="2_vpwqr"]
 [ext_resource type="PackedScene" uid="uid://dicbh8wfvn2o6" path="res://Feeding Program/Scenes/draggable_component.tscn" id="3_eljxc"]
 [ext_resource type="PackedScene" uid="uid://cbwo3rey4mmxm" path="res://Feeding Program/Scenes/scoring_component.tscn" id="4_owx6d"]
@@ -25,7 +25,7 @@ size = Vector2(18, 29)
 
 [node name="Chocolate" type="CharacterBody2D" unique_id=1778370900]
 scale = Vector2(2, 2)
-script = ExtResource("1_2vyxa")
+script = ExtResource("1_vpwqr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=439428137]
 scale = Vector2(0.080000736, 0.080000736)
