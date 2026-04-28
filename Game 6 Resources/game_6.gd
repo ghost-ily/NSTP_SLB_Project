@@ -30,3 +30,7 @@ func start_game():
 		all_trash.append(inst_trash)
 		inst_trash.position = Vector2(randi_range(100, 1000), 520)
 		add_child(inst_trash)
+
+
+func get_service() -> String:
+	return service
