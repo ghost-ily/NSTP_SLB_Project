@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bkgj4by70h0sv"]
 
 [ext_resource type="Script" uid="uid://ddrsuyk3ejnn3" path="res://Game 6 Resources/game_6.gd" id="1_bxc1t"]
+[ext_resource type="Texture2D" uid="uid://s0xkh4u4u6h8" path="res://Game 6 Resources/nstp_street_bg.png" id="2_dcvax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dcvax"]
 
@@ -20,3 +21,8 @@ shape = SubResource("RectangleShape2D_dcvax")
 self_modulate = Color(0.4103884, 0.3983227, 0.3902751, 1)
 scale = Vector2(20.000002, 19.900002)
 texture = SubResource("CanvasTexture_ym0kk")
+
+[node name="NstpStreetBg" type="Sprite2D" parent="." unique_id=851640306]
+position = Vector2(534.00006, 330)
+scale = Vector2(0.43999785, 0.43999785)
+texture = ExtResource("2_dcvax")

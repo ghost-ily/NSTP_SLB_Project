@@ -1,7 +1,10 @@
-extends RigidBody2D
+extends StaticBody2D
 
 @onready var mouse_area: Area2D = $mouseArea
 @onready var sprite: Sprite2D = $Sprite2D
+@onready var texture1 = load("res://Game 6 Resources/nstp_trash_bag.png")
+@onready var texture2 = load("res://Game 6 Resources/nstp_trash_bin.png")
+@onready var texture3 = load("res://Game 6 Resources/nstp_dumpster.png")
 var type: int
 var health: int
 
@@ -14,12 +17,21 @@ func _ready() -> void:
 	type = randi_range(1, 3)
 	if type == 1:
 		health = 1
+		$Sprite2D.texture = texture1
+		$Sprite2D.scale = Vector2(0.15, 0.15)
+		$mouseArea.scale = Vector2(1.0, 1.0)
 		# resize mouseArea
 	elif type == 2:
 		health = 3
+		$Sprite2D.texture = texture2
+		$Sprite2D.scale = Vector2(0.3, 0.3)
+		$mouseArea.scale = Vector2(1.0, 2.0)
 		# resize mouseArea
 	elif type == 3:
 		health = 5
+		$Sprite2D.texture = texture3
+		$Sprite2D.scale = Vector2(0.3, 0.3)
+		$mouseArea.scale = Vector2(2.0, 1.8)
 		# resize mouseArea
 	_connect_signals()
 	
