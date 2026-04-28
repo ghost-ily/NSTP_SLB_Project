@@ -41,5 +41,6 @@ func _on_button_pressed() -> void:
 		if h != null:
 			h.queue_free()
 	spawner.potholes.clear()
+	player_cement = 0
 	spawner._ready()
 	

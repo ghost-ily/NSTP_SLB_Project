@@ -36,4 +36,5 @@ func get_service() -> String:
 	
 	
 func start_game() -> void:
+	score = 0
 	game_complete = false

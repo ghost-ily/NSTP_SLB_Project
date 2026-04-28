@@ -55,7 +55,7 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 text = "Ready!"
 
 [node name="GameTimer" type="Timer" parent="." unique_id=1071314775]
-wait_time = 7.0
+wait_time = 10.0
 one_shot = true
 
 [node name="Budget" type="RichTextLabel" parent="." unique_id=309366661]
