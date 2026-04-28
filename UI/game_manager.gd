@@ -38,9 +38,9 @@ func _ready() -> void:
 	debug = $DebugWindow
 	debug.get_node("Button").pressed.connect(debug_ready)
 	is_new_game = true
-	#choose_random_game()
-	current_game = debug_game_scene.instantiate()
-	add_child(current_game)
+	choose_random_game()
+	#current_game = debug_game_scene.instantiate()
+	#add_child(current_game)
 
 
 func choose_random_game():
