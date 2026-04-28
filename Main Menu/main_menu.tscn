@@ -1,7 +1,17 @@
 [gd_scene format=3 uid="uid://qi8prflkyq0r"]
 
 [ext_resource type="Script" uid="uid://bjwiu2xtwqon" path="res://Main Menu/main_menu.gd" id="1_nb5b5"]
-[ext_resource type="Texture2D" uid="uid://c8j3716c6x1du" path="res://Main Menu/title_temp.png" id="1_vccqd"]
+[ext_resource type="Texture2D" uid="uid://b371aga3gwjx8" path="res://Main Menu/nstp_logo.png" id="2_8ketd"]
+[ext_resource type="Texture2D" uid="uid://b1cj85hmmm3b5" path="res://Game 1 Resources/nstp_infrastructure_bg.png" id="3_15lat"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ketd"]
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_8ketd"]
+specular_color = Color(0.9490196, 0.9411765, 0.9372549, 1)
 
 [node name="MainMenu" type="Control" unique_id=1674805258]
 layout_mode = 3
@@ -12,7 +22,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nb5b5")
 
+[node name="NstpInfrastructureBg2" type="Sprite2D" parent="." unique_id=1854931210]
+z_index = -1
+position = Vector2(570.99994, 388.99997)
+scale = Vector2(0.4400006, 0.4400006)
+texture = ExtResource("3_15lat")
+
 [node name="TitleScreen" type="Control" parent="." unique_id=370675052]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,8 +47,9 @@ offset_top = 100.0
 offset_right = 100.0
 offset_bottom = 300.0
 grow_horizontal = 2
+scale = Vector2(1.5, 1.5)
 pivot_offset_ratio = Vector2(0.5, 0.5)
-texture = ExtResource("1_vccqd")
+texture = ExtResource("2_8ketd")
 expand_mode = 1
 
 [node name="StartLabel" type="Label" parent="TitleScreen" unique_id=413894554]
@@ -62,7 +80,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="UserScreen" unique_id=1064692034]
+[node name="Panel" type="Panel" parent="UserScreen" unique_id=754833683]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Label" type="Label" parent="UserScreen/Panel" unique_id=1064692034]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -70,16 +103,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -76.5
-offset_top = -11.5
+offset_top = -66.0
 offset_right = 76.5
-offset_bottom = 11.5
+offset_bottom = -43.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "What is your name?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="NameInput" type="LineEdit" parent="UserScreen" unique_id=1440917291]
+[node name="NameInput" type="LineEdit" parent="UserScreen/Panel" unique_id=1440917291]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -87,13 +120,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -75.0
-offset_top = 20.0
-offset_right = 75.0
-offset_bottom = 51.0
+offset_top = -34.5
+offset_right = 74.99994
+offset_bottom = -3.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Confirm" type="Button" parent="UserScreen" unique_id=719395332]
+[node name="Confirm" type="Button" parent="UserScreen/Panel" unique_id=719395332]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -101,15 +134,15 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -35.5
-offset_top = 118.0
+offset_top = 63.5
 offset_right = 35.5
-offset_bottom = 149.0
+offset_bottom = 94.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ketd")
 text = "Confirm"
 
 [node name="ReadyScreen" type="Control" parent="." unique_id=1925446738]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -118,6 +151,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="LetterText" type="RichTextLabel" parent="ReadyScreen" unique_id=1879319812]
+z_index = 2
 custom_minimum_size = Vector2(700, 0)
 layout_mode = 1
 anchors_preset = 13
@@ -129,13 +163,16 @@ offset_top = 87.0
 offset_right = 350.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1, 1.0951631)
 mouse_filter = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 visible_characters = 0
 visible_ratio = 0.0
 
 [node name="StartLabel" type="Label" parent="ReadyScreen" unique_id=224729336]
+z_index = 2
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -148,8 +185,25 @@ offset_right = 112.0
 offset_bottom = -75.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(1, 0.9780969)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Press any button to continue"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="ReadyScreen" unique_id=782775365]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -622.0
+offset_right = 400.0
+offset_bottom = 178.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("CanvasTexture_8ketd")

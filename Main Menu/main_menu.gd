@@ -14,8 +14,8 @@ var main_game_scene = preload("res://UI/game_manager.tscn")
 func _ready() -> void:
 	title_screen = $TitleScreen
 	user_screen = $UserScreen
-	user_input = $UserScreen/NameInput
-	user_confirm = $UserScreen/Confirm
+	user_input = $UserScreen/Panel/NameInput
+	user_confirm = $UserScreen/Panel/Confirm
 	ready_screen = $ReadyScreen
 	
 	# Makes sure signals are connected
