@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://36pe2dpwdg0n" path="res://UI/hourglass.png" id="6_fuquo"]
 [ext_resource type="Texture2D" uid="uid://cial4wticjbmb" path="res://UI/health_bar.png" id="7_k66he"]
 
-[node name="GameManager" type="Control" unique_id=987682661]
+[node name="GameManager" type="Control" unique_id=987682661 groups=["garbage"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
