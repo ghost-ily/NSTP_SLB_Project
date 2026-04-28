@@ -41,7 +41,7 @@ func _on_button_pressed() -> void:
 		asphalt = 0
 
 func _on_timer_timeout() -> void:
-	asphalt = 10
+	asphalt = 3
 	is_mixing = false
 
 func _on_stone_pile_put_stone() -> void:

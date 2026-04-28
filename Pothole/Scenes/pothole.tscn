@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dwqupxhl528h0"]
 
-[ext_resource type="Texture2D" uid="uid://cxfobw21obwuq" path="res://Pothole/Assets/hole.png" id="1_oo1n2"]
 [ext_resource type="Script" uid="uid://bjvva28xa1xie" path="res://Pothole/Scripts/pothole.gd" id="1_uu3hd"]
+[ext_resource type="Texture2D" uid="uid://b5xuccql3r1t5" path="res://Pothole/Assets/nstp_pothole_2.png" id="2_uu3hd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uu3hd"]
 radius = 23.0
@@ -13,7 +13,8 @@ script = ExtResource("1_uu3hd")
 shape = SubResource("CircleShape2D_uu3hd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1063071072]
-texture = ExtResource("1_oo1n2")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_uu3hd")
 
 [node name="Button" type="Button" parent="." unique_id=74190012]
 modulate = Color(1, 1, 1, 0)

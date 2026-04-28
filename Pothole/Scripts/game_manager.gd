@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 	time.text = "Time left: " + str(int(timer.time_left))
 
 func fill_cement(charges: int) -> void:
-	player_cement = charges
+	player_cement += charges
 
 func end_game() -> void:
 	timer.paused = true

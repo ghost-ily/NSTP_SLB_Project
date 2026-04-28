@@ -1,354 +1,13 @@
-[gd_scene format=4 uid="uid://bkilexh10tdd"]
+[gd_scene format=3 uid="uid://bkilexh10tdd"]
 
-[ext_resource type="Texture2D" uid="uid://bqixh0crxf6tw" path="res://Pothole/Assets/Background_Green_TileSet.png" id="1_6v2ne"]
 [ext_resource type="Script" uid="uid://du6vpy6tmj0j2" path="res://Pothole/Scripts/game_manager.gd" id="1_cskvr"]
 [ext_resource type="FontFile" uid="uid://0vt547ojq26s" path="res://Pothole/Assets/PixelOperator8.ttf" id="2_8knna"]
 [ext_resource type="Script" uid="uid://ck4hyfskc6oie" path="res://Pothole/Scripts/spawner.gd" id="2_nk51g"]
 [ext_resource type="PackedScene" uid="uid://ba2e6d1ticbqh" path="res://Pothole/Scenes/mixer.tscn" id="3_d4mea"]
+[ext_resource type="Texture2D" uid="uid://dggsajlsaigsb" path="res://Pothole/Assets/nstp_road.png" id="3_h2fh8"]
+[ext_resource type="Texture2D" uid="uid://c6e00hbefjspb" path="res://Pothole/Assets/nstp_dirt_bg.png" id="3_p386l"]
 [ext_resource type="PackedScene" uid="uid://cl5bnmupkgk2y" path="res://Pothole/Scenes/binder.tscn" id="6_h2fh8"]
 [ext_resource type="PackedScene" uid="uid://c62go30jruny2" path="res://Pothole/Scenes/stone_pile.tscn" id="7_p386l"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e54m6"]
-texture = ExtResource("1_6v2ne")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-12:0/0 = 0
-13:0/0 = 0
-14:0/0 = 0
-15:0/0 = 0
-16:0/0 = 0
-17:0/0 = 0
-18:0/0 = 0
-19:0/0 = 0
-20:0/0 = 0
-21:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-16:1/0 = 0
-17:1/0 = 0
-18:1/0 = 0
-19:1/0 = 0
-21:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-10:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-16:2/0 = 0
-17:2/0 = 0
-18:2/0 = 0
-19:2/0 = 0
-20:2/0 = 0
-21:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-12:3/0 = 0
-13:3/0 = 0
-14:3/0 = 0
-15:3/0 = 0
-16:3/0 = 0
-17:3/0 = 0
-18:3/0 = 0
-19:3/0 = 0
-20:3/0 = 0
-21:3/0 = 0
-22:3/0 = 0
-23:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-10:4/0 = 0
-11:4/0 = 0
-12:4/0 = 0
-13:4/0 = 0
-14:4/0 = 0
-15:4/0 = 0
-16:4/0 = 0
-17:4/0 = 0
-18:4/0 = 0
-19:4/0 = 0
-20:4/0 = 0
-21:4/0 = 0
-22:4/0 = 0
-23:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
-7:5/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-16:5/0 = 0
-17:5/0 = 0
-18:5/0 = 0
-19:5/0 = 0
-20:5/0 = 0
-21:5/0 = 0
-22:5/0 = 0
-23:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
-7:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-16:6/0 = 0
-17:6/0 = 0
-18:6/0 = 0
-19:6/0 = 0
-20:6/0 = 0
-21:6/0 = 0
-22:6/0 = 0
-23:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-8:7/0 = 0
-9:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
-16:7/0 = 0
-17:7/0 = 0
-18:7/0 = 0
-19:7/0 = 0
-20:7/0 = 0
-21:7/0 = 0
-22:7/0 = 0
-23:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-6:8/0 = 0
-7:8/0 = 0
-8:8/0 = 0
-9:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-16:8/0 = 0
-17:8/0 = 0
-18:8/0 = 0
-19:8/0 = 0
-20:8/0 = 0
-21:8/0 = 0
-22:8/0 = 0
-23:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-6:9/0 = 0
-7:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-16:9/0 = 0
-17:9/0 = 0
-18:9/0 = 0
-19:9/0 = 0
-20:9/0 = 0
-21:9/0 = 0
-22:9/0 = 0
-23:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-4:10/0 = 0
-5:10/0 = 0
-6:10/0 = 0
-7:10/0 = 0
-9:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-17:10/0 = 0
-18:10/0 = 0
-19:10/0 = 0
-20:10/0 = 0
-21:10/0 = 0
-22:10/0 = 0
-23:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-9:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-16:11/0 = 0
-17:11/0 = 0
-18:11/0 = 0
-19:11/0 = 0
-20:11/0 = 0
-21:11/0 = 0
-22:11/0 = 0
-23:11/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-6:12/0 = 0
-7:12/0 = 0
-8:12/0 = 0
-9:12/0 = 0
-10:12/0 = 0
-11:12/0 = 0
-12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-16:12/0 = 0
-17:12/0 = 0
-18:12/0 = 0
-19:12/0 = 0
-20:12/0 = 0
-21:12/0 = 0
-3:13/0 = 0
-5:13/0 = 0
-6:13/0 = 0
-8:13/0 = 0
-9:13/0 = 0
-11:13/0 = 0
-12:13/0 = 0
-14:13/0 = 0
-15:13/0 = 0
-17:13/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-5:14/0 = 0
-6:14/0 = 0
-7:14/0 = 0
-8:14/0 = 0
-9:14/0 = 0
-10:14/0 = 0
-11:14/0 = 0
-12:14/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-16:14/0 = 0
-17:14/0 = 0
-6:15/0 = 0
-7:15/0 = 0
-8:15/0 = 0
-9:15/0 = 0
-10:15/0 = 0
-11:15/0 = 0
-12:15/0 = 0
-13:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-16:15/0 = 0
-6:16/0 = 0
-7:16/0 = 0
-8:16/0 = 0
-9:16/0 = 0
-10:16/0 = 0
-11:16/0 = 0
-12:16/0 = 0
-13:16/0 = 0
-14:16/0 = 0
-15:16/0 = 0
-16:16/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_pyhsw"]
-sources/0 = SubResource("TileSetAtlasSource_e54m6")
 
 [node name="PotholeGame" type="Node2D" unique_id=236193574]
 
@@ -406,45 +65,50 @@ offset_left = -285.0
 offset_top = -157.0
 offset_right = -123.0
 offset_bottom = -124.0
+theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("2_8knna")
 text = "Time Left:"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=152782975]
 zoom = Vector2(2, 2)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=861099072]
-tile_map_data = PackedByteArray("AAD/////AAAFAAkAAAAAAP//AAAFAAkAAAAAAAAAAAAFAAkAAAD//wAAAAAFAAkAAAD+//7/AAAFAAkAAAD+////AAAFAAkAAAD+/wAAAAAFAAkAAAD+/wEAAAAFAAkAAAD+/wIAAAAFAAkAAAD+/wMAAAAFAAkAAAD6//3/AAAFAAkAAAD7//3/AAAFAAkAAAD8//3/AAAAAAsAAAD9//3/AAAFAAkAAAD+//3/AAAFAAkAAAD///3/AAAFAAkAAAAAAP3/AAAFAAkAAAABAP3/AAAFAAkAAAACAP3/AAAFAAkAAAADAP3/AAAAAAsAAAAEAP3/AAAFAAkAAAAFAP3/AAAFAAkAAAAFAP7/AAAFAAkAAAAFAP//AAAFAAkAAAAFAAAAAAAFAAkAAAAFAAEAAAAFAAkAAAAFAAIAAAAFAAkAAAAFAAMAAAAFAAkAAAAFAAQAAAAFAAkAAAD6//7/AAAFAAkAAAD6////AAAFAAkAAAD6/wAAAAAFAAkAAAD6/wEAAAAFAAkAAAD6/wIAAAAFAAkAAAD6/wMAAAAFAAkAAAD6/wQAAAAFAAkAAAD6/wUAAAAFAAkAAAD6/wYAAAAFAAkAAAD6/wcAAAAFAAkAAAD6/wgAAAAFAAkAAAD6/wkAAAAFAAkAAAD6/woAAAAFAAkAAAD7/wkAAAAFAAkAAAD7/wgAAAAFAAkAAAD7/wcAAAAFAAkAAAD7/wYAAAAFAAkAAAD7/wUAAAAFAAkAAAD7/wQAAAAFAAkAAAD7/wMAAAAFAAkAAAD7/wIAAAAFAAkAAAD7/wEAAAAFAAkAAAD7/wAAAAAFAAkAAAD7////AAAFAAkAAAD7//7/AAAFAAkAAAD7//z/AAAFAAkAAAD7//v/AAAFAAkAAAD7//r/AAAFAAkAAAD7//n/AAAFAAkAAAD6//z/AAAFAAkAAAD6//v/AAAFAAkAAAD6//r/AAAFAAkAAAD6//n/AAAFAAkAAAD6//j/AAAFAAkAAAD6//f/AAAFAAkAAAD6//b/AAAFAAkAAAD6//X/AAAFAAkAAAD7//X/AAAFAAkAAAD7//b/AAAFAAkAAAD7//f/AAAFAAkAAAD7//j/AAAFAAkAAAD8//X/AAAAAAsAAAD8//b/AAAAAAsAAAD8//f/AAAAAAsAAAD8//j/AAAAAAsAAAD8//n/AAAAAAsAAAD8//r/AAAAAAsAAAD8//v/AAAAAAsAAAD8//z/AAAAAAsAAAD8//7/AAAAAAsAAAD8////AAAAAAsAAAD8/wAAAAAAAAsAAAD8/wEAAAAAAAsAAAD8/wIAAAAAAAsAAAD8/wMAAAAAAAsAAAD8/wQAAAAAAAsAAAD8/wUAAAAAAAsAAAD8/wYAAAAAAAsAAAD8/wcAAAAAAAsAAAD8/wgAAAAAAAsAAAD8/wkAAAAAAAsAAAD9//b/AAAFAAkAAAD9//f/AAAFAAkAAAD9//j/AAAFAAkAAAD9//n/AAAFAAkAAAD9//r/AAAFAAkAAAD9//v/AAAFAAkAAAD9//z/AAAFAAkAAAD9//7/AAAFAAkAAAD9////AAAFAAkAAAD9/wAAAAAFAAkAAAD9/wEAAAAFAAkAAAD9/wIAAAAFAAkAAAD9/wMAAAAFAAkAAAD9/wQAAAAFAAkAAAD9/wUAAAAFAAkAAAD9/wYAAAAFAAkAAAD9/wcAAAAFAAkAAAD9/wgAAAAFAAkAAAD9/wkAAAAFAAkAAAD+//b/AAAFAAkAAAD+//f/AAAFAAkAAAD+//j/AAAFAAkAAAD+//n/AAAFAAkAAAD+//r/AAAFAAkAAAD+//v/AAAFAAkAAAD+//z/AAAFAAkAAAD+/wQAAAAFAAkAAAD+/wUAAAAFAAkAAAD+/wYAAAAFAAkAAAD+/wcAAAAFAAkAAAD+/wgAAAAFAAkAAAD+/wkAAAAFAAkAAAD///b/AAAFAAkAAAD///f/AAAFAAkAAAD///j/AAAFAAkAAAD///n/AAAFAAkAAAD///r/AAAFAAkAAAD///v/AAAFAAkAAAD///z/AAAFAAkAAAD///7/AAAFAAkAAAD//wEAAAAFAAkAAAD//wIAAAAFAAkAAAD//wMAAAAFAAkAAAD//wQAAAAFAAkAAAD//wUAAAAFAAkAAAD//wYAAAAFAAkAAAD//wcAAAAFAAkAAAD//wgAAAAFAAkAAAD//wkAAAAFAAkAAAAAAPb/AAAFAAkAAAAAAPf/AAAFAAkAAAAAAPj/AAAFAAkAAAAAAPn/AAAFAAkAAAAAAPr/AAAFAAkAAAAAAPv/AAAFAAkAAAAAAPz/AAAFAAkAAAAAAP7/AAAFAAkAAAAAAAEAAAAFAAkAAAAAAAIAAAAFAAkAAAAAAAMAAAAFAAkAAAAAAAQAAAAFAAkAAAAAAAUAAAAFAAkAAAAAAAYAAAAFAAkAAAAAAAcAAAAFAAkAAAAAAAgAAAAFAAkAAAAAAAkAAAAFAAkAAAABAPb/AAAFAAkAAAABAPf/AAAFAAkAAAABAPj/AAAFAAkAAAABAPn/AAAFAAkAAAABAPr/AAAFAAkAAAABAPv/AAAFAAkAAAABAPz/AAAFAAkAAAABAP7/AAAFAAkAAAABAP//AAAFAAkAAAABAAAAAAAFAAkAAAABAAEAAAAFAAkAAAABAAIAAAAFAAkAAAABAAMAAAAFAAkAAAABAAQAAAAFAAkAAAABAAUAAAAFAAkAAAABAAYAAAAFAAkAAAABAAcAAAAFAAkAAAABAAgAAAAFAAkAAAABAAkAAAAFAAkAAAACAPb/AAAFAAkAAAACAPf/AAAFAAkAAAACAPj/AAAFAAkAAAACAPn/AAAFAAkAAAACAPr/AAAFAAkAAAACAPv/AAAFAAkAAAACAPz/AAAFAAkAAAACAP7/AAAFAAkAAAACAP//AAAFAAkAAAACAAAAAAAFAAkAAAACAAEAAAAFAAkAAAACAAIAAAAFAAkAAAACAAMAAAAFAAkAAAACAAQAAAAFAAkAAAACAAUAAAAFAAkAAAACAAYAAAAFAAkAAAACAAcAAAAFAAkAAAACAAgAAAAFAAkAAAACAAkAAAAFAAkAAAADAPb/AAAAAAsAAAADAPf/AAAAAAsAAAADAPj/AAAAAAsAAAADAPn/AAAAAAsAAAADAPr/AAAAAAsAAAADAPv/AAAAAAsAAAADAPz/AAAAAAsAAAADAP7/AAAAAAsAAAADAP//AAAAAAsAAAADAAAAAAAAAAsAAAADAAEAAAAAAAsAAAADAAIAAAAAAAsAAAADAAMAAAAAAAsAAAADAAQAAAAAAAsAAAADAAUAAAAAAAsAAAADAAYAAAAAAAsAAAADAAcAAAAAAAsAAAADAAgAAAAAAAsAAAADAAkAAAAAAAsAAAAEAPb/AAAFAAkAAAAEAPf/AAAFAAkAAAAEAPj/AAAFAAkAAAAEAPn/AAAFAAkAAAAEAPr/AAAFAAkAAAAEAPv/AAAFAAkAAAAEAPz/AAAFAAkAAAAEAP7/AAAFAAkAAAAEAP//AAAFAAkAAAAEAAAAAAAFAAkAAAAEAAEAAAAFAAkAAAAEAAIAAAAFAAkAAAAEAAMAAAAFAAkAAAAEAAQAAAAFAAkAAAAEAAUAAAAFAAkAAAAEAAYAAAAFAAkAAAAEAAcAAAAFAAkAAAAEAAgAAAAFAAkAAAAEAAkAAAAFAAkAAAAFAPb/AAAFAAkAAAAFAPf/AAAFAAkAAAAFAPj/AAAFAAkAAAAFAPn/AAAFAAkAAAAFAPr/AAAFAAkAAAAFAPv/AAAFAAkAAAAFAPz/AAAFAAkAAAAFAAUAAAAFAAkAAAAFAAYAAAAFAAkAAAAFAAcAAAAFAAkAAAAFAAgAAAAFAAkAAAAFAAkAAAAFAAkAAAD9//X/AAAFAAkAAAD9/woAAAAFAAkAAAD+//X/AAAFAAkAAAD+/woAAAAFAAkAAAD///X/AAAFAAkAAAD//woAAAAFAAkAAAAAAPX/AAAFAAkAAAAAAAoAAAAFAAkAAAABAPX/AAAFAAkAAAABAAoAAAAFAAkAAAACAPX/AAAFAAkAAAACAAoAAAAFAAkAAAADAPX/AAAAAAsAAAADAAoAAAAAAAsAAAAEAPX/AAAFAAkAAAAEAAoAAAAFAAkAAAAFAPX/AAAFAAkAAAAFAAoAAAAFAAkAAAD7/woAAAAFAAkAAAD8/woAAAAAAAsAAAAGAPb/AAAFAAgAAAAGAPf/AAAFAAgAAAAGAPj/AAAFAAgAAAAGAPn/AAAFAAgAAAAGAPr/AAAFAAgAAAAGAPv/AAAFAAgAAAAGAPz/AAAFAAgAAAAGAP3/AAAFAAgAAAAGAP7/AAAFAAgAAAAGAP//AAAFAAgAAAAGAAAAAAAFAAgAAAAGAAEAAAAFAAgAAAAGAAIAAAAFAAgAAAAGAAMAAAAFAAgAAAAGAAQAAAAFAAgAAAAGAAUAAAAFAAgAAAAGAAYAAAAFAAgAAAAGAAcAAAAFAAgAAAAGAAgAAAAFAAgAAAAGAAkAAAAFAAgAAAD5//b/AAAAAAgAAAD5//f/AAAAAAgAAAD5//j/AAAAAAgAAAD5//n/AAAAAAgAAAD5//r/AAAAAAgAAAD5//v/AAAAAAgAAAD5//z/AAAAAAgAAAD5//3/AAAAAAgAAAD5//7/AAAAAAgAAAD5////AAAAAAgAAAD5/wAAAAAAAAgAAAD5/wEAAAAAAAgAAAD5/wIAAAAAAAgAAAD5/wMAAAAAAAgAAAD5/wQAAAAAAAgAAAD5/wUAAAAAAAgAAAD5/wYAAAAAAAgAAAD5/wcAAAAAAAgAAAD5/wgAAAAAAAgAAAD5/wkAAAAAAAgAAAD5/woAAAAAAAgAAAD5//X/AAAAAAgAAAAGAPX/AAAFAAgAAAAGAAoAAAAFAAgAAAA=")
-tile_set = SubResource("TileSet_pyhsw")
+[node name="Background" type="Sprite2D" parent="." unique_id=845984625]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_p386l")
+
+[node name="Road" type="Sprite2D" parent="." unique_id=1504938483]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_h2fh8")
 
 [node name="Spawner" type="Node" parent="." unique_id=1545221803]
 unique_name_in_owner = true
 script = ExtResource("2_nk51g")
 
+[node name="Mixer" parent="." unique_id=534750330 instance=ExtResource("3_d4mea")]
+z_index = 5
+position = Vector2(211, -56)
+
 [node name="BinderOrigin" type="Node2D" parent="." unique_id=618994964]
 unique_name_in_owner = true
-position = Vector2(-138, -30)
+position = Vector2(248, 43)
 
 [node name="StonePileOrigin" type="Node2D" parent="." unique_id=356981568]
 unique_name_in_owner = true
-position = Vector2(-139, 23)
+position = Vector2(185, 54)
 
 [node name="StonePile" parent="." unique_id=1428270179 instance=ExtResource("7_p386l")]
 z_index = 5
-position = Vector2(-139, 23)
+position = Vector2(185, 54)
 
 [node name="Binder" parent="." unique_id=1302068114 instance=ExtResource("6_h2fh8")]
 z_index = 5
-position = Vector2(-138, -30)
-
-[node name="Mixer" parent="." unique_id=534750330 instance=ExtResource("3_d4mea")]
-z_index = 5
-position = Vector2(136, -7)
+position = Vector2(248, 43)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
 [connection signal="pressed" from="GameManager/Window/Button" to="GameManager" method="_on_button_pressed"]
-[connection signal="put_stone" from="StonePile" to="Mixer" method="_on_stone_pile_put_stone"]
-[connection signal="put_binder" from="Binder" to="Mixer" method="_on_binder_put_binder"]
 [connection signal="body_entered" from="Mixer" to="StonePile" method="_on_mixer_body_entered"]
 [connection signal="body_entered" from="Mixer" to="Binder" method="_on_mixer_body_entered"]
 [connection signal="body_exited" from="Mixer" to="StonePile" method="_on_mixer_body_exited"]
 [connection signal="body_exited" from="Mixer" to="Binder" method="_on_mixer_body_exited"]
+[connection signal="put_stone" from="StonePile" to="Mixer" method="_on_stone_pile_put_stone"]
+[connection signal="put_binder" from="Binder" to="Mixer" method="_on_binder_put_binder"]
