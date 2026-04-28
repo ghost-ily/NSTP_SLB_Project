@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c62go30jruny2"]
+
+[ext_resource type="Script" uid="uid://cr8rirybgadua" path="res://Pothole/Scripts/stone_pile.gd" id="1_q3p67"]
+[ext_resource type="PackedScene" uid="uid://bd8h2r8rj3v2m" path="res://Pothole/Scenes/draggable_component.tscn" id="2_7rjhe"]
+[ext_resource type="Texture2D" uid="uid://c5uxjvbh03jve" path="res://Pothole/Assets/nstp_crushed_rocks.png" id="2_q3p67"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rjhe"]
+size = Vector2(47, 49)
+
+[node name="StonePile" type="CharacterBody2D" unique_id=1428270179]
+script = ExtResource("1_q3p67")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=497140953]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_7rjhe")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1946902160]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_q3p67")
+
+[node name="Button" type="Button" parent="." unique_id=1327604251]
+modulate = Color(1, 1, 1, 0)
+offset_left = -23.0
+offset_top = -25.0
+offset_right = 24.0
+offset_bottom = 24.0
+
+[node name="DraggableComponent" parent="." unique_id=971154288 instance=ExtResource("2_7rjhe")]
+position = Vector2(-20, -9)
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cl5bnmupkgk2y"]
+
+[ext_resource type="Script" uid="uid://bvmm3rep2wlwy" path="res://Pothole/Scripts/binder.gd" id="1_chit3"]
+[ext_resource type="PackedScene" uid="uid://bd8h2r8rj3v2m" path="res://Pothole/Scenes/draggable_component.tscn" id="2_bmhk0"]
+[ext_resource type="Texture2D" uid="uid://ut2e4420w4gf" path="res://Pothole/Assets/nstp_cement_binder.png" id="2_chit3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmhk0"]
+size = Vector2(33, 46)
+
+[node name="Binder" type="CharacterBody2D" unique_id=1302068114]
+script = ExtResource("1_chit3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=573787508]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_bmhk0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1772536432]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_chit3")
+
+[node name="Button" type="Button" parent="." unique_id=952160219]
+modulate = Color(1, 1, 1, 0)
+offset_left = -16.0
+offset_top = -22.0
+offset_right = 17.0
+offset_bottom = 24.0
+
+[node name="DraggableComponent" parent="." unique_id=971154288 instance=ExtResource("2_bmhk0")]
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

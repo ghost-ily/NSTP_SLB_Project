@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://bkilexh10tdd"]
+
+[ext_resource type="Script" uid="uid://du6vpy6tmj0j2" path="res://Pothole/Scripts/game_manager.gd" id="1_cskvr"]
+[ext_resource type="FontFile" uid="uid://0vt547ojq26s" path="res://Pothole/Assets/PixelOperator8.ttf" id="2_8knna"]
+[ext_resource type="Script" uid="uid://ck4hyfskc6oie" path="res://Pothole/Scripts/spawner.gd" id="2_nk51g"]
+[ext_resource type="PackedScene" uid="uid://ba2e6d1ticbqh" path="res://Pothole/Scenes/mixer.tscn" id="3_d4mea"]
+[ext_resource type="Texture2D" uid="uid://dggsajlsaigsb" path="res://Pothole/Assets/nstp_road.png" id="3_h2fh8"]
+[ext_resource type="Texture2D" uid="uid://c6e00hbefjspb" path="res://Pothole/Assets/nstp_dirt_bg.png" id="3_p386l"]
+[ext_resource type="PackedScene" uid="uid://cl5bnmupkgk2y" path="res://Pothole/Scenes/binder.tscn" id="6_h2fh8"]
+[ext_resource type="PackedScene" uid="uid://c62go30jruny2" path="res://Pothole/Scenes/stone_pile.tscn" id="7_p386l"]
+
+[node name="PotholeGame" type="Node2D" unique_id=236193574]
+
+[node name="GameManager" type="Node" parent="." unique_id=163371039]
+unique_name_in_owner = true
+script = ExtResource("1_cskvr")
+
+[node name="Timer" type="Timer" parent="GameManager" unique_id=2025737610]
+one_shot = true
+
+[node name="Window" type="Window" parent="GameManager" unique_id=274807836]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(300, 200)
+visible = false
+
+[node name="Label" type="Label" parent="GameManager/Window" unique_id=1051153166]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 29.0
+offset_bottom = 105.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_8knna")
+theme_override_font_sizes/font_size = 24
+text = "You Win"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="GameManager/Window" unique_id=1365045728]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 74.0
+offset_top = 29.0
+offset_right = -74.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_8knna")
+text = "Retry"
+
+[node name="Asphalt" type="Label" parent="GameManager" unique_id=858185246]
+offset_left = -288.0
+offset_top = 138.0
+offset_right = -88.0
+offset_bottom = 161.0
+theme_override_fonts/font = ExtResource("2_8knna")
+theme_override_font_sizes/font_size = 8
+text = "Asphalt Stored: "
+vertical_alignment = 2
+
+[node name="GameTime" type="Label" parent="GameManager" unique_id=1653742059]
+offset_left = -285.0
+offset_top = -157.0
+offset_right = -123.0
+offset_bottom = -124.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("2_8knna")
+text = "Time Left:"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=152782975]
+zoom = Vector2(2, 2)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=845984625]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_p386l")
+
+[node name="Road" type="Sprite2D" parent="." unique_id=1504938483]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_h2fh8")
+
+[node name="Spawner" type="Node" parent="." unique_id=1545221803]
+unique_name_in_owner = true
+script = ExtResource("2_nk51g")
+
+[node name="Mixer" parent="." unique_id=534750330 instance=ExtResource("3_d4mea")]
+z_index = 5
+position = Vector2(211, -56)
+
+[node name="BinderOrigin" type="Node2D" parent="." unique_id=618994964]
+unique_name_in_owner = true
+position = Vector2(248, 43)
+
+[node name="StonePileOrigin" type="Node2D" parent="." unique_id=356981568]
+unique_name_in_owner = true
+position = Vector2(185, 54)
+
+[node name="StonePile" parent="." unique_id=1428270179 instance=ExtResource("7_p386l")]
+z_index = 5
+position = Vector2(185, 54)
+
+[node name="Binder" parent="." unique_id=1302068114 instance=ExtResource("6_h2fh8")]
+z_index = 5
+position = Vector2(248, 43)
+
+[connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
+[connection signal="pressed" from="GameManager/Window/Button" to="GameManager" method="_on_button_pressed"]
+[connection signal="body_entered" from="Mixer" to="StonePile" method="_on_mixer_body_entered"]
+[connection signal="body_entered" from="Mixer" to="Binder" method="_on_mixer_body_entered"]
+[connection signal="body_exited" from="Mixer" to="StonePile" method="_on_mixer_body_exited"]
+[connection signal="body_exited" from="Mixer" to="Binder" method="_on_mixer_body_exited"]
+[connection signal="put_stone" from="StonePile" to="Mixer" method="_on_stone_pile_put_stone"]
+[connection signal="put_binder" from="Binder" to="Mixer" method="_on_binder_put_binder"]

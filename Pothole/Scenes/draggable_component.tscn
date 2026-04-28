@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bd8h2r8rj3v2m"]
+
+[ext_resource type="Script" uid="uid://ccjm20ve7od4f" path="res://Pothole/Scripts/draggable_component.gd" id="1_l1tyf"]
+
+[node name="DraggableComponent" type="Node2D" unique_id=971154288]
+script = ExtResource("1_l1tyf")
