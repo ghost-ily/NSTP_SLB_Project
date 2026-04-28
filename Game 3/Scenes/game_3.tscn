@@ -4,11 +4,7 @@
 [ext_resource type="Script" uid="uid://ct010hocy14eh" path="res://Game 3/Scripts/game_3_handler.gd" id="1_nv3va"]
 [ext_resource type="Script" uid="uid://bc2ey6paqldk1" path="res://Game 3/Scripts/game_manager.gd" id="1_wbilk"]
 [ext_resource type="PackedScene" uid="uid://c7j71aje4k3gw" path="res://Game 3/Scenes/shelf.tscn" id="2_qjn0y"]
-[ext_resource type="Texture2D" uid="uid://c2feyh5ulo3p" path="res://Game 3/Assets/shelf_2.png" id="3_wbilk"]
-[ext_resource type="Texture2D" uid="uid://c6k0135rp4kdg" path="res://Game 3/Assets/shelf_3.png" id="4_nv3va"]
-[ext_resource type="Texture2D" uid="uid://01hadv1un7f7" path="res://Game 3/Assets/shelf_4.png" id="5_x4ixy"]
-[ext_resource type="Texture2D" uid="uid://dudku4vba42mv" path="res://Game 3/Assets/shelf_5.png" id="6_blwty"]
-[ext_resource type="Texture2D" uid="uid://de6b1ql0j0egf" path="res://Game 3/Assets/shelf_6.png" id="7_as2rh"]
+[ext_resource type="Texture2D" uid="uid://2pjttaynjdi1" path="res://Game 3/Assets/nstp_library_bg.png" id="3_hrsbk"]
 [ext_resource type="PackedScene" uid="uid://yrv7j4p5ednf" path="res://Game 3/Scenes/table.tscn" id="8_6e7jb"]
 
 [sub_resource type="SystemFont" id="SystemFont_qjn0y"]
@@ -27,9 +23,9 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -302.0
-offset_top = 190.0
+offset_top = 64.0
 offset_right = -50.0
-offset_bottom = 239.0
+offset_bottom = 113.0
 grow_horizontal = 0
 pivot_offset_ratio = Vector2(1, 0)
 text = "Correct Placements:"
@@ -42,9 +38,9 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -302.0
-offset_top = 230.0
+offset_top = 96.0
 offset_right = -50.0
-offset_bottom = 253.0
+offset_bottom = 119.0
 grow_horizontal = 0
 pivot_offset_ratio = Vector2(1, 0)
 horizontal_alignment = 2
@@ -55,9 +51,9 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -199.0
-offset_top = 150.0
+offset_top = 24.0
 offset_right = -50.0
-offset_bottom = 176.0
+offset_bottom = 50.0
 grow_horizontal = 0
 pivot_offset_ratio = Vector2(1, 0)
 text = "Books left:"
@@ -113,9 +109,14 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Play Again"
 
+[node name="Background" type="Sprite2D" parent="." unique_id=1782548506]
+modulate = Color(0.6255971, 0.6255971, 0.6255971, 1)
+position = Vector2(1388, -314)
+texture = ExtResource("3_hrsbk")
+
 [node name="Player" parent="." unique_id=1146975373 instance=ExtResource("1_5r6k1")]
 z_index = 10
-position = Vector2(180, 323)
+position = Vector2(118, 375)
 scale = Vector2(4, 4)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=810037128]
@@ -125,49 +126,44 @@ position = Vector2(577, 323)
 
 [node name="Science" parent="Shelves" unique_id=193637864 instance=ExtResource("2_qjn0y")]
 unique_name_in_owner = true
-position = Vector2(759, 523)
+position = Vector2(850, 523)
 scale = Vector2(2, 2)
 
 [node name="Label" parent="Shelves/Science" index="2" unique_id=86449406]
+offset_top = -95.5
+offset_bottom = -72.5
 theme_override_fonts/font = SubResource("SystemFont_qjn0y")
 text = "Science"
 metadata/_edit_use_anchors_ = true
 
 [node name="Literature" parent="Shelves" unique_id=1387118188 instance=ExtResource("2_qjn0y")]
 unique_name_in_owner = true
-position = Vector2(566, 523)
+position = Vector2(600, 523)
 scale = Vector2(2, 2)
-
-[node name="Sprite2D" parent="Shelves/Literature" index="0" unique_id=1396550074]
-texture = ExtResource("3_wbilk")
 
 [node name="Label" parent="Shelves/Literature" index="2" unique_id=86449406]
 offset_left = -33.0
-offset_top = -97.0
+offset_top = -95.5
 offset_right = 33.0
-offset_bottom = -74.0
+offset_bottom = -72.5
 text = "Literature"
 metadata/_edit_use_anchors_ = true
 
 [node name="History" parent="Shelves" unique_id=1868130102 instance=ExtResource("2_qjn0y")]
 unique_name_in_owner = true
-position = Vector2(373, 523)
+position = Vector2(350, 523)
 scale = Vector2(2, 2)
 
-[node name="Sprite2D" parent="Shelves/History" index="0" unique_id=1396550074]
-texture = ExtResource("4_nv3va")
-
 [node name="Label" parent="Shelves/History" index="2" unique_id=86449406]
+offset_top = -95.5
+offset_bottom = -72.5
 text = "History"
 metadata/_edit_use_anchors_ = true
 
 [node name="Languages" parent="Shelves" unique_id=946267633 instance=ExtResource("2_qjn0y")]
 unique_name_in_owner = true
-position = Vector2(759, 303)
+position = Vector2(850, 303)
 scale = Vector2(2, 2)
-
-[node name="Sprite2D" parent="Shelves/Languages" index="0" unique_id=1396550074]
-texture = ExtResource("5_x4ixy")
 
 [node name="Label" parent="Shelves/Languages" index="2" unique_id=86449406]
 text = "Languages"
@@ -175,38 +171,32 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Arts" parent="Shelves" unique_id=2072128195 instance=ExtResource("2_qjn0y")]
 unique_name_in_owner = true
-position = Vector2(566, 303)
+position = Vector2(600, 303)
 scale = Vector2(2, 2)
 
-[node name="Sprite2D" parent="Shelves/Arts" index="0" unique_id=1396550074]
-texture = ExtResource("6_blwty")
-
 [node name="Label" parent="Shelves/Arts" index="2" unique_id=86449406]
-offset_top = -94.0
-offset_bottom = -71.0
+offset_top = -95.5
+offset_bottom = -58.5
 text = "Arts
 "
 metadata/_edit_use_anchors_ = true
 
 [node name="Philosophy" parent="Shelves" unique_id=1135831266 instance=ExtResource("2_qjn0y")]
 unique_name_in_owner = true
-position = Vector2(374, 303)
+position = Vector2(350, 303)
 scale = Vector2(2, 2)
-
-[node name="Sprite2D" parent="Shelves/Philosophy" index="0" unique_id=1396550074]
-texture = ExtResource("7_as2rh")
 
 [node name="Label" parent="Shelves/Philosophy" index="2" unique_id=86449406]
 offset_left = -66.0
-offset_top = -96.0
+offset_top = -92.5
 offset_right = 66.0
-offset_bottom = -80.0
+offset_bottom = -76.5
 text = "Philosophy"
 metadata/_edit_use_anchors_ = true
 
 [node name="Table" parent="." unique_id=1354710621 instance=ExtResource("8_6e7jb")]
 unique_name_in_owner = true
-position = Vector2(180, 323)
+position = Vector2(118, 375)
 scale = Vector2(2, 2)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]

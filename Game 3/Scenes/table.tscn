@@ -1,18 +1,19 @@
 [gd_scene format=3 uid="uid://yrv7j4p5ednf"]
 
-[ext_resource type="Texture2D" uid="uid://br2oyngottgwx" path="res://Game 3/Assets/table.png" id="1_ix8et"]
 [ext_resource type="Script" uid="uid://bqtwcfiu382ew" path="res://Game 3/Scripts/table.gd" id="1_uk5bt"]
+[ext_resource type="Texture2D" uid="uid://xrobuldtdco8" path="res://Game 3/Assets/nstp_table.png" id="2_uk5bt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ix8et"]
-size = Vector2(96, 62)
+size = Vector2(96, 48)
 
 [node name="Table" type="Area2D" unique_id=1354710621]
 script = ExtResource("1_uk5bt")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1876626945]
-position = Vector2(0, -32)
-texture = ExtResource("1_ix8et")
+position = Vector2(0, -17)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_uk5bt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=337765320]
-position = Vector2(0, -31)
+position = Vector2(0, -24)
 shape = SubResource("RectangleShape2D_ix8et")
