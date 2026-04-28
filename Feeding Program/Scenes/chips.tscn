@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bt50nsmt3a0s5"]
+
+[ext_resource type="Texture2D" uid="uid://cal4ytvwh87r3" path="res://Feeding Program/Assets/Food/potatochip_yellow.png" id="1_7cwb1"]
+[ext_resource type="Script" uid="uid://ijufltcg1r1g" path="res://Feeding Program/Scripts/chips.gd" id="1_mtp73"]
+[ext_resource type="PackedScene" uid="uid://dicbh8wfvn2o6" path="res://Feeding Program/Scenes/draggable_component.tscn" id="3_fhchd"]
+[ext_resource type="PackedScene" uid="uid://cbwo3rey4mmxm" path="res://Feeding Program/Scenes/scoring_component.tscn" id="4_dghaj"]
+[ext_resource type="PackedScene" uid="uid://c5babptu201ma" path="res://Feeding Program/Scenes/collision_component.tscn" id="5_fhchd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7m12y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7cwb1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_su26n"]
+size = Vector2(26, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dghaj"]
+size = Vector2(26, 30)
+
+[node name="Chips" type="CharacterBody2D" unique_id=2119807035]
+script = ExtResource("1_mtp73")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=410400148]
+sprite_frames = SubResource("SpriteFrames_7m12y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=286534940]
+shape = SubResource("RectangleShape2D_su26n")
+
+[node name="Button" type="Button" parent="." unique_id=1116063398]
+modulate = Color(1, 1, 1, 0)
+offset_left = -13.0
+offset_top = -15.0
+offset_right = 13.0
+offset_bottom = 15.0
+
+[node name="DraggableComponent" parent="." unique_id=1844435161 instance=ExtResource("3_fhchd")]
+
+[node name="ScoringComponent" parent="." unique_id=1194813053 instance=ExtResource("4_dghaj")]
+
+[node name="CollisionComponent" parent="." unique_id=598408951 instance=ExtResource("5_fhchd")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionComponent" unique_id=989536048]
+shape = SubResource("RectangleShape2D_dghaj")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
