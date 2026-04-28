@@ -4,6 +4,12 @@ extends CharacterBody2D
 @onready var draggable_component: Node2D = $DraggableComponent
 @onready var scoring_component: Node = $ScoringComponent
 @onready var collision_component: StaticBody2D = $CollisionComponent
+@onready var button: Button = $Button
+
+func _ready() -> void:
+	button.button_down.connect(_on_button_button_down)
+	button.button_up.connect(_on_button_button_up)
+	pass
 
 var category = "Healthy"
 var game_manager: Node

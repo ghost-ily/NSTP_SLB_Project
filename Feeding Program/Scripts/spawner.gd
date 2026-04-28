@@ -1,10 +1,11 @@
 extends Node2D
 
 const apple = preload("res://Feeding Program/Scenes/apple.tscn")
-const milk = preload("res://Feeding Program/Scenes/milk.tscn")
-const chips = preload("res://Feeding Program/Scenes/chips.tscn")
+const carrot = preload("res://Feeding Program/Scenes/carrot.tscn")
+const donut = preload("res://Feeding Program/Scenes/donut.tscn")
+const chocolate = preload("res://Feeding Program/Scenes/chocolate.tscn")
 
-const foods: Array[PackedScene] = [apple, milk, chips]
+const foods: Array[PackedScene] = [apple, carrot, donut, chocolate]
 
 var has_game_ended = false
 

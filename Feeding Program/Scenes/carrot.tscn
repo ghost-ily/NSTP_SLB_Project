@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dxds3xiq33keu"]
+
+[ext_resource type="Script" uid="uid://o0pndk6r1nsy" path="res://Feeding Program/Scripts/carrot.gd" id="1_bxdjt"]
+[ext_resource type="Texture2D" uid="uid://bgtll0hh4st5" path="res://Feeding Program/Assets/nstp_healthy_food.png" id="2_bxdjt"]
+[ext_resource type="PackedScene" uid="uid://dicbh8wfvn2o6" path="res://Feeding Program/Scenes/draggable_component.tscn" id="3_tipvn"]
+[ext_resource type="PackedScene" uid="uid://cbwo3rey4mmxm" path="res://Feeding Program/Scenes/scoring_component.tscn" id="4_6mecj"]
+[ext_resource type="PackedScene" uid="uid://c5babptu201ma" path="res://Feeding Program/Scenes/collision_component.tscn" id="5_a5q63"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5i4sx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bxdjt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2u30d"]
+size = Vector2(18, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hocfc"]
+size = Vector2(18, 29)
+
+[node name="Carrot" type="CharacterBody2D" unique_id=1778370900]
+scale = Vector2(2, 2)
+script = ExtResource("1_bxdjt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=439428137]
+scale = Vector2(0.060000658, 0.060000658)
+sprite_frames = SubResource("SpriteFrames_5i4sx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1099375980]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2u30d")
+
+[node name="Button" type="Button" parent="." unique_id=715101489]
+modulate = Color(1, 1, 1, 0)
+offset_left = -9.0
+offset_top = -14.0
+offset_right = 9.0
+offset_bottom = 15.0
+
+[node name="DraggableComponent" parent="." unique_id=1844435161 instance=ExtResource("3_tipvn")]
+offset = Vector2(0, -29)
+
+[node name="ScoringComponent" parent="." unique_id=1194813053 instance=ExtResource("4_6mecj")]
+
+[node name="CollisionComponent" parent="." unique_id=598408951 instance=ExtResource("5_a5q63")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionComponent" unique_id=1377905005]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_hocfc")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+
+[editable path="CollisionComponent"]

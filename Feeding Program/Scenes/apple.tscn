@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d27ypajbypja1"]
 
 [ext_resource type="Script" uid="uid://cy60a24kv8egs" path="res://Feeding Program/Scripts/apple.gd" id="1_jl7pq"]
-[ext_resource type="Texture2D" uid="uid://cdql8xs5mer32" path="res://Feeding Program/Assets/Food/red_apple.png" id="1_m2ga2"]
+[ext_resource type="Texture2D" uid="uid://8h0wp7r7i443" path="res://Feeding Program/Assets/nstp_healthy_food_2.png" id="2_8dlhr"]
 [ext_resource type="PackedScene" uid="uid://dicbh8wfvn2o6" path="res://Feeding Program/Scenes/draggable_component.tscn" id="3_ma2lr"]
 [ext_resource type="PackedScene" uid="uid://cbwo3rey4mmxm" path="res://Feeding Program/Scenes/scoring_component.tscn" id="4_fgte2"]
 [ext_resource type="PackedScene" uid="uid://c5babptu201ma" path="res://Feeding Program/Scenes/collision_component.tscn" id="5_8dlhr"]
@@ -13,7 +13,7 @@ size = Vector2(25, 20)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_m2ga2")
+"texture": ExtResource("2_8dlhr")
 }],
 "loop": true,
 "name": &"default",
@@ -32,6 +32,8 @@ position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_jl7pq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1007546672]
+position = Vector2(0, 1)
+scale = Vector2(0.06000039, 0.06000039)
 sprite_frames = SubResource("SpriteFrames_ma2lr")
 
 [node name="Button" type="Button" parent="." unique_id=1634050891]

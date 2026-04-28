@@ -1,16 +1,16 @@
-[gd_scene format=3 uid="uid://dxds3xiq33keu"]
+[gd_scene format=3 uid="uid://7vgn3vk8l283"]
 
-[ext_resource type="Script" uid="uid://o0pndk6r1nsy" path="res://Feeding Program/Scripts/milk.gd" id="1_2u30d"]
-[ext_resource type="Texture2D" uid="uid://b3dpxs6vofcwp" path="res://Feeding Program/Assets/Food/milk_pack.png" id="1_bh0nm"]
-[ext_resource type="PackedScene" uid="uid://dicbh8wfvn2o6" path="res://Feeding Program/Scenes/draggable_component.tscn" id="2_5i4sx"]
-[ext_resource type="PackedScene" uid="uid://cbwo3rey4mmxm" path="res://Feeding Program/Scenes/scoring_component.tscn" id="4_febqe"]
-[ext_resource type="PackedScene" uid="uid://c5babptu201ma" path="res://Feeding Program/Scenes/collision_component.tscn" id="5_hocfc"]
+[ext_resource type="Script" uid="uid://o0pndk6r1nsy" path="res://Feeding Program/Scripts/carrot.gd" id="1_2vyxa"]
+[ext_resource type="Texture2D" uid="uid://cpdrj0q2ybbnc" path="res://Feeding Program/Assets/chocolatebar.png" id="2_vpwqr"]
+[ext_resource type="PackedScene" uid="uid://dicbh8wfvn2o6" path="res://Feeding Program/Scenes/draggable_component.tscn" id="3_eljxc"]
+[ext_resource type="PackedScene" uid="uid://cbwo3rey4mmxm" path="res://Feeding Program/Scenes/scoring_component.tscn" id="4_owx6d"]
+[ext_resource type="PackedScene" uid="uid://c5babptu201ma" path="res://Feeding Program/Scenes/collision_component.tscn" id="5_4vafc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5i4sx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_bh0nm")
+"texture": ExtResource("2_vpwqr")
 }],
 "loop": true,
 "name": &"default",
@@ -23,11 +23,12 @@ size = Vector2(18, 29)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hocfc"]
 size = Vector2(18, 29)
 
-[node name="Milk" type="CharacterBody2D" unique_id=1778370900]
+[node name="Chocolate" type="CharacterBody2D" unique_id=1778370900]
 scale = Vector2(2, 2)
-script = ExtResource("1_2u30d")
+script = ExtResource("1_2vyxa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=439428137]
+scale = Vector2(0.080000736, 0.080000736)
 sprite_frames = SubResource("SpriteFrames_5i4sx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1099375980]
@@ -41,12 +42,12 @@ offset_top = -14.0
 offset_right = 9.0
 offset_bottom = 15.0
 
-[node name="DraggableComponent" parent="." unique_id=1844435161 instance=ExtResource("2_5i4sx")]
+[node name="DraggableComponent" parent="." unique_id=1844435161 instance=ExtResource("3_eljxc")]
 offset = Vector2(0, -29)
 
-[node name="ScoringComponent" parent="." unique_id=1194813053 instance=ExtResource("4_febqe")]
+[node name="ScoringComponent" parent="." unique_id=1194813053 instance=ExtResource("4_owx6d")]
 
-[node name="CollisionComponent" parent="." unique_id=598408951 instance=ExtResource("5_hocfc")]
+[node name="CollisionComponent" parent="." unique_id=598408951 instance=ExtResource("5_4vafc")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionComponent" unique_id=1377905005]
 position = Vector2(0, 0.5)
