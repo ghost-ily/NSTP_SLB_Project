@@ -9,40 +9,42 @@ metadata/_edit_horizontal_guides_ = [-841.0, 650.0]
 metadata/_edit_vertical_guides_ = [1147.0]
 
 [node name="ShelfCrit" parent="." unique_id=1387935665 instance=ExtResource("3_eb2n6")]
-position = Vector2(820, 101)
+position = Vector2(776.99994, 81.99999)
 
 [node name="Label" type="Label" parent="ShelfCrit" unique_id=1713506394]
-offset_left = 55.0
-offset_top = -24.0
-offset_right = 192.0
-offset_bottom = -1.0
+offset_left = 59.40536
+offset_top = 10.281696
+offset_right = 196.40536
+offset_bottom = 33.281696
 text = "Critical Medicines"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="ShelfPres" parent="." unique_id=1682588727 instance=ExtResource("3_eb2n6")]
-position = Vector2(470, 99)
+position = Vector2(444, 130)
 
 [node name="Label" type="Label" parent="ShelfPres" unique_id=2134886072]
-offset_left = 33.0
-offset_top = -24.0
-offset_right = 209.0
-offset_bottom = -1.0
+offset_left = 42.269142
+offset_top = 7.996868
+offset_right = 218.26913
+offset_bottom = 30.996868
 text = "Prescribed Medicines"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="ShelfOTC" parent="." unique_id=1562471713 instance=ExtResource("3_eb2n6")]
-position = Vector2(128, 99)
+position = Vector2(109, 81.99999)
 
 [node name="Label" type="Label" parent="ShelfOTC" unique_id=540681035]
-offset_left = 12.0
-offset_top = -24.0
-offset_right = 231.0
-offset_bottom = -1.0
+offset_left = 22.848183
+offset_top = 7.9968777
+offset_right = 241.84818
+offset_bottom = 30.996878
 text = "Over-the-Counter Medicines"
 horizontal_alignment = 1
 
 [node name="MedicineSpawner" type="Node2D" parent="." unique_id=1931757531]
-position = Vector2(591, 508)
+position = Vector2(563, 489)
 
 [node name="scoreBoard" type="Label" parent="." unique_id=1659060111]
 visible = false

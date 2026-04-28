@@ -21,6 +21,7 @@ func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.pressed:
 			dragging = true
+			get_parent().is_spawn_free = true
 		else:
 			dragging = false
 			check_shelf_overlap()

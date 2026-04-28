@@ -7,6 +7,7 @@ const MEDICINE = preload("res://Game 2 Resources/medicine.tscn")
 @onready var medspawn: Node2D = $MedicineSpawner
 @onready var randotime: Timer = $RandomTimer
 
+var is_spawn_free: bool = true
 var game_complete: bool = false
 var service: String = "Healthcare"
 
@@ -30,11 +31,13 @@ func _ready() -> void:
 	scoreboard.text = "Score: %d" % score
 
 func _on_RandomTimer_timeout() -> void:
-	spawn_medicine()
+	if is_spawn_free:
+		spawn_medicine()
 	randotime.wait_time = 1
 	randotime.start()
 
 func spawn_medicine() -> void:
+	is_spawn_free = false
 	var med = MEDICINE.instantiate()
 	var medcat = ["OTC", "Prescribed", "Critical"]
 	med.category = medcat[randi() % medcat.size()]
