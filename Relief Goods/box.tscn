@@ -1,12 +1,10 @@
 [gd_scene format=3 uid="uid://c365qgmwcieuq"]
 
 [ext_resource type="Script" uid="uid://ddu5cbit2jesp" path="res://Relief Goods/box.gd" id="1_wd8pn"]
+[ext_resource type="Texture2D" uid="uid://72nyb6t7hhaj" path="res://Relief Goods/nstp_open_box.png" id="2_3m52x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x1h3u"]
 size = Vector2(20.616117, 42.5)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wd8pn"]
-size = Vector2(172, 172)
 
 [node name="Box" type="StaticBody2D" unique_id=409775154]
 script = ExtResource("1_wd8pn")
@@ -16,7 +14,8 @@ scale = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_x1h3u")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=69929651]
-texture = SubResource("PlaceholderTexture2D_wd8pn")
+scale = Vector2(0.5200011, 0.5200011)
+texture = ExtResource("2_3m52x")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=350750111]
 

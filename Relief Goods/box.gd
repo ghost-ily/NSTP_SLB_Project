@@ -3,6 +3,9 @@ extends StaticBody2D
 @onready var mouse_area: Area2D = $Area2D
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var truck: Area2D = $"../Truck"
+var health_tex_2 = load("res://Relief Goods/nstp_open_box.png")
+var health_tex_1 = load("res://Relief Goods/nstp_partially_open_box.png")
+var health_tex_0 = load("res://Relief Goods/nstp_closed_box.png")
 var health: int
 var has_mouse: bool
 var is_grabbed: bool
@@ -24,6 +27,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if health == 0:
+		$Sprite2D.texture = health_tex_0
 		if Input.is_action_just_pressed("left_click") && has_mouse:
 			if is_grabbed == true:
 				is_grabbed = false
@@ -33,6 +37,9 @@ func _process(delta: float) -> void:
 				is_grabbed = true
 		if is_grabbed == true:
 			self.position = get_global_mouse_position()
+	if health == 1: $Sprite2D.texture = health_tex_1
+	if health == 2: $Sprite2D.texture = health_tex_2
+		
 	
 	
 func _on_box_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:

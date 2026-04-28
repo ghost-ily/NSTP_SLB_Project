@@ -17,7 +17,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if !is_occupied:
 		current_box = BOX.instantiate()
-		current_box.position = Vector2(190, 420)
+		current_box.position = Vector2(149, 516)
 		current_box.loaded_box.connect(_on_box_loaded)
 		add_child(current_box)
 		is_occupied = true

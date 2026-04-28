@@ -1,22 +1,25 @@
 [gd_scene format=3 uid="uid://d1hjj6fr7g6dr"]
 
 [ext_resource type="Script" uid="uid://cimrr006q1lkm" path="res://Relief Goods/relief_goods.gd" id="1_mg7gt"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mg7gt"]
+[ext_resource type="Texture2D" uid="uid://dl1g14ot6hkkj" path="res://Relief Goods/nstp_truck_bg.png" id="2_4740a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnhjd"]
-size = Vector2(317.5, 409)
+size = Vector2(358.75, 482)
 
 [node name="Game" type="Node2D" unique_id=161948064]
 script = ExtResource("1_mg7gt")
 
 [node name="Truck" type="Area2D" parent="." unique_id=751668816]
 
-[node name="Sprite2D" type="Sprite2D" parent="Truck" unique_id=518069879]
-position = Vector2(622.625, 298.625)
-scale = Vector2(312.75, 404.75)
-texture = SubResource("PlaceholderTexture2D_mg7gt")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Truck" unique_id=1562801575]
-position = Vector2(622, 299)
+position = Vector2(643, 236)
 shape = SubResource("RectangleShape2D_jnhjd")
+
+[node name="NstpTruckBg" type="Sprite2D" parent="." unique_id=1261377445]
+z_index = -1
+position = Vector2(585, 237)
+scale = Vector2(0.4158828, 0.4158828)
+texture = ExtResource("2_4740a")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=985946507]
+position = Vector2(149, 516)
