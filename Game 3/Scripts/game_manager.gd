@@ -1,37 +1,38 @@
 extends Node
 
-@onready var score: Label = $Labels/Score
-@onready var category: Label = $Labels/Category
+@onready var score_label: Label = $Labels/Score
 @onready var target_score: Label = $Labels/TargetScore
 @onready var time: Label = $Labels/Time
 @onready var timer: Timer = $Timer
-@onready var player: CharacterBody2D = $"../Player"
+@onready var player: CharacterBody2D = %Player
 @onready var table: Area2D = %Table
 @onready var game_over: Window = $GameOver
 @onready var game_over_label: Label = $GameOver/Label
 
-var correct_score = 0
-var incorrect_score = 0
-var target = 10
-var game_time = 120
+var correct = 0
+var incorrect = 0
+var score = 0
+var target = 1000
+var game_time = 30
 
 func _ready() -> void:
-	target_score.text = "Books to sort: " + str(target)
+	target_score.text = "Target Score: " + str(target)
 	timer.start(game_time)
 
 func _process(delta: float) -> void:
-	score.text = "Correct Placements: " + str(correct_score) + "\n" + "Incorrect Placements: " + str(incorrect_score)
+	score = (100 * correct) - (50 * incorrect)
+	score_label.text = "Score: " + str(score)
 	time.text = "Time Left: " + str(int(timer.time_left))
 	
-	if correct_score >= target:
+	if correct >= target:
 		timer.paused = true
 		end_game()
 
 func add_correct_score() -> void:
-	correct_score += 1
+	correct += 1
 	
 func add_incorrect_score() -> void:
-	incorrect_score += 1
+	incorrect += 1
 	
 
 func _on_timer_timeout() -> void:
@@ -39,7 +40,7 @@ func _on_timer_timeout() -> void:
 	
 func end_game() -> void:
 	game_over.show()
-	if correct_score >= target:
+	if score >= target:
 		game_over_label.text = "You Win"
 	else:
 		game_over_label.text = "You Lose"

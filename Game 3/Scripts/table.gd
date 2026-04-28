@@ -13,7 +13,6 @@ var game_has_ended = false
 func _process(delta: float) -> void:
 	if randf() <= 0.01 and reserve_books.size() < 10 and !game_has_ended:
 		var new_book = BOOK.instantiate()
-		print("Book Arrived")
 		new_book.position.x = 0
 		new_book.position.y = -40 - (5 * reserve_books.size())
 		add_child(new_book)

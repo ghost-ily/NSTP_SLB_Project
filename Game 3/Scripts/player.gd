@@ -9,8 +9,9 @@ extends CharacterBody2D
 @onready var table: Area2D = %Table
 @onready var move_timer: Timer = $MoveTimer
 @onready var book_anchor: Node2D = $BookAnchor
-@onready var category: Label = %Category
 @onready var interaction_timer: Timer = $InteractionTimer
+@onready var display: Sprite2D = %Display
+@onready var display_label: Label = %DisplayLabel
 
 var shelves: Array[Array] = [[], []]
 
@@ -51,8 +52,8 @@ func _process(delta: float) -> void:
 	
 	position = shelves[y_position][x_position].position
 	for i in books.size():
-		books[i].position.y = book_anchor.global_position.y - (5 * i)
-		books[i].position.x = book_anchor.global_position.x
+		books[i].global_position.y = book_anchor.global_position.y - (5 * i)
+		books[i].global_position.x = book_anchor.global_position.x
 	
 	if Input.is_action_pressed("interact") and can_interact:
 		shelves[y_position][x_position].interact(books)
@@ -60,9 +61,11 @@ func _process(delta: float) -> void:
 		interaction_timer.start()
 		
 	if not books.is_empty():
-		category.text = "Category: " + books[0].get_category()
+		display.show()
+		display_label.text = books[0].get_category()
 	else:
-		category.text = ""
+		display.hide()
+		display_label.text = ""
 		
 func end_game() -> void:
 	game_has_ended = true
