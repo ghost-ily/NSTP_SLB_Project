@@ -6,9 +6,9 @@ var speed = 1000
 
 func move(object: CharacterBody2D, origin: Node2D, delta: float) -> void:
 	if is_dragging:
-		object.position = get_global_mouse_position() - offset
+		object.global_position = get_global_mouse_position()
 	else:
-		object.position = object.position.move_toward(origin.global_position - offset, speed * delta)
+		object.global_position = origin.global_position
 		
 func set_dragging(state: bool) -> void:
 	is_dragging = state

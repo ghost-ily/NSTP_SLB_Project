@@ -24,6 +24,7 @@ size = Vector2(18, 29)
 size = Vector2(18, 29)
 
 [node name="Milk" type="CharacterBody2D" unique_id=1778370900]
+scale = Vector2(2, 2)
 script = ExtResource("1_2u30d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=439428137]

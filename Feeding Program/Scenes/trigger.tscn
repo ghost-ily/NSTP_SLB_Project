@@ -8,6 +8,7 @@
 size = Vector2(30, 50)
 
 [node name="Trigger" type="Area2D" unique_id=1131611655]
+scale = Vector2(2, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=570347993]
 modulate = Color(0, 0.99, 0.5774999, 0.29803923)

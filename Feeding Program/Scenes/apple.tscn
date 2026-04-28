@@ -24,6 +24,7 @@ animations = [{
 size = Vector2(25, 20)
 
 [node name="Apple" type="CharacterBody2D" unique_id=624121244]
+scale = Vector2(2, 2)
 script = ExtResource("1_jl7pq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1287134521]

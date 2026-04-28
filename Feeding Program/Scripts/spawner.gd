@@ -19,4 +19,3 @@ func _process(delta: float) -> void:
 
 func end_game():
 	has_game_ended = true
-	self.get_child(0).queue_free()

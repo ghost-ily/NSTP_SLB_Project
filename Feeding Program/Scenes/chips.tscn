@@ -24,6 +24,7 @@ size = Vector2(26, 30)
 size = Vector2(26, 30)
 
 [node name="Chips" type="CharacterBody2D" unique_id=2119807035]
+scale = Vector2(2, 2)
 script = ExtResource("1_mtp73")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=410400148]
