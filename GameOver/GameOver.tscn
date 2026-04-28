@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dgdgbwy8yfyul"]
+
+[ext_resource type="Script" uid="uid://bdqw42052gkmr" path="res://GameOver/game_over.gd" id="1_bed4b"]
+
+[node name="GameOver" type="Control" unique_id=1700033226]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bed4b")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=697536818]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=278691037]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1540891333]
+layout_mode = 2
+text = "Infrastructure"
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=990427793]
+layout_mode = 2
+text = "Healthcare"
+
+[node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=753886791]
+layout_mode = 2
+text = "Education"
+
+[node name="Label4" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1975110842]
+layout_mode = 2
+text = "Public Health"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=1224330639]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2" unique_id=1159968761]
+layout_mode = 2
+text = "Infrastructure"
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer2" unique_id=216196046]
+layout_mode = 2
+text = "Healthcare"
+
+[node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer2" unique_id=933549837]
+layout_mode = 2
+text = "Education"
+
+[node name="Label4" type="Label" parent="HBoxContainer/VBoxContainer2" unique_id=655314881]
+layout_mode = 2
+text = "Public Health"

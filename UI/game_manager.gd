@@ -19,6 +19,7 @@ var game_8 = load("res://Relief Goods/relief_goods.tscn")
 var packed_game: PackedScene
 var current_game
 var all_games: Array = [game_1, game_2, game_3, game_4, game_5, game_6, game_7, game_8]
+var game_over = load("res://GameOver/GameOver.tscn")
 
 var infra_funds: int
 var health_funds: int
@@ -81,6 +82,14 @@ func _process(delta: float) -> void:
 			add_decremented_funds()
 			pause_game()
 			choose_random_game()
+	else:
+		var new_scene = game_over.instantiate()
+		new_scene.total_infra = infra_funds
+		new_scene.total_health = health_funds
+		new_scene.total_educ = educ_funds
+		new_scene.total_pub_health = pub_health_funds
+		get_tree().root.add_child(new_scene)
+		self.queue_free()
 		
 
 
