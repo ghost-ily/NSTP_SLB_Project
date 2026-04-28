@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cijg0u51vnotf"]
 
 [ext_resource type="Script" uid="uid://dob7vfhoiy8o2" path="res://Feeding Program/Scripts/game_manager.gd" id="1_d3pqv"]
-[ext_resource type="Texture2D" uid="uid://c5cpivrl6fwoy" path="res://Feeding Program/Assets/table.png" id="1_ufq50"]
 [ext_resource type="FontFile" uid="uid://dba80ad2j2ofv" path="res://Feeding Program/Assets/PixelOperator8.ttf" id="2_46eq0"]
 [ext_resource type="PackedScene" uid="uid://ceylxf4eyjcdo" path="res://Feeding Program/Scenes/trigger.tscn" id="2_mjbtq"]
 [ext_resource type="Script" uid="uid://d1c2wj8wxxh5t" path="res://Feeding Program/Scripts/spawner.gd" id="3_mjbtq"]
+[ext_resource type="Texture2D" uid="uid://b77s3kmlohpyw" path="res://Feeding Program/Assets/nstp_grocery_bg.png" id="3_vxbg1"]
+[ext_resource type="Texture2D" uid="uid://d4hr27lgxqcmp" path="res://Feeding Program/Assets/nstp_table.png" id="4_1sj67"]
 
 [node name="Feeding Program" type="Node2D" unique_id=906347311]
 
@@ -84,17 +85,23 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_46eq0")
 text = "Retry"
 
+[node name="Background" type="Sprite2D" parent="." unique_id=1462196110]
+position = Vector2(0, -113)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_vxbg1")
+
 [node name="Table" type="Sprite2D" parent="." unique_id=1147193072]
-position = Vector2(0, -20)
-texture = ExtResource("1_ufq50")
+position = Vector2(0, -13)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("4_1sj67")
 
 [node name="Healthy" parent="." unique_id=1131611655 instance=ExtResource("2_mjbtq")]
 unique_name_in_owner = true
-position = Vector2(-42, -52)
+position = Vector2(-50, -80)
 
 [node name="Unhealthy" parent="." unique_id=155113734 instance=ExtResource("2_mjbtq")]
 unique_name_in_owner = true
-position = Vector2(43, -51)
+position = Vector2(50, -80)
 
 [node name="Sprite2D" parent="Unhealthy" index="0" unique_id=570347993]
 modulate = Color(0.99, 0, 0, 0.29803923)
@@ -110,7 +117,7 @@ zoom = Vector2(3, 3)
 
 [node name="Spawner" type="Node2D" parent="." unique_id=1081595222]
 unique_name_in_owner = true
-position = Vector2(0, -29)
+position = Vector2(0, -35)
 script = ExtResource("3_mjbtq")
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]

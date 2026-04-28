@@ -2,7 +2,8 @@ extends Node
 
 var correct_sort = 0
 var incorrect_sort = 0
-var target_score = 10
+var target_score = 1000
+var final_score = 0
 
 @export var game_time = 30
 
@@ -20,7 +21,8 @@ func _ready() -> void:
 	timer.start()
 
 func _process(delta: float) -> void:
-	score.text = "Correct: " + str(correct_sort) + "\n" + "Incorrect: " + str(incorrect_sort)
+	final_score = (100 * correct_sort) - (50 * incorrect_sort)
+	score.text = "Score: " + str(final_score)
 	time.text = "Time Left: " + str(int(timer.time_left))
 	target.text = "Target: " + str(target_score)
 
@@ -33,7 +35,7 @@ func add_incorrect_score() -> void:
 func _on_timer_timeout() -> void:
 	spawner.end_game()
 	window.show()
-	if correct_sort >= target_score:
+	if final_score >= target_score:
 		window_label.text = "You win!"
 	else:
 		window_label.text = "You lose!"
