@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://tktgaxcrmx8h" path="res://Game 3/Assets/shelf_1.png" id="1_ndc05"]
 [ext_resource type="Script" uid="uid://dnpelrw6thckj" path="res://Game 3/Scripts/shelf.gd" id="1_vam0j"]
-[ext_resource type="FontFile" uid="uid://brwviftb7arsx" path="res://Game 3/Assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="2_pp4lf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pp4lf"]
 size = Vector2(96, 102)
@@ -26,7 +25,6 @@ offset_bottom = -75.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 1
-theme_override_fonts/font = ExtResource("2_pp4lf")
 theme_override_font_sizes/font_size = 8
 text = "Lorem"
 horizontal_alignment = 1

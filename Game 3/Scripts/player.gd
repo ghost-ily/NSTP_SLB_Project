@@ -51,8 +51,12 @@ func _process(delta: float) -> void:
 	
 	position = shelves[y_position][x_position].position
 	for i in books.size():
-		books[i].position.y = book_anchor.global_position.y - (5 * i)
-		books[i].position.x = book_anchor.global_position.x
+		#books[i].position.y = book_anchor.position.y - (5 * i)
+		#books[i].position.x = book_anchor.position.x
+		
+		books[i].reparent(book_anchor)
+		books[i].position.y = book_anchor.position.y - (2.5 * i)
+		books[i].position.x = book_anchor.position.x 
 	
 	if Input.is_action_pressed("interact") and can_interact:
 		shelves[y_position][x_position].interact(books)

@@ -14,10 +14,13 @@ var correct_score = 0
 var incorrect_score = 0
 var target = 10
 var game_time = 120
+@export var game_complete: bool
+var service = "Education"
 
 func _ready() -> void:
 	target_score.text = "Books to sort: " + str(target)
 	timer.start(game_time)
+	game_complete = false
 
 func _process(delta: float) -> void:
 	score.text = "Correct Placements: " + str(correct_score) + "\n" + "Incorrect Placements: " + str(incorrect_score)
@@ -25,6 +28,9 @@ func _process(delta: float) -> void:
 	
 	if correct_score >= target:
 		timer.paused = true
+		game_complete = true
+		end_game()
+	if game_complete:
 		end_game()
 
 func add_correct_score() -> void:
@@ -35,7 +41,8 @@ func add_incorrect_score() -> void:
 	
 
 func _on_timer_timeout() -> void:
-	end_game()
+	#end_game()
+	pass
 	
 func end_game() -> void:
 	game_over.show()
@@ -43,10 +50,14 @@ func end_game() -> void:
 		game_over_label.text = "You Win"
 	else:
 		game_over_label.text = "You Lose"
-		
+	
 	player.end_game()
 	table.end_game()
 
 
 func _on_button_pressed() -> void:
 	get_tree().reload_current_scene()
+	
+	
+func get_service() -> String:
+	return service

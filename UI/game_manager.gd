@@ -7,7 +7,7 @@ var debug: Window
 var is_new_game: bool
 
 # Use debug_game_scene to test individual games
-var debug_game_scene = load("res://Game 2 Resources/medicinesorter.tscn")
+var debug_game_scene = load("res://Game 3/Scenes/game_3.tscn")
 var game_1 = load("res://Game 1 Resources/game1.tscn")
 var game_2 = load("res://Game 2 Resources/medicinesorter.tscn")
 var packed_game: PackedScene
@@ -32,9 +32,9 @@ func _ready() -> void:
 	debug = $DebugWindow
 	debug.get_node("Button").pressed.connect(debug_ready)
 	is_new_game = true
-	choose_random_game()
-	#current_game = debug_game_scene.instantiate()
-	#add_child(current_game)
+	#choose_random_game()
+	current_game = debug_game_scene.instantiate()
+	add_child(current_game)
 
 
 func choose_random_game():
