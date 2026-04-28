@@ -1,0 +1,202 @@
+[gd_scene format=3 uid="uid://dc72qhxhd14r6"]
+
+[ext_resource type="PackedScene" uid="uid://cdwc7uswm7bdo" path="res://Game 3/Scenes/player.tscn" id="1_5r6k1"]
+[ext_resource type="Script" uid="uid://bc2ey6paqldk1" path="res://Game 3/Scripts/game_manager.gd" id="1_wbilk"]
+[ext_resource type="PackedScene" uid="uid://c7j71aje4k3gw" path="res://Game 3/Scenes/shelf.tscn" id="2_qjn0y"]
+[ext_resource type="Texture2D" uid="uid://c2feyh5ulo3p" path="res://Game 3/Assets/shelf_2.png" id="3_wbilk"]
+[ext_resource type="Texture2D" uid="uid://c6k0135rp4kdg" path="res://Game 3/Assets/shelf_3.png" id="4_nv3va"]
+[ext_resource type="Texture2D" uid="uid://01hadv1un7f7" path="res://Game 3/Assets/shelf_4.png" id="5_x4ixy"]
+[ext_resource type="Texture2D" uid="uid://dudku4vba42mv" path="res://Game 3/Assets/shelf_5.png" id="6_blwty"]
+[ext_resource type="Texture2D" uid="uid://de6b1ql0j0egf" path="res://Game 3/Assets/shelf_6.png" id="7_as2rh"]
+[ext_resource type="PackedScene" uid="uid://yrv7j4p5ednf" path="res://Game 3/Scenes/table.tscn" id="8_6e7jb"]
+[ext_resource type="FontFile" uid="uid://brwviftb7arsx" path="res://Game 3/Assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="10_nv3va"]
+
+[node name="Game" type="Node2D" unique_id=1065281874]
+
+[node name="GameManager" type="Node" parent="." unique_id=1360980387]
+unique_name_in_owner = true
+script = ExtResource("1_wbilk")
+
+[node name="Labels" type="Node" parent="GameManager" unique_id=938823339]
+
+[node name="Score" type="Label" parent="GameManager/Labels" unique_id=452400967]
+offset_left = -47.0
+offset_top = -159.0
+offset_right = 205.0
+offset_bottom = -136.0
+theme_override_fonts/font = ExtResource("10_nv3va")
+theme_override_font_sizes/font_size = 8
+text = "Correct Placements:
+Incorrect Placements:"
+
+[node name="Category" type="Label" parent="GameManager/Labels" unique_id=297071049]
+unique_name_in_owner = true
+offset_left = 268.0
+offset_top = 139.0
+offset_right = 520.0
+offset_bottom = 162.0
+theme_override_fonts/font = ExtResource("10_nv3va")
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 2
+
+[node name="TargetScore" type="Label" parent="GameManager/Labels" unique_id=1495044700]
+offset_left = 375.0
+offset_top = -162.0
+offset_right = 524.0
+offset_bottom = -136.0
+theme_override_fonts/font = ExtResource("10_nv3va")
+theme_override_font_sizes/font_size = 8
+text = "Books to sort:"
+horizontal_alignment = 2
+
+[node name="Time" type="Label" parent="GameManager/Labels" unique_id=1839876034]
+offset_left = 401.0
+offset_top = -147.0
+offset_right = 524.0
+offset_bottom = -124.0
+theme_override_fonts/font = ExtResource("10_nv3va")
+theme_override_font_sizes/font_size = 8
+text = "Time Left:"
+horizontal_alignment = 2
+
+[node name="Timer" type="Timer" parent="GameManager" unique_id=1213037029]
+autostart = true
+
+[node name="GameOver" type="Window" parent="GameManager" unique_id=450082140]
+oversampling_override = 1.0
+title = "Game Over"
+initial_position = 1
+size = Vector2i(250, 200)
+visible = false
+
+[node name="Label" type="Label" parent="GameManager/GameOver" unique_id=2107923701]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.35500002
+anchor_right = 0.5
+anchor_bottom = 0.35500002
+offset_left = -68.0
+offset_top = -13.0
+offset_right = 70.0
+offset_bottom = 11.0
+theme_override_fonts/font = ExtResource("10_nv3va")
+theme_override_font_sizes/font_size = 24
+text = "You Win"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="GameManager/GameOver" unique_id=1335964958]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = 37.0
+offset_right = 63.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_nv3va")
+text = "Play Again"
+
+[node name="Player" parent="." unique_id=1146975373 instance=ExtResource("1_5r6k1")]
+z_index = 10
+position = Vector2(1, 0)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=810037128]
+position = Vector2(237, 0)
+zoom = Vector2(2, 2)
+
+[node name="Shelves" type="Node" parent="." unique_id=948207991]
+
+[node name="Science" parent="Shelves" unique_id=193637864 instance=ExtResource("2_qjn0y")]
+unique_name_in_owner = true
+position = Vector2(300, 100)
+
+[node name="Label" parent="Shelves/Science" index="2" unique_id=86449406]
+offset_top = -93.0
+offset_bottom = -70.0
+text = "Science
+"
+
+[node name="Literature" parent="Shelves" unique_id=1387118188 instance=ExtResource("2_qjn0y")]
+unique_name_in_owner = true
+position = Vector2(200, 100)
+
+[node name="Sprite2D" parent="Shelves/Literature" index="0" unique_id=1396550074]
+texture = ExtResource("3_wbilk")
+
+[node name="Label" parent="Shelves/Literature" index="2" unique_id=86449406]
+offset_left = -33.0
+offset_top = -97.0
+offset_right = 33.0
+offset_bottom = -74.0
+text = "Literature"
+
+[node name="History" parent="Shelves" unique_id=1868130102 instance=ExtResource("2_qjn0y")]
+unique_name_in_owner = true
+position = Vector2(100, 100)
+
+[node name="Sprite2D" parent="Shelves/History" index="0" unique_id=1396550074]
+texture = ExtResource("4_nv3va")
+
+[node name="Label" parent="Shelves/History" index="2" unique_id=86449406]
+text = "History"
+
+[node name="Languages" parent="Shelves" unique_id=946267633 instance=ExtResource("2_qjn0y")]
+unique_name_in_owner = true
+position = Vector2(300, -20)
+
+[node name="Sprite2D" parent="Shelves/Languages" index="0" unique_id=1396550074]
+texture = ExtResource("5_x4ixy")
+
+[node name="Label" parent="Shelves/Languages" index="2" unique_id=86449406]
+text = "Languages"
+
+[node name="Arts" parent="Shelves" unique_id=2072128195 instance=ExtResource("2_qjn0y")]
+unique_name_in_owner = true
+position = Vector2(200, -20)
+
+[node name="Sprite2D" parent="Shelves/Arts" index="0" unique_id=1396550074]
+texture = ExtResource("6_blwty")
+
+[node name="Label" parent="Shelves/Arts" index="2" unique_id=86449406]
+offset_top = -94.0
+offset_bottom = -71.0
+text = "Arts
+"
+
+[node name="Philosophy" parent="Shelves" unique_id=1135831266 instance=ExtResource("2_qjn0y")]
+unique_name_in_owner = true
+position = Vector2(100, -20)
+
+[node name="Sprite2D" parent="Shelves/Philosophy" index="0" unique_id=1396550074]
+texture = ExtResource("7_as2rh")
+
+[node name="Label" parent="Shelves/Philosophy" index="2" unique_id=86449406]
+offset_left = -66.0
+offset_top = -96.0
+offset_right = 66.0
+offset_bottom = -80.0
+text = "Philosophy"
+
+[node name="Table" parent="." unique_id=1354710621 instance=ExtResource("8_6e7jb")]
+unique_name_in_owner = true
+
+[connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
+[connection signal="pressed" from="GameManager/GameOver/Button" to="GameManager" method="_on_button_pressed"]
+[connection signal="mouse_shape_entered" from="Shelves/Science" to="Player" method="_on_science_mouse_shape_entered"]
+[connection signal="mouse_shape_entered" from="Shelves/Literature" to="Player" method="_on_literature_mouse_shape_entered"]
+[connection signal="mouse_shape_entered" from="Shelves/History" to="Player" method="_on_history_mouse_shape_entered"]
+[connection signal="mouse_shape_entered" from="Shelves/Languages" to="Player" method="_on_languages_mouse_shape_entered"]
+[connection signal="mouse_shape_entered" from="Shelves/Arts" to="Player" method="_on_arts_mouse_shape_entered"]
+[connection signal="mouse_shape_entered" from="Shelves/Philosophy" to="Player" method="_on_philosophy_mouse_shape_entered"]
+[connection signal="mouse_shape_entered" from="Table" to="Player" method="_on_table_mouse_shape_entered"]
+
+[editable path="Shelves/Science"]
+[editable path="Shelves/Literature"]
+[editable path="Shelves/History"]
+[editable path="Shelves/Languages"]
+[editable path="Shelves/Arts"]
+[editable path="Shelves/Philosophy"]

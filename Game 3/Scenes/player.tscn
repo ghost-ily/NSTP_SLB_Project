@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cdwc7uswm7bdo"]
+
+[ext_resource type="Script" uid="uid://clfy67yt74xoq" path="res://Game 3/Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://cwq2oggg1gkuk" path="res://Game 3/Assets/Bob_16x16.png" id="2_kmqvx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1ek2"]
+size = Vector2(14, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ml5od"]
+atlas = ExtResource("2_kmqvx")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b0ti7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ml5od")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=1146975373]
+scale = Vector2(2, 2)
+script = ExtResource("1_cvnsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2132746472]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_f1ek2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=27876641]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_b0ti7")
+
+[node name="MoveTimer" type="Timer" parent="." unique_id=374786040]
+wait_time = 0.1
+
+[node name="InteractionTimer" type="Timer" parent="." unique_id=282281574]
+wait_time = 0.1
+
+[node name="BookAnchor" type="Node2D" parent="." unique_id=856467389]
+position = Vector2(10, -5)
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
+[connection signal="timeout" from="InteractionTimer" to="." method="_on_interaction_timer_timeout"]
