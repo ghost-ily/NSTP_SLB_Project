@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 	if not is_mixing and asphalt == 0:
 		label.text = "Needs:"
 		if not has_stone:
-			label.text = label.text + " [stone]"
+			label.text = label.text + " [stone]" + "\n"
 		if not has_binder:
 			label.text = label.text + " [binder]"
 	elif not is_mixing and asphalt > 0:

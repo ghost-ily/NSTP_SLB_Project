@@ -8,6 +8,7 @@
 size = Vector2(94, 120)
 
 [node name="Mixer" type="Area2D" unique_id=826334510]
+scale = Vector2(2, 2)
 script = ExtResource("1_qlkcp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=702111777]
@@ -19,9 +20,9 @@ position = Vector2(-2, -2)
 shape = SubResource("RectangleShape2D_pmvp5")
 
 [node name="Label" type="Label" parent="." unique_id=1968242588]
-offset_left = -114.0
+offset_left = -178.5
 offset_top = -89.0
-offset_right = 113.0
+offset_right = 181.5
 offset_bottom = -66.0
 theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("2_pmvp5")
@@ -38,7 +39,7 @@ offset_right = 45.0
 offset_bottom = 57.0
 
 [node name="Timer" type="Timer" parent="." unique_id=1088887470]
-wait_time = 5.0
+wait_time = 2.5
 one_shot = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

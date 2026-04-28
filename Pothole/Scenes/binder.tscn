@@ -8,6 +8,7 @@
 size = Vector2(33, 46)
 
 [node name="Binder" type="CharacterBody2D" unique_id=1302068114]
+scale = Vector2(2, 2)
 script = ExtResource("1_chit3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=573787508]

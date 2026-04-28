@@ -13,8 +13,9 @@ var game_has_ended = false
 @onready var time: Label = $GameTime
 
 func _ready() -> void:
-	timer.wait_time = game_time
-	timer.start()
+	#timer.wait_time = game_time
+	#timer.start()
+	game_has_ended = false
 
 func _process(delta: float) -> void:
 	asphalt.text = "Asphalt stored: " + str(player_cement)
@@ -26,7 +27,7 @@ func fill_cement(charges: int) -> void:
 func end_game() -> void:
 	timer.paused = true
 	game_has_ended = true
-	window.show()
+	#window.show()
 	if spawner.get_child_count() > 0:
 		label.text = "You Lose"
 	else:
@@ -36,4 +37,7 @@ func _on_timer_timeout() -> void:
 	end_game()
 
 func _on_button_pressed() -> void:
-	get_tree().reload_current_scene()
+	for h in spawner.potholes:
+		h.queue_free()
+	spawner.potholes.clear()
+	spawner._ready()

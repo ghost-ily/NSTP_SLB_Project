@@ -53,16 +53,14 @@ theme_override_fonts/font = ExtResource("2_8knna")
 text = "Retry"
 
 [node name="Asphalt" type="Label" parent="GameManager" unique_id=858185246]
-offset_left = 867.0
-offset_top = 410.0
-offset_right = 1067.0
-offset_bottom = 433.0
+offset_left = -288.0
+offset_top = 138.0
+offset_right = -88.0
+offset_bottom = 161.0
 theme_override_fonts/font = ExtResource("2_8knna")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 8
 text = "Asphalt Stored: "
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
+vertical_alignment = 2
 
 [node name="GameTime" type="Label" parent="GameManager" unique_id=1653742059]
 visible = false
@@ -75,18 +73,14 @@ theme_override_fonts/font = ExtResource("2_8knna")
 text = "Time Left:"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=152782975]
-position = Vector2(564, 326)
-enabled = false
 zoom = Vector2(2, 2)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=845984625]
-position = Vector2(576, 324)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_p386l")
 
 [node name="Road" type="Sprite2D" parent="." unique_id=1504938483]
-position = Vector2(575.99994, 323.99997)
-scale = Vector2(1.3000001, 1.3000001)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_h2fh8")
 
 [node name="Spawner" type="Node" parent="." unique_id=1545221803]
@@ -95,23 +89,23 @@ script = ExtResource("2_nk51g")
 
 [node name="Mixer" parent="." unique_id=534750330 instance=ExtResource("3_d4mea")]
 z_index = 5
-position = Vector2(972, 289)
+position = Vector2(211, -56)
 
 [node name="BinderOrigin" type="Node2D" parent="." unique_id=618994964]
 unique_name_in_owner = true
-position = Vector2(1039, 511)
+position = Vector2(248, 43)
 
 [node name="StonePileOrigin" type="Node2D" parent="." unique_id=356981568]
 unique_name_in_owner = true
-position = Vector2(896, 514)
+position = Vector2(185, 54)
 
 [node name="StonePile" parent="." unique_id=1428270179 instance=ExtResource("7_p386l")]
 z_index = 5
-position = Vector2(896, 514)
+position = Vector2(185, 54)
 
 [node name="Binder" parent="." unique_id=1302068114 instance=ExtResource("6_h2fh8")]
 z_index = 5
-position = Vector2(1039, 511)
+position = Vector2(248, 43)
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
 [connection signal="pressed" from="GameManager/Window/Button" to="GameManager" method="_on_button_pressed"]
