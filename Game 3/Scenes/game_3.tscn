@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://de6b1ql0j0egf" path="res://Game 3/Assets/shelf_6.png" id="7_as2rh"]
 [ext_resource type="PackedScene" uid="uid://yrv7j4p5ednf" path="res://Game 3/Scenes/table.tscn" id="8_6e7jb"]
 
+[sub_resource type="SystemFont" id="SystemFont_qjn0y"]
+
 [node name="Game" type="Node2D" unique_id=1065281874]
 
 [node name="GameManager" type="Node" parent="." unique_id=1360980387]
@@ -19,33 +21,49 @@ script = ExtResource("1_wbilk")
 [node name="Labels" type="Node" parent="GameManager" unique_id=938823339]
 
 [node name="Score" type="Label" parent="GameManager/Labels" unique_id=452400967]
-offset_left = 18.0
-offset_top = 67.0
-offset_right = 270.0
-offset_bottom = 116.0
-text = "Correct Placements:
-Incorrect Placements:"
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -302.0
+offset_top = 190.0
+offset_right = -50.0
+offset_bottom = 239.0
+grow_horizontal = 0
+pivot_offset_ratio = Vector2(1, 0)
+text = "Correct Placements:"
+horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Category" type="Label" parent="GameManager/Labels" unique_id=297071049]
 unique_name_in_owner = true
-offset_left = 412.0
-offset_top = 78.0
-offset_right = 664.0
-offset_bottom = 101.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -302.0
+offset_top = 230.0
+offset_right = -50.0
+offset_bottom = 253.0
+grow_horizontal = 0
+pivot_offset_ratio = Vector2(1, 0)
 horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="TargetScore" type="Label" parent="GameManager/Labels" unique_id=1495044700]
-offset_left = 982.0
-offset_top = 85.0
-offset_right = 1131.0
-offset_bottom = 111.0
-text = "Books to sort:"
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -199.0
+offset_top = 150.0
+offset_right = -50.0
+offset_bottom = 176.0
+grow_horizontal = 0
+pivot_offset_ratio = Vector2(1, 0)
+text = "Books left:"
 horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Time" type="Label" parent="GameManager/Labels" unique_id=1839876034]
+visible = false
 offset_left = 1007.0
 offset_top = 117.0
 offset_right = 1130.0
@@ -111,6 +129,7 @@ scale = Vector2(2, 2)
 [node name="Label" parent="Shelves/Science" index="2" unique_id=86449406]
 offset_top = -93.0
 offset_bottom = -70.0
+theme_override_fonts/font = SubResource("SystemFont_qjn0y")
 text = "Science
 "
 metadata/_edit_use_anchors_ = true

@@ -51,9 +51,6 @@ func _process(delta: float) -> void:
 	
 	position = shelves[y_position][x_position].position
 	for i in books.size():
-		#books[i].position.y = book_anchor.position.y - (5 * i)
-		#books[i].position.x = book_anchor.position.x
-		
 		books[i].reparent(book_anchor)
 		books[i].position.y = book_anchor.position.y - (2.5 * i)
 		books[i].position.x = book_anchor.position.x 
@@ -64,7 +61,7 @@ func _process(delta: float) -> void:
 		interaction_timer.start()
 		
 	if not books.is_empty():
-		category.text = "Category: " + books[0].get_category()
+		category.text = "Held Category: " + books[0].get_category()
 	else:
 		category.text = ""
 		

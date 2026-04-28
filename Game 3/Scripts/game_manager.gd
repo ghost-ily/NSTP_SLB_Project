@@ -23,7 +23,7 @@ func _ready() -> void:
 	game_complete = false
 
 func _process(delta: float) -> void:
-	score.text = "Correct Placements: " + str(correct_score) + "\n" + "Incorrect Placements: " + str(incorrect_score)
+	score.text = "Correct Placements: " + str(correct_score) #+ "\n" + "Incorrect Placements: " + str(incorrect_score)
 	time.text = "Time Left: " + str(int(timer.time_left))
 	
 	if correct_score >= target:
