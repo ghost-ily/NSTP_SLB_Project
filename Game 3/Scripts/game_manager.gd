@@ -12,7 +12,7 @@ extends Node
 
 var correct_score = 0
 var incorrect_score = 0
-var target = 10
+var target = 5
 var game_time = 120
 var game_complete: bool
 var service = "Education"
@@ -45,18 +45,20 @@ func _on_timer_timeout() -> void:
 	pass
 	
 func end_game() -> void:
-	game_over.show()
+	#game_over.show()
 	if correct_score >= target:
 		game_over_label.text = "You Win"
 	else:
 		game_over_label.text = "You Lose"
 	
+	game_complete = true
 	player.end_game()
 	table.end_game()
 
 
-func _on_button_pressed() -> void:
-	get_tree().reload_current_scene()
+func _on_button_pressed():
+	correct_score = 0
+	target = 5
 	
 	
 func get_service() -> String:
