@@ -11,6 +11,7 @@ var all_bricks: Array = [brick1, brick2, brick3, brick4]
 var on_floor: Array = []
 var on_brick: Array = []
 var game_complete: bool = false
+var service: String = "Infrastructure"
 
 
 func start_game() -> void:
@@ -57,3 +58,7 @@ func _process(delta: float) -> void:
 				game_complete = true
 				for c in all_bricks:
 					c.position = Vector2(randi_range(100,1000), 500)
+
+
+func get_service() -> String:
+	return service

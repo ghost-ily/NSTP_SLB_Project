@@ -8,6 +8,7 @@ const MEDICINE = preload("res://Game 2 Resources/medicine.tscn")
 @onready var randotime: Timer = $RandomTimer
 
 var game_complete: bool = false
+var service: String = "Healthcare"
 
 func start_game() -> void:
 	# Reset state
@@ -66,3 +67,6 @@ func _on_medicine_placed(med_category: String, shelf_name: String) -> void:
 func _process(delta: float) -> void:
 	if game_complete:
 		randotime.stop()
+		
+func get_service() -> String:
+	return service

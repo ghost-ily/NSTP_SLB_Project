@@ -47,3 +47,7 @@ func format_number_comma(input: int):
 			result = "," + result
 
 	self.text = "PHP " + result
+	
+	
+func get_decremented() -> int:
+	return decrement_value
