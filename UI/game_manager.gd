@@ -7,14 +7,14 @@ var debug: Window
 var is_new_game: bool
 
 # Use debug_game_scene to test individual games
-var debug_game_scene = load("res://Pothole/Scenes/pothole_game.tscn")
+var debug_game_scene = load("res://Medical Equipment Game/med_eqp_game.tscn")
 var game_1 = load("res://Game 1 Resources/game1.tscn")
 var game_2 = load("res://Game 2 Resources/medicinesorter.tscn")
 var game_3 = load("res://Game 3/Scenes/game_3.tscn")
 var game_4 = load("res://Pothole/Scenes/pothole_game.tscn")
 var packed_game: PackedScene
 var current_game
-var all_games: Array = [game_1, game_2, game_3]
+var all_games: Array = [game_1, game_2, game_3, game_4]
 
 var infra_funds: int
 var health_funds: int

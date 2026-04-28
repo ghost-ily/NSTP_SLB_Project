@@ -27,6 +27,9 @@ var checkout: Button
 var all_goals: Array
 var in_cart: Array
 
+var game_complete: bool
+var service = "Healthcare"
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	bed = $InputContainer/Bed
@@ -56,6 +59,7 @@ func _ready() -> void:
 	clear_cart = $ClearCart
 	checkout = $Checkout
 	connect_signals()
+	game_complete = true
 	start_game()
 
 
@@ -98,14 +102,20 @@ func _on_checkout_pressed() -> void:
 		in_cart.clear()
 	else:
 		in_cart.clear()
-		start_game()
+		game_complete = true
 	
 	
 	
 func start_game() -> void:
 	for g in all_goals:
-		var i_goal = randi_range(3, 7)
+		var i_goal = randi_range(0, 4)
 		g.text = str(i_goal)
 		
 	for i in range(all_btns.size()):
 		$InputContainer.move_child(all_btns[i], randi_range(0, 5))
+		
+	game_complete = false
+	
+	
+func get_service() -> String:
+	return service

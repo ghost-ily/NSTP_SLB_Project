@@ -14,7 +14,7 @@ config/name="NSTP-SLB Project"
 run/main_scene="uid://dsra78oc18l5m"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
-run/main_scene="uid://qi8prflkyq0r"
+<<<<<<<HEADrun/main_scene="uid://qi8prflkyq0r"
 
 [input]
 
