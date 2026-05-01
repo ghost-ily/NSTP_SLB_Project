@@ -13,14 +13,26 @@ var total_pub_health: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	label.text = "PHP " + str(format_number_comma(total_infra))
+	label_2.text = "PHP " + str(format_number_comma(total_health))
+	label_3.text = "PHP " + str(format_number_comma(total_educ))
+	label_4.text = "PHP " + str(format_number_comma(total_pub_health))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	label.text = "PHP " + str(total_infra)
-	label_2.text = "PHP " + str(total_health)
-	label_3.text = "PHP " + str(total_educ)
-	label_4.text = "PHP " + str(total_pub_health)
+	pass
 	
+
+func format_number_comma(input: int):
+	var s_input: String = str(input)
+	var result: String = ""
+	var count: int = 0
 	
+	for i in range(s_input.length() - 1, -1, -1):
+		result = s_input[i] + result
+		count += 1
+		if count % 3 == 0 and i != 0:
+			result = "," + result
+
+	return result;
