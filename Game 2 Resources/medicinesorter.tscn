@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dxnqepn68uxc1" path="res://Game 2 Resources/shelf.tscn" id="3_eb2n6"]
 [ext_resource type="Texture2D" uid="uid://s0xkh4u4u6h8" path="res://Game 6 Resources/nstp_street_bg.png" id="3_kyrlg"]
 [ext_resource type="Texture2D" uid="uid://d4hr27lgxqcmp" path="res://Feeding Program/Assets/nstp_table.png" id="4_kyrlg"]
+[ext_resource type="AudioStream" uid="uid://bb4rlldyicckv" path="res://Feeding Program/Assets/531512__cogfirestudios__positive-blip-effect.wav" id="5_4747v"]
 
 [node name="main" type="Node2D" unique_id=1352383641]
 script = ExtResource("1_v2op4")
@@ -68,5 +69,9 @@ z_index = -4
 position = Vector2(562, 750)
 scale = Vector2(0.36750007, 0.36750007)
 texture = ExtResource("4_kyrlg")
+
+[node name="Success" type="AudioStreamPlayer" parent="." unique_id=1682203570]
+stream = ExtResource("5_4747v")
+volume_db = -15.0
 
 [connection signal="timeout" from="RandomTimer" to="." method="_on_RandomTimer_timeout"]

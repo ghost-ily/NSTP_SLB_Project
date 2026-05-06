@@ -6,6 +6,8 @@ const MEDICINE = preload("res://Game 2 Resources/medicine.tscn")
 @onready var scoreboard: Label = $scoreBoard
 @onready var medspawn: Node2D = $MedicineSpawner
 @onready var randotime: Timer = $RandomTimer
+@onready var success: AudioStreamPlayer = $Success
+
 
 var is_spawn_free: bool = true
 var game_complete: bool = false
@@ -59,6 +61,7 @@ func _on_medicine_placed(med_category: String, shelf_name: String) -> void:
 
 	if correct:
 		score += 500
+		success.play()
 	else:
 		score -= 300
 	scoreboard.text = "Score: %d" % score

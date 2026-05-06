@@ -15,6 +15,7 @@ var final_score = 0
 @onready var window: Window = $Window
 @onready var window_label: Label = $Window/Label
 @onready var window_button: Button = $Window/Button
+@onready var success: AudioStreamPlayer = $Success
 var game_complete: bool
 
 func _ready() -> void:
@@ -33,6 +34,7 @@ func _process(delta: float) -> void:
 
 func add_correct_score() -> void:
 	correct_sort += 1
+	success.play()
 
 func add_incorrect_score() -> void:
 	incorrect_sort += 1

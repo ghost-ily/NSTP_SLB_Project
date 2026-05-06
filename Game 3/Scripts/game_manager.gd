@@ -9,6 +9,7 @@ extends Node
 @onready var table: Area2D = %Table
 @onready var game_over: Window = $GameOver
 @onready var game_over_label: Label = $GameOver/Label
+@onready var success: AudioStreamPlayer = $Success
 
 var correct_score = 0
 var incorrect_score = 0
@@ -35,6 +36,7 @@ func _process(delta: float) -> void:
 
 func add_correct_score() -> void:
 	correct_score += 1
+	success.play()
 	
 func add_incorrect_score() -> void:
 	incorrect_score += 1

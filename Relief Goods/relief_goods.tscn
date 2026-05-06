@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cimrr006q1lkm" path="res://Relief Goods/relief_goods.gd" id="1_mg7gt"]
 [ext_resource type="Texture2D" uid="uid://dl1g14ot6hkkj" path="res://Relief Goods/nstp_truck_bg.png" id="2_4740a"]
+[ext_resource type="AudioStream" uid="uid://bb4rlldyicckv" path="res://Feeding Program/Assets/531512__cogfirestudios__positive-blip-effect.wav" id="3_jb7iq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnhjd"]
 size = Vector2(358.75, 482)
@@ -23,3 +24,7 @@ texture = ExtResource("2_4740a")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=985946507]
 position = Vector2(149, 516)
+
+[node name="Success" type="AudioStreamPlayer" parent="." unique_id=105239313]
+stream = ExtResource("3_jb7iq")
+volume_db = -15.0

@@ -12,6 +12,7 @@ var game_has_ended = false
 @onready var spawner: Node = %Spawner
 @onready var time: Label = $GameTime
 
+
 func _ready() -> void:
 	#timer.wait_time = game_time
 	#timer.start()

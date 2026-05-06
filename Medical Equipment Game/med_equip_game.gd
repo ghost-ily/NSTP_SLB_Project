@@ -30,6 +30,7 @@ var in_cart: Array
 var game_complete: bool
 var service = "Healthcare"
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	bed = $InputContainer/Bed
@@ -103,6 +104,7 @@ func _on_checkout_pressed() -> void:
 	else:
 		in_cart.clear()
 		game_complete = true
+		
 	
 	
 	

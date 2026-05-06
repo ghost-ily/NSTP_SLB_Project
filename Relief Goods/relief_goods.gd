@@ -6,6 +6,7 @@ var game_complete: bool
 var is_occupied: bool
 var score: int = 0
 var current_box
+@onready var success: AudioStreamPlayer = $Success
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,6 +29,7 @@ func _process(delta: float) -> void:
 func _on_box_loaded() -> void:
 	current_box.queue_free()
 	score += 1
+	success.play()
 	is_occupied = false
 	
 	

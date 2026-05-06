@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bc2ey6paqldk1" path="res://Game 3/Scripts/game_manager.gd" id="1_wbilk"]
 [ext_resource type="PackedScene" uid="uid://c7j71aje4k3gw" path="res://Game 3/Scenes/shelf.tscn" id="2_qjn0y"]
 [ext_resource type="Texture2D" uid="uid://2pjttaynjdi1" path="res://Game 3/Assets/nstp_library_bg.png" id="3_hrsbk"]
+[ext_resource type="AudioStream" uid="uid://bb4rlldyicckv" path="res://Feeding Program/Assets/531512__cogfirestudios__positive-blip-effect.wav" id="3_u1bi2"]
 [ext_resource type="PackedScene" uid="uid://yrv7j4p5ednf" path="res://Game 3/Scenes/table.tscn" id="8_6e7jb"]
 
 [sub_resource type="SystemFont" id="SystemFont_qjn0y"]
@@ -109,6 +110,10 @@ offset_bottom = 61.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Play Again"
+
+[node name="Success" type="AudioStreamPlayer" parent="GameManager" unique_id=1438112607]
+stream = ExtResource("3_u1bi2")
+volume_db = -15.0
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1782548506]
 modulate = Color(0.6255971, 0.6255971, 0.6255971, 1)

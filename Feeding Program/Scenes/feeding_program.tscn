@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://d1c2wj8wxxh5t" path="res://Feeding Program/Scripts/spawner.gd" id="3_mjbtq"]
 [ext_resource type="Texture2D" uid="uid://b77s3kmlohpyw" path="res://Feeding Program/Assets/nstp_grocery_bg.png" id="3_vxbg1"]
 [ext_resource type="Texture2D" uid="uid://d4hr27lgxqcmp" path="res://Feeding Program/Assets/nstp_table.png" id="4_1sj67"]
+[ext_resource type="AudioStream" uid="uid://bb4rlldyicckv" path="res://Feeding Program/Assets/531512__cogfirestudios__positive-blip-effect.wav" id="4_cm4ng"]
 [ext_resource type="Texture2D" uid="uid://cial4wticjbmb" path="res://UI/health_bar.png" id="8_vnrng"]
 
 [node name="Feeding Program" type="Node2D" unique_id=906347311]
@@ -91,6 +92,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_46eq0")
 text = "Retry"
+
+[node name="Success" type="AudioStreamPlayer" parent="GameManager" unique_id=1554373303]
+stream = ExtResource("4_cm4ng")
+volume_db = -15.0
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1462196110]
 position = Vector2(576, 283)
