@@ -125,3 +125,11 @@ grow_vertical = 0
 mouse_filter = 2
 texture = SubResource("CanvasTexture_yek8r")
 metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="." unique_id=479411980]
+layout_mode = 0
+offset_left = 847.0
+offset_top = 584.0
+offset_right = 950.0
+offset_bottom = 627.0
+text = "Try again?"

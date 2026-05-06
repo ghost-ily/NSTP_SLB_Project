@@ -1,15 +1,16 @@
 extends Control
 
+const NEW_GAME_TIME = 20.0
+var current_game_time
 var time_bar: TextureProgressBar
 var game_timer: Timer
-#@onready var start_timer: Button = $StartTimer
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	time_bar = $TimeLeft
 	game_timer = $"../GameTimer"
-	#start_timer.pressed.connect(start_timer_button)
+	current_game_time = NEW_GAME_TIME
 
 
 func _process(delta) -> void:
@@ -19,4 +20,10 @@ func _process(delta) -> void:
 
 
 func start_timer():
-	game_timer.start(7.0)
+	game_timer.start(current_game_time)
+	
+	
+func decrement_time():
+	if (randi() % 100 <= 30):
+		current_game_time -= 0.1
+	

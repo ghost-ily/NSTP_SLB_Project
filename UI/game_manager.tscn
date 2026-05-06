@@ -64,7 +64,7 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -372.0
+offset_left = -627.0
 offset_top = 20.0
 offset_right = -19.0
 offset_bottom = 70.0
@@ -73,14 +73,15 @@ theme_override_font_sizes/normal_font_size = 32
 horizontal_alignment = 2
 script = ExtResource("2_soe0u")
 
-[node name="Decrement" type="Button" parent="." unique_id=51712099]
-visible = false
+[node name="Decrement" type="Label" parent="Budget" unique_id=1934991910]
+modulate = Color(1, 1, 1, 0.6862745)
+self_modulate = Color(1, 1, 1, 0.6862745)
 layout_mode = 0
-offset_left = 596.0
-offset_top = 271.0
-offset_right = 679.0
-offset_bottom = 351.0
-text = "-"
+offset_left = 220.0
+offset_right = 466.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0.29803923, 0.9764706, 0.16862746, 1)
+theme_override_font_sizes/font_size = 32
 
 [node name="Lives" type="Control" parent="." unique_id=324075631]
 z_index = 1

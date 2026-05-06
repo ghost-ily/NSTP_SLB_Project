@@ -7,7 +7,6 @@ var debug: Window
 var is_new_game: bool
 
 # Use debug_game_scene to test individual games
-var debug_game_scene = load("res://Feeding Program/Scenes/feeding_program.tscn")
 var game_1 = load("res://Game 1 Resources/game1.tscn")
 var game_2 = load("res://Game 2 Resources/medicinesorter.tscn")
 var game_3 = load("res://Game 3/Scenes/game_3.tscn")
@@ -40,8 +39,6 @@ func _ready() -> void:
 	debug.get_node("Button").pressed.connect(debug_ready)
 	is_new_game = true
 	choose_random_game()
-	#current_game = debug_game_scene.instantiate()
-	#add_child(current_game)
 
 
 func choose_random_game():
@@ -53,6 +50,22 @@ func choose_random_game():
 		all_games.append(temp)
 	else:
 		packed_game = all_games.pick_random()
+	if packed_game == game_1:
+		debug.get_child(0).text = "Stack bricks to help construction!"
+	if packed_game == game_2:
+		debug.get_child(0).text = "Sort medicine for a hospital!"
+	if packed_game == game_3:
+		debug.get_child(0).text = "Sort books for a book drive!"
+	if packed_game == game_4:
+		debug.get_child(0).text = "Fill potholes for cleaner roads!"
+	if packed_game == game_5:
+		debug.get_child(0).text = "Order medicine to restock!"
+	if packed_game == game_6:
+		debug.get_child(0).text = "Clean trash to clean the street!"
+	if packed_game == game_7:
+		debug.get_child(0).text = "Buy healthy food for a feeding program!"
+	if packed_game == game_8:
+		debug.get_child(0).text = "Pack boxes for relief goods!"
 	current_game = packed_game.instantiate()
 	add_child(current_game)
 	is_new_game = true
@@ -81,6 +94,7 @@ func _process(delta: float) -> void:
 			budget._on_decremented()
 			add_decremented_funds()
 			pause_game()
+			timer.decrement_time()
 			choose_random_game()
 	else:
 		var new_scene = game_over.instantiate()
