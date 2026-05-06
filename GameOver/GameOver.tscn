@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bdqw42052gkmr" path="res://GameOver/game_over.gd" id="1_bed4b"]
 [ext_resource type="Texture2D" uid="uid://b1cj85hmmm3b5" path="res://Game 1 Resources/nstp_infrastructure_bg.png" id="2_pyvlu"]
+[ext_resource type="AudioStream" uid="uid://b0qdj2u6u8gw" path="res://Main Menu/822301__setuniman__night-shift-1x78.wav" id="3_yek8r"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_yek8r"]
 specular_color = Color(0.9490196, 0.9411765, 0.9372549, 1)
@@ -133,3 +134,8 @@ offset_top = 584.0
 offset_right = 950.0
 offset_bottom = 627.0
 text = "Try again?"
+
+[node name="BackgroundAudio" type="AudioStreamPlayer" parent="." unique_id=858218360]
+stream = ExtResource("3_yek8r")
+volume_db = -15.0
+autoplay = true

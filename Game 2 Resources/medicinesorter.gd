@@ -15,6 +15,7 @@ var service: String = "Healthcare"
 
 func start_game() -> void:
 	# Reset state
+	is_spawn_free = true
 	score = 0
 	game_complete = false
 	scoreboard.text = "Score: %d" % score

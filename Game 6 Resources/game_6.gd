@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var trash = preload("res://Game 6 Resources/trash.tscn")
 @onready var truck: Area2D = $Truck
+@onready var success: AudioStreamPlayer = $Success
+
 var all_trash: Array = []
 
 var service = "Environmental"
@@ -19,6 +21,7 @@ func _process(delta: float) -> void:
 	for t in all_trash:
 		if t == null:
 			all_trash.erase(t)
+			success.play()
 
 
 func start_game():

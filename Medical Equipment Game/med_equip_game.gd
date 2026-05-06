@@ -29,6 +29,7 @@ var in_cart: Array
 
 var game_complete: bool
 var service = "Healthcare"
+@onready var beep: AudioStreamPlayer = $Beep
 
 
 # Called when the node enters the scene tree for the first time.
@@ -81,10 +82,12 @@ func connect_signals() -> void:
 
 	
 func _on_btn_pressed(btn_name: String) -> void:
+	beep.play()
 	in_cart.append(btn_name)
 	
 
 func _on_clear_pressed() -> void:
+	beep.play()
 	in_cart.clear()
 	
 

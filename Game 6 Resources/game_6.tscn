@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ddrsuyk3ejnn3" path="res://Game 6 Resources/game_6.gd" id="1_bxc1t"]
 [ext_resource type="Texture2D" uid="uid://s0xkh4u4u6h8" path="res://Game 6 Resources/nstp_street_bg.png" id="2_dcvax"]
 [ext_resource type="Texture2D" uid="uid://cial4wticjbmb" path="res://UI/health_bar.png" id="3_ym0kk"]
+[ext_resource type="AudioStream" uid="uid://bb4rlldyicckv" path="res://Feeding Program/Assets/531512__cogfirestudios__positive-blip-effect.wav" id="4_i81ak"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dcvax"]
 
@@ -54,3 +55,7 @@ offset_right = 831.0
 offset_bottom = 636.0
 texture = ExtResource("3_ym0kk")
 expand_mode = 1
+
+[node name="Success" type="AudioStreamPlayer" parent="." unique_id=809729772]
+stream = ExtResource("4_i81ak")
+volume_db = -15.0

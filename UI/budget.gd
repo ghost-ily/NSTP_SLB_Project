@@ -26,7 +26,7 @@ func _on_decremented():
 		3.0)\
 		.set_trans(Tween.TRANS_QUINT)\
 		.set_ease(Tween.EASE_OUT)
-	#start_budget -= decrement_value
+	start_budget -= decrement_value
 	
 	
 func format_number_comma(input: int):

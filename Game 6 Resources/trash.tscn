@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://3ugix76xtbon" path="res://Game 6 Resources/trash.gd" id="1_m3fwr"]
 [ext_resource type="Texture2D" uid="uid://dg5daj4mpsb8v" path="res://Game 6 Resources/nstp_dumpster.png" id="2_iex7o"]
+[ext_resource type="AudioStream" uid="uid://bb4rlldyicckv" path="res://Feeding Program/Assets/531512__cogfirestudios__positive-blip-effect.wav" id="3_o3syk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iex7o"]
 size = Vector2(68, 66)
@@ -24,3 +25,7 @@ z_index = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mouseArea" unique_id=1549903003]
 shape = SubResource("RectangleShape2D_m3fwr")
+
+[node name="Success" type="AudioStreamPlayer" parent="." unique_id=1124221244]
+stream = ExtResource("3_o3syk")
+volume_db = -15.0

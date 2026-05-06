@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://db2ipbh2a04xd" path="res://Medical Equipment Game/iv_fluid_p.png" id="9_vjq1s"]
 [ext_resource type="Texture2D" uid="uid://cnwm7nhiets3t" path="res://Medical Equipment Game/syringe_p.png" id="11_gls15"]
 [ext_resource type="Texture2D" uid="uid://bf5schx1ce8cg" path="res://Medical Equipment Game/masks_p.png" id="13_18650"]
+[ext_resource type="AudioStream" uid="uid://dm4xvivresexl" path="res://Medical Equipment Game/140773__qubodup__computer-beep-sfx-for-videogames.wav" id="14_05loe"]
 
 [node name="Game" type="Control" unique_id=474715905]
 layout_mode = 3
@@ -352,3 +353,6 @@ offset_top = 470.0
 offset_right = 1121.0
 offset_bottom = 547.0
 text = "Checkout"
+
+[node name="Beep" type="AudioStreamPlayer" parent="." unique_id=1658153518]
+stream = ExtResource("14_05loe")

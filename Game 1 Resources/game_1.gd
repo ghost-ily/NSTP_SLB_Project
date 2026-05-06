@@ -12,6 +12,7 @@ var on_floor: Array = []
 var on_brick: Array = []
 var game_complete: bool = false
 var service: String = "Infrastructure"
+@onready var success: AudioStreamPlayer = $Success
 
 
 func start_game() -> void:

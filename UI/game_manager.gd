@@ -124,3 +124,4 @@ func add_decremented_funds():
 		educ_funds += budget.get_decremented()
 	elif current_service == "Public Health":
 		pub_health_funds += budget.get_decremented()
+		
