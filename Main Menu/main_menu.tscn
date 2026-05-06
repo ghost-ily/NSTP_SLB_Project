@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bjwiu2xtwqon" path="res://Main Menu/main_menu.gd" id="1_nb5b5"]
 [ext_resource type="Texture2D" uid="uid://b371aga3gwjx8" path="res://Main Menu/nstp_logo.png" id="2_8ketd"]
 [ext_resource type="Texture2D" uid="uid://b1cj85hmmm3b5" path="res://Game 1 Resources/nstp_infrastructure_bg.png" id="3_15lat"]
+[ext_resource type="AudioStream" uid="uid://b0qdj2u6u8gw" path="res://Main Menu/822301__setuniman__night-shift-1x78.wav" id="4_15lat"]
+[ext_resource type="AudioStream" uid="uid://c0m1t8yojvhyl" path="res://Main Menu/450282__stu556__mechanical-keyboard-typing-treble-version.wav" id="4_60tkv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ketd"]
 corner_radius_top_left = 5
@@ -206,3 +208,11 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
 texture = SubResource("CanvasTexture_8ketd")
+
+[node name="TypeSound" type="AudioStreamPlayer" parent="ReadyScreen" unique_id=1034856105]
+stream = ExtResource("4_60tkv")
+
+[node name="BackgroundAudio" type="AudioStreamPlayer" parent="." unique_id=1487548724]
+stream = ExtResource("4_15lat")
+volume_db = -15.0
+autoplay = true

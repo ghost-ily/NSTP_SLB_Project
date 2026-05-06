@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dmia6e3veq77h" path="res://UI/timer.gd" id="5_twojc"]
 [ext_resource type="Texture2D" uid="uid://36pe2dpwdg0n" path="res://UI/hourglass.png" id="6_fuquo"]
 [ext_resource type="Texture2D" uid="uid://cial4wticjbmb" path="res://UI/health_bar.png" id="7_k66he"]
+[ext_resource type="AudioStream" uid="uid://b0qdj2u6u8gw" path="res://Main Menu/822301__setuniman__night-shift-1x78.wav" id="8_soe0u"]
 
 [node name="GameManager" type="Control" unique_id=987682661]
 layout_mode = 3
@@ -157,3 +158,8 @@ offset_top = -200.0
 offset_right = 427.0
 offset_bottom = -155.0
 text = "Start Timer"
+
+[node name="BackgroundAudio" type="AudioStreamPlayer" parent="." unique_id=1276163861]
+stream = ExtResource("8_soe0u")
+volume_db = -15.0
+autoplay = true

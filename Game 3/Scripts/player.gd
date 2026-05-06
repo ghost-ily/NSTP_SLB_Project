@@ -62,7 +62,7 @@ func _process(delta: float) -> void:
 		interaction_timer.start()
 		
 	if not books.is_empty():
-		category.text = "Held Category: " + books[0].get_category()
+		category.text = "Held Category: \n" + books[0].get_category()
 	else:
 		category.text = ""
 		

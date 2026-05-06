@@ -9,6 +9,7 @@ var user_confirm: Button
 var ready_screen: Control
 var user_name: String
 var main_game_scene = preload("res://UI/game_manager.tscn")
+var typing_player
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,6 +18,7 @@ func _ready() -> void:
 	user_input = $UserScreen/Panel/NameInput
 	user_confirm = $UserScreen/Panel/Confirm
 	ready_screen = $ReadyScreen
+	typing_player = $ReadyScreen/TypeSound
 	
 	# Makes sure signals are connected
 	connect_signals()
@@ -69,8 +71,11 @@ func _format_letter_text() -> void:
 
 Together with your team, you are responsible for using these funds to improve public services and projects as they were meant to be.
 
-You are advised to keep mistakes to a minimum. Errors may result in the need for replacement equipment and additional expenses, which will be charged against the budget. Repeated or excessive mistakes may lead to your removal from the position.
+You are advised to keep mistakes to a minimum. Repeated or excessive mistakes may lead to your removal from the position.
 	")
 	
 	var typewriter = self.create_tween()
 	typewriter.tween_property($ReadyScreen/LetterText, "visible_ratio", 1.0, type_time)
+	typing_player.play()
+	await get_tree().create_timer(type_time).timeout
+	typing_player.stop()
