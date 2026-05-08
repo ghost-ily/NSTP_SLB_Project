@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 	
 func _on_decremented():
 	number_change_anim = get_tree().create_tween()
-	decrement_value = randi() % 4_000_000_000 + 1_000_000_000
+	decrement_value = randi() % 2_000_000_000 + 1_000_000_000
 	number_change_anim.tween_method(
 		format_number_comma,
 		start_budget,

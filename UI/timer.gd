@@ -24,6 +24,6 @@ func start_timer():
 	
 	
 func decrement_time():
-	if (randi() % 100 <= 30):
-		current_game_time -= 0.1
+	if (randi() % 100 <= 70):
+		current_game_time -= 0.5
 	

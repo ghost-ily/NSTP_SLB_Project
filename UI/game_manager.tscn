@@ -150,15 +150,6 @@ offset_bottom = 64.0
 value = 100.0
 texture_progress = ExtResource("7_k66he")
 
-[node name="StartTimer" type="Button" parent="Timer" unique_id=2038780298]
-visible = false
-layout_mode = 0
-offset_left = 103.0
-offset_top = -200.0
-offset_right = 427.0
-offset_bottom = -155.0
-text = "Start Timer"
-
 [node name="BackgroundAudio" type="AudioStreamPlayer" parent="." unique_id=1276163861]
 stream = ExtResource("8_soe0u")
 volume_db = -15.0

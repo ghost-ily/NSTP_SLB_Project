@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bpvfh0gsr21je" path="res://Pothole/Scripts/mixer.gd" id="1_qlkcp"]
 [ext_resource type="FontFile" uid="uid://0vt547ojq26s" path="res://Pothole/Assets/PixelOperator8.ttf" id="2_pmvp5"]
 [ext_resource type="Texture2D" uid="uid://co6mbwn10m7eb" path="res://Pothole/Assets/nstp_cement_mixer.png" id="2_qlkcp"]
+[ext_resource type="AudioStream" uid="uid://bv4ls4xo02pn8" path="res://Pothole/Assets/699198__rudmer_rotteveel__sewing-machine-short-slow-01.wav" id="4_0tmf2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmvp5"]
 size = Vector2(94, 120)
@@ -41,6 +42,10 @@ offset_bottom = 57.0
 [node name="Timer" type="Timer" parent="." unique_id=1088887470]
 wait_time = 2.5
 one_shot = true
+
+[node name="MixSound" type="AudioStreamPlayer" parent="." unique_id=68517330]
+stream = ExtResource("4_0tmf2")
+volume_db = -10.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

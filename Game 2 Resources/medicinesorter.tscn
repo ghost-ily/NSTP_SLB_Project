@@ -66,7 +66,7 @@ texture = ExtResource("3_kyrlg")
 
 [node name="NstpTable" type="Sprite2D" parent="." unique_id=1141008659]
 z_index = -4
-position = Vector2(562, 750)
+position = Vector2(562, 765)
 scale = Vector2(0.36750007, 0.36750007)
 texture = ExtResource("4_kyrlg")
 

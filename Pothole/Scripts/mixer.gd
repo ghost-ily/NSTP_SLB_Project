@@ -4,6 +4,7 @@ extends Area2D
 @onready var button: Button = $Button
 @onready var game_manager: Node = %GameManager
 @onready var timer: Timer = $Timer
+@onready var mix_sound: AudioStreamPlayer = $MixSound
 
 var has_stone = false
 var has_binder = false
@@ -31,6 +32,7 @@ func _process(delta: float) -> void:
 		
 	if has_stone and has_binder:
 		#is_mixing = true
+		mix_sound.play()
 		has_stone = false
 		has_binder = false
 		asphalt = 3
